@@ -1,0 +1,1 @@
+vcs -f filelist_top.f -sverilog -full64 -debug_access+all

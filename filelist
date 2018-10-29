@@ -1,0 +1,16 @@
++define+S50 \
++define+VERBOSE \
++incdir+./rtl \
+./test_enviroment/Test.sv
+./rtl/model/IS42VM16400K.V
+./rtl/model/mt48lc2m32b2.v \
+./rtl/model/mt48lc8m8a2.v  \
+./rtl/sdrc_top.v \
+./rtl/wb2sdrc.v \
+./rtl/async_fifo.v  \
+./rtl/sdrc_core.v \
+./rtl/sdrc_bank_ctl.v \
+./rtl/sdrc_bank_fsm.v \
+./rtl/sdrc_bs_convert.v \
+./rtl/sdrc_req_gen.v \
+./rtl/sdrc_xfr_ctl.v 
