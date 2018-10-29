@@ -1,12 +1,5 @@
-
 class scoreboard;
-   
-  //creating mailbox handle
-  mailbox mon2scb;
-  
-  //used to count the number of transactions
-  int no_transactions;
-  
+     
   //constructor
   function new(mailbox mon2scb);
     //getting the mailbox handles from  environment 
