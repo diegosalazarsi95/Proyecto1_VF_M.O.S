@@ -1,23 +1,8 @@
-class scoreboard;
-     
-  //constructor
-  function new(mailbox mon2scb);
-    //getting the mailbox handles from  environment 
-    this.mon2scb = mon2scb;
-  endfunction
-  
-  //Compares the Actual result with the expected result
-  task main;
-    transaction trans;
-    forever begin
-      mon2scb.get(trans);
-        if((trans.a+trans.b) == trans.c)
-          $display("Result is as Expected");
-        else
-          $error("Wrong Result.\n\tExpeced: %0d Actual: %0d",(trans.a+trans.b),trans.c);
-        no_transactions++;
-      trans.display("[ Scoreboard ]");
-    end
-  endtask
-  
+class scoreboard; 
+//A queue is declared like an array, but using $ for the range
+//X Optionally, a maximum size for the queue can be specified
+int address_fifo[$];
+int data_fifo[$];
+int bl_fifo[$];
+
 endclass
