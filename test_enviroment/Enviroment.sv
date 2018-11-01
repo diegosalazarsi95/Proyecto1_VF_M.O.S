@@ -1,6 +1,7 @@
 `include "Driver.sv"
 `include "Monitor.sv"
 `include "scoreboard.sv"
+`include "Interface.sv"
 class environment;
   
   driver    	driv;

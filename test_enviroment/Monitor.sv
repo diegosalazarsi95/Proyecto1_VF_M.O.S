@@ -1,3 +1,4 @@
+`include "Interface.sv"
 class monitor;
   //hay dos relojs hay que ver eso
   scoreboard score;

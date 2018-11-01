@@ -1,3 +1,4 @@
+`include "Interface.sv"
 class driver;
 
   virtual intf vif;
