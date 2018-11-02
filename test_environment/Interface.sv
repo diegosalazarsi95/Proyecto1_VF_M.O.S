@@ -1,5 +1,5 @@
-interface Interface #(parameter dw = 32);
-
+interface intf;
+	parameter dw = 32;
 	//-------------------------------------------
 	// WISH BONE Interface
 	//-------------------------------------------
@@ -32,7 +32,7 @@ interface Interface #(parameter dw = 32);
 
 `ifdef SDR_32BIT
 	logic 	[31:0]		sdr_dq      ; // SDRAM Read/Write Data Bus
-   	logic 	[3:0]       sdr_dqm     ; // SDRAM DATA Mask
+   	logic 	[3:0]       sdr_dqm     ; // SDRAM DATA Mask.
 `elsif SDR_16BIT 
    	logic 	[15:0]      sdr_dq      ; // SDRAM Read/Write Data Bus
    	logic 	[1:0]       sdr_dqm     ; // SDRAM DATA Mask

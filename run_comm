@@ -1,1 +1,3 @@
-vcs -f filelist_top.f -sverilog -full64 -debug_access+all
+vcs -f filelist +define+S50 +define+VERBOSE +incdir+./rtl +incdir+./rtl/model +incdir+./test_environment -sverilog -full64 -debug_access+all -timescale=1ns/10ps
+./simv > log.txt
+rm -rf csrc DVEfiles inter.vpd simv simv.daidir swave_compile_done ucli.key
