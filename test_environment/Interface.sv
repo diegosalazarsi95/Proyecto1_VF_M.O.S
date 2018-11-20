@@ -25,20 +25,7 @@ interface intf;
 	logic				sdr_ras_n 	;
 	logic				sdr_cas_n 	;
 	logic				sdr_we_n 	;
-	logic 	[1:0]       sdr_ba      ; // SDRAM Bank Select
-	logic 	[12:0]      sdr_addr	; // SDRAM ADRESS
 
-	logic     	        sdr_init_done; // SDRAM Init Done
-
-`ifdef SDR_32BIT
-	logic 	[31:0]		sdr_dq      ; // SDRAM Read/Write Data Bus
-   	logic 	[3:0]       sdr_dqm     ; // SDRAM DATA Mask.
-`elsif SDR_16BIT 
-   	logic 	[15:0]      sdr_dq      ; // SDRAM Read/Write Data Bus
-   	logic 	[1:0]       sdr_dqm     ; // SDRAM DATA Mask
-`else 
-   	logic 	[7:0]       sdr_dq      ; // SDRAM Read/Write Data Bus
-   	logic 	[0:0]       sdr_dqm     ; // SDRAM DATA Mask
-`endif
+	logic 				sdr_init_done; // SDRAM Init Done
 
 endinterface

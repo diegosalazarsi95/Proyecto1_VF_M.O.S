@@ -28,7 +28,7 @@
 # Bash para definir caminos a las herramientas de Synopsys. Actualizado al 20-03-2018 (ACR).
 
 # Direccion de la licencia
-SNPSLMD_LICENSE_FILE=27000@172.21.16.253; # Es importante verificar con el tecnico si el archivo 
+SNPSLMD_LICENSE_FILE=27000@172.21.9.209,27000@172.21.9.210,27000@172.21.9.211; # Es importante verificar con el tecnico si el archivo 
 					  # de la licencia se encuentra en esta direccion
 SNPSLMD_QUEUE=TRUE;	# Variable de ambiente para que Synopsys espere la validacion de las 
 			# todas las licencias solicitadas.
