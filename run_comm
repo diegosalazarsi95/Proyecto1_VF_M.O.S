@@ -1,2 +1,3 @@
 vcs -f filelist +define+S50 +define+VERBOSE +define+SDR_16BIT +incdir+./rtl +incdir+./rtl/model +incdir+./test_environment -sverilog -full64 -debug_access+all -timescale=1ns/10ps
 ./simv > log.txt
+rm -rf csrc/ DVEfiles/ inter.vpd swave_compile_done ucli.key
