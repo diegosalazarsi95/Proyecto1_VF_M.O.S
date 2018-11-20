@@ -1,8 +1,12 @@
-30       
+38       
 0 Test.sv
 0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/Test.sv
 0 ./rtl/Test.sv
 0 ./rtl/model/Test.sv
+0 Environment2.sv
+0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/Environment2.sv
+0 ./rtl/Environment2.sv
+0 ./rtl/model/Environment2.sv
 0 Environment.sv
 0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/Environment.sv
 0 ./rtl/Environment.sv
@@ -19,6 +23,10 @@
 0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/Monitor.sv
 0 ./rtl/Monitor.sv
 0 ./rtl/model/Monitor.sv
+0 estimulo1.sv
+0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/estimulo1.sv
+0 ./rtl/estimulo1.sv
+0 ./rtl/model/estimulo1.sv
 0 Interface.sv
 0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/Interface.sv
 0 ./rtl/Interface.sv
@@ -31,11 +39,11 @@
 0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/sdrc_define.v
 33
 +define+S50
-+define+SDR_32BIT
++define+SDR_16BIT
 +define+VERBOSE
 +incdir+./rtl
 +incdir+./rtl/model
-+incdir+./test_environment
++incdir+./test_environment2
 +itf+/mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/linux64/lib/vcsdp_lite.tab
 +vcsd1
 +vpi
@@ -63,7 +71,7 @@
 -sverilog
 -timescale=1ns/10ps
 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/linux64/bin/vcs1
-62
+64
 sysc_uni_pwd=/mnt/vol_NFS_Zener/WD_ESPEC/diegosalazar/Proyecto1_VF_M.O.S
 XMODIFIERS=@im=none
 XDG_VTNR=1
@@ -119,6 +127,8 @@ HISTCONTROL=ignoredups
 HARDWARE_PLATFORM=x86_64
 GNOME_SHELL_SESSION_MODE=classic
 GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GJS_DEBUG_TOPICS=JS ERROR;JS LOG
+GJS_DEBUG_OUTPUT=stderr
 GDM_LANG=es_CR.UTF-8
 GDMSESSION=gnome-classic
 FTK_KIT_DIR=/mnt/vol_NFS_Zener/tools/synopsys/pdks/xh018-ams/XFAB_snps_CustomDesigner_kit_v2_1_0
@@ -127,15 +137,17 @@ DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-G0wOeIykPq,guid=61efbf98af2aedb
 COLORTERM=truecolor
 CNI_ROOT=/mnt/vol_NFS_Zener/tools/synopsys/apps/PyCell_Studio/N-2017.12_Py262
 0
-23
+25
 1534995302 ./rtl/sdrc_define.v
-1541194860 ./test_environment/clk.sv
-1542745788 ./test_environment/Interface.sv
-1541202314 ./test_environment/Monitor.sv
-1541202275 ./test_environment/Driver.sv
-1541192617 ./test_environment/scoreboard.sv
-1541193750 ./test_environment/Environment.sv
-1541202366 ./test_environment/Test.sv
+1542747837 ./test_environment2/clk.sv
+1542747837 ./test_environment2/Interface.sv
+1542756548 ./test_environment2/estimulo1.sv
+1542747837 ./test_environment2/Monitor.sv
+1542747837 ./test_environment2/Driver.sv
+1542747837 ./test_environment2/scoreboard.sv
+1542753577 ./test_environment2/Environment.sv
+1542755377 ./test_environment2/Environment2.sv
+1542754984 ./test_environment2/Test.sv
 1534995304 ./rtl/sdrc_xfr_ctl.v
 1534995304 ./rtl/sdrc_req_gen.v
 1534995304 ./rtl/sdrc_bs_convert.v
@@ -148,8 +160,8 @@ CNI_ROOT=/mnt/vol_NFS_Zener/tools/synopsys/apps/PyCell_Studio/N-2017.12_Py262
 1534995240 ./rtl/model/mt48lc8m8a2.v
 1534995242 ./rtl/model/mt48lc2m32b2.v
 1541183507 ./rtl/model/IS42VM16400K.V
-1542745840 ./test_environment/testbench.sv
-1541183763 filelist
+1542753196 ./test_environment2/testbench.sv
+1542753351 filelist
 1519358599 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/linux64/lib/vcsdp_lite.tab
 5
 0 
@@ -157,4 +169,4 @@ CNI_ROOT=/mnt/vol_NFS_Zener/tools/synopsys/apps/PyCell_Studio/N-2017.12_Py262
 1519359429 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/linux64/lib/liberrorinf.so
 1519359412 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/linux64/lib/libsnpsmalloc.so
 1519359683 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/linux64/lib/libvfs.so
-1542745901 simv.daidir
+1542756565 simv.daidir

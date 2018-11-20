@@ -5,11 +5,11 @@
         "module",
         1
     ],
-    "sdrc_bank_fsm": [
-        "sdrc_bank_fsm",
-        "ChjVu",
+    "clk": [
+        "clk",
+        "DLCGT",
         "module",
-        11
+        5
     ],
     "std": [
         "std",
@@ -17,35 +17,17 @@
         "module",
         2
     ],
-    "intf": [
-        "intf",
-        "k6LTY",
-        "module",
-        4
-    ],
-    "...MASTER...": [
-        "SIM",
-        "amcQw",
-        "module",
-        12
-    ],
-    "clk": [
-        "clk",
-        "DLCGT",
-        "module",
-        5
-    ],
-    "mt48lc8m8a2": [
-        "mt48lc8m8a2",
-        "Pj51K",
-        "module",
-        9
-    ],
     "test": [
         "test",
         "x9Hvb",
         "module",
         3
+    ],
+    "intf": [
+        "intf",
+        "k6LTY",
+        "module",
+        4
     ],
     "tbench_top": [
         "tbench_top",
@@ -53,15 +35,33 @@
         "module",
         6
     ],
-    "IS42VM16400K": [
-        "IS42VM16400K",
-        "TzJKa",
+    "mt48lc2m32b2": [
+        "mt48lc2m32b2",
+        "a3mSN",
         "module",
         7
+    ],
+    "mt48lc8m8a2": [
+        "mt48lc8m8a2",
+        "Pj51K",
+        "module",
+        8
     ],
     "sdrc_top": [
         "sdrc_top",
         "NTNU2",
+        "module",
+        9
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module",
+        11
+    ],
+    "sdrc_bank_fsm": [
+        "sdrc_bank_fsm",
+        "ChjVu",
         "module",
         10
     ]
