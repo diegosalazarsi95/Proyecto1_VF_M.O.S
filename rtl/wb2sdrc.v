@@ -106,14 +106,14 @@ The MASTER sends this information to the SLAVE. The SLAVE can use this
 information to prepare the response for the next cycle.
 Table 4-2 Cycle Type Identifiers
 CTI_O(2:0) Description
-‘000’ Classic cycle.
-‘001’ Constant address burst cycle
-‘010’ Incrementing burst cycle
-‘011’ Reserved
-‘100’ Reserved
-‘101 Reserved
-‘110’ Reserved
-‘111’ End-of-Burst
+Â‘000Â’ Classic cycle.
+Â‘001Â’ Constant address burst cycle
+Â‘010Â’ Incrementing burst cycle
+Â‘011Â’ Reserved
+Â‘100Â’ Reserved
+Â‘101 Reserved
+Â‘110Â’ Reserved
+Â‘111Â’ End-of-Burst
 ****************************************************/
 //--------------------------------------------
 // SDRAM controller Interface 
@@ -237,18 +237,32 @@ end
      );
 
 // synopsys translate_off
-always @(posedge wb_clk_i) begin
+/*always @(posedge wb_clk_i) begin
   if (cmdfifo_full == 1'b1 && cmdfifo_wr == 1'b1)  begin
      $display("ERROR:%m COMMAND FIFO WRITE OVERFLOW");
-  end 
+  end */
+
+property overflow_fifo_write;
+  @(posedge wb_clk_i) (cmdfifo_full == 1'b1 && cmdfifo_wr == 1'b1);
+endproperty
+assert_overflow: assert property overflow_fifo_write $display("ERROR:%m COMMAND FIFO WRITE OVERFLOW");
+
+
 end 
 // synopsys translate_on
 // synopsys translate_off
-always @(posedge sdram_clk) begin
+/*always @(posedge sdram_clk) begin
    if (cmdfifo_empty == 1'b1 && cmdfifo_rd == 1'b1) begin
       $display("ERROR:%m COMMAND FIFO READ OVERFLOW");
    end
-end 
+end*/
+
+property overflow_fifo_read;
+  @(posedge wb_clk_i) (cmdfifo_empty == 1'b1 && cmdfifo_rd == 1'b1);
+endproperty
+assert_overflow: assert property overflow_fifo_read $display("ERROR:%m COMMAND FIFO READ OVERFLOW");
+
+
 // synopsys translate_on
 
 //---------------------------------------------------------------------
@@ -293,7 +307,7 @@ wire  wrdatafifo_rd  = sdr_wr_next;
                                 sdr_wr_data}      )
      );
 // synopsys translate_off
-always @(posedge wb_clk_i) begin
+/*always @(posedge wb_clk_i) begin
   if (wrdatafifo_full == 1'b1 && wrdatafifo_wr == 1'b1)  begin
      $display("ERROR:%m WRITE DATA FIFO WRITE OVERFLOW");
   end 
@@ -303,7 +317,20 @@ always @(posedge sdram_clk) begin
    if (wrdatafifo_empty == 1'b1 && wrdatafifo_rd == 1'b1) begin
       $display("ERROR:%m WRITE DATA FIFO READ OVERFLOW");
    end
-end 
+end/*
+
+
+property write_data_overflow;
+  @(posedge wb_clk_i) (wrdatafifo_full == 1'b1 && wrdatafifo_wr == 1'b1);
+endproperty
+assert_overflow: assert property write_data_overflow $display("ERROR:%m WRITE DATA FIFO WRITE OVERFLOW");
+
+
+property read_data_overflow;
+  @(posedge sdram_clk) (wrdatafifo_empty == 1'b1 && wrdatafifo_rd == 1'b1);
+endproperty
+assert_overflow: assert property read_data_overflow $display("ERROR:%m WRITE DATA FIFO READ OVERFLOW");
+
 // synopsys translate_on
 
 // -------------------------------------------------------------------
@@ -354,7 +381,7 @@ wire    rddatafifo_rd = wb_ack_o & !wb_we_i;
      );
 
 // synopsys translate_off
-always @(posedge sdram_clk) begin
+/*always @(posedge sdram_clk) begin
   if (rddatafifo_full == 1'b1 && rddatafifo_wr == 1'b1)  begin
      $display("ERROR:%m READ DATA FIFO WRITE OVERFLOW");
   end 
@@ -364,7 +391,19 @@ always @(posedge wb_clk_i) begin
    if (rddatafifo_empty == 1'b1 && rddatafifo_rd == 1'b1) begin
       $display("ERROR:%m READ DATA FIFO READ OVERFLOW");
    end
-end 
+end */
+
+
+property read_data_write_sdram_overflow;
+  @(posedge sdram_clk) (rddatafifo_full == 1'b1 && rddatafifo_wr == 1'b1);
+endproperty
+assert_overflow: assert property read_data_write_sdram_overflow $display("ERROR:%m READ DATA FIFO WRITE OVERFLOW");
+
+property read_data_read_overflow;
+  @(posedge wb_clk_i) (rddatafifo_empty == 1'b1 && rddatafifo_rd == 1'b1);
+endproperty
+assert_overflow: assert property read_data_read_overflow $display("ERROR:%m READ DATA FIFO READ OVERFLOW");
+
 // synopsys translate_on
 
  
