@@ -5,17 +5,17 @@
         "module",
         1
     ],
-    "clk": [
-        "clk",
-        "DLCGT",
-        "module",
-        5
-    ],
     "std": [
         "std",
         "reYIK",
         "module",
         2
+    ],
+    "mt48lc8m8a2": [
+        "mt48lc8m8a2",
+        "Pj51K",
+        "module",
+        8
     ],
     "test": [
         "test",
@@ -29,11 +29,17 @@
         "module",
         4
     ],
-    "tbench_top": [
-        "tbench_top",
-        "Mk7In",
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
         "module",
-        6
+        11
+    ],
+    "clk": [
+        "clk",
+        "DLCGT",
+        "module",
+        5
     ],
     "mt48lc2m32b2": [
         "mt48lc2m32b2",
@@ -41,23 +47,17 @@
         "module",
         7
     ],
-    "mt48lc8m8a2": [
-        "mt48lc8m8a2",
-        "Pj51K",
+    "tbench_top": [
+        "tbench_top",
+        "Mk7In",
         "module",
-        8
+        6
     ],
     "sdrc_top": [
         "sdrc_top",
         "NTNU2",
         "module",
         9
-    ],
-    "...MASTER...": [
-        "SIM",
-        "amcQw",
-        "module",
-        11
     ],
     "sdrc_bank_fsm": [
         "sdrc_bank_fsm",

@@ -1,5 +1,9 @@
 `include "Environment.sv"
 `include "estimulo1.sv"
+`include "estimulo2.sv"
+`include "estimulo3.sv"
+`include "estimulo4.sv"
+
 
 class environment2 extends environment;
 	estimulo1 est1;
@@ -19,7 +23,7 @@ class environment2 extends environment;
 		est1.run();
 	endtask : run_estimulo1
 
-	task run_estimulo2();
+	/*task run_estimulo2();
 		est2.run();
 	endtask : run_estimulo2
 
@@ -29,6 +33,6 @@ class environment2 extends environment;
 
 	task run_estimulo4();
 		est4.run();
-	endtask : run_estimulo4
+	endtask : run_estimulo4*/
 
 endclass : environment2

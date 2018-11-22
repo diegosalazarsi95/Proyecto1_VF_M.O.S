@@ -79,17 +79,17 @@ module async_fifo (wr_clk,
    output            afull, aempty;       // about full and about to empty
 
 
-   // synopsys translate_off
+  //synopsys translate_off
 
-  // initial begin
- //     if (AW == 0) begin
- //        $display ("%m : ERROR!!! Fifo depth %d not in range 2 to 256", DP);
- //     end // if (AW == 0)
- //  end // initial begin
+  initial begin
+    if (AW == 0) begin
+      $display ("%m : ERROR!!! Fifo depth %d not in range 2 to 256", DP);
+    end // if (AW == 0)
+  end // initial begin
 
    // synopsys translate_on
 
-   range_2: assert(AW==0) $display ("%m : ERROR!!! Fifo depth %d not in range 2 to 256", DP);
+  //range_2: assert(AW==0) $display("%m : ERROR!!! Fifo depth %d not in range 2 to 256", DP);
 
 
 
@@ -322,8 +322,7 @@ end*/
 	property afifo_overflow;
 		@(posedge wr_clk) (wr_en && full);
 	endproperty
-
-	assert_overflow: assert property afifo_overflow $display($time, "%m Error! afifo overflow!");
+	assert_overflow_afifo: assert property (afifo_overflow) $display($time, "%m Error! afifo overflow!");
 //===================================================
 
 /*always @(posedge rd_clk) begin
@@ -338,8 +337,7 @@ end
 	property afifo_underflow;
 		@(posedge rd_clk) (rd_en && empty);
 	endproperty
-
-	assert_overflow: assert property afifo_underflow $display($time, "%m error! afifo underflow!");
+	assert_underflow_afifo: assert property (afifo_underflow) $display($time, "%m error! afifo underflow!");
 //===================================================
 // synopsys translate_on
 

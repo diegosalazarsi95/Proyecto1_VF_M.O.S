@@ -28,4 +28,4 @@ class estimulo2;
     end
   endtask : run
 
-endclass : estimulo1
+endclass : estimulo2
