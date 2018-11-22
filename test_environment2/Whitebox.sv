@@ -1,4 +1,4 @@
-parameter 		TOP_PATH = top.u_dut;
+parameter 		TOP_PATH = tbench_top.u_dut;
 parameter       APP_AW   = 26 ;  // Application Address Width
 parameter       APP_DW   = 32 ;  // Application Data Width 
 parameter       APP_BW   = 4  ;   // Application Byte Width
@@ -53,6 +53,7 @@ interface Whitebox();
 	assign WB_pad_sdr_din     = `TOP_PATH.pad_sdr_din        ;
 	assign WB_sdr_dout        = `TOP_PATH.sdr_dout           ;
 	assign WB_sdr_den_n       = `TOP_PATH.sdr_den_n          ;
+	assign WB_sdram_pad_clk   = `TOP_PATH.sdram_pad_clk      ;
 
 	//--------------------------------------------
 	// Assertions Interface signals 
