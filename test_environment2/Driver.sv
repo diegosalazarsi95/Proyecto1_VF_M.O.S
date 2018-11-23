@@ -23,7 +23,7 @@ task reset();
   vif.wb_we_i       = 0;
   vif.wb_stb_i      = 0;
   vif.wb_cyc_i      = 0;
-  vif.wb_rst_i      = 1'h1;
+  vif.wb_rst_i      = 1'h0;
   #100
   // Applying reset
   vif.wb_rst_i      = 1'h0;

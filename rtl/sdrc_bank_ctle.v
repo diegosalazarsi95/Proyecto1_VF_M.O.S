@@ -321,9 +321,9 @@ parameter  SDR_BW   = 2;   // SDR Byte Width
 */
 
 property read_empty_fifo;
-	@(posedge rd_clk) (~rank_fifo_wr & rank_fifo_rd && rank_cnt == 3'h0);
+	@(posedge rd_clk)  ~(~rank_fifo_wr & rank_fifo_rd && rank_cnt == 3'h0);
 endproperty
-assert_overflow: assert property read_empty_fifo $display ("%t: %m: ERROR!!! Read from empty Fifo", $time);
+assert_overflow_empty: assert property (read_empty_fifo) else $display("%t: %m: ERROR!!! Read from empty Fifo", $time);
 
 
 /*      if (rank_fifo_wr && ~rank_fifo_rd && rank_cnt == 3'h4) begin

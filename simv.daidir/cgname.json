@@ -1,4 +1,10 @@
 {
+    "mt48lc2m32b2": [
+        "mt48lc2m32b2",
+        "a3mSN",
+        "module",
+        7
+    ],
     "_vcs_unit__1992648205": [
         "_vcs_unit__1992648205",
         "qMEbv",
@@ -11,11 +17,11 @@
         "module",
         2
     ],
-    "mt48lc8m8a2": [
-        "mt48lc8m8a2",
-        "Pj51K",
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
         "module",
-        8
+        12
     ],
     "test": [
         "test",
@@ -23,29 +29,17 @@
         "module",
         3
     ],
-    "intf": [
-        "intf",
-        "k6LTY",
-        "module",
-        4
-    ],
-    "...MASTER...": [
-        "SIM",
-        "amcQw",
-        "module",
-        11
-    ],
     "clk": [
         "clk",
         "DLCGT",
         "module",
         5
     ],
-    "mt48lc2m32b2": [
-        "mt48lc2m32b2",
-        "a3mSN",
+    "intf": [
+        "intf",
+        "k6LTY",
         "module",
-        7
+        4
     ],
     "tbench_top": [
         "tbench_top",
@@ -53,16 +47,28 @@
         "module",
         6
     ],
+    "mt48lc8m8a2": [
+        "mt48lc8m8a2",
+        "Pj51K",
+        "module",
+        8
+    ],
     "sdrc_top": [
         "sdrc_top",
         "NTNU2",
         "module",
         9
     ],
+    "sdrc_core": [
+        "sdrc_core",
+        "yYhTI",
+        "module",
+        10
+    ],
     "sdrc_bank_fsm": [
         "sdrc_bank_fsm",
         "ChjVu",
         "module",
-        10
+        11
     ]
 }

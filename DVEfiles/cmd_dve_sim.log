@@ -14,9 +14,9 @@ synopsys::dump -autoflush on -fid VPD0
 set ::dve_fid VPD0
 synUtils::setDVEInitPhase 0
 ucliCore::getToolPID
-synUtils::sendTool -active _icl_setToolSocket /tmp/smlnpZvU26g
-synUtils::sendTool -active {_icl_start_rpc -version "M-2017.03-SP2-5_Full64" -sync_file /tmp/vcs_dve_rpc.diegosalazar.798}
-synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.diegosalazar.798}
+synUtils::sendTool -active _icl_setToolSocket /tmp/smlnpStteK4
+synUtils::sendTool -active {_icl_start_rpc -version "M-2017.03-SP2-5_Full64" -sync_file /tmp/vcs_dve_rpc.diegosalazar.19994}
+synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.diegosalazar.19994}
 config endofsim noexit
 config onfail enable all
 config syscaddplainmembers
@@ -30,12 +30,9 @@ ucliGUI::vpdAddHierarchy -scope tbench_top.u_dut.u_wb2sdrc.u_cmdfifo -depth 1 -f
 ucliGUI::vpdAddHierarchy -scope tbench_top.u_dut.u_wb2sdrc.u_rddatafifo -depth 1 -file /mnt/vol_NFS_Zener/WD_ESPEC/diegosalazar/Proyecto1_VF_M.O.S/inter.vpd
 ucliGUI::vpdAddHierarchy -scope tbench_top.u_dut.u_wb2sdrc.u_wrdatafifo -depth 1 -file /mnt/vol_NFS_Zener/WD_ESPEC/diegosalazar/Proyecto1_VF_M.O.S/inter.vpd
 synopsys::dump -flush VPD0
-synopsys::dump -add {tbench_top.i_inter } -aggregates  -fid VPD0
 synopsys::run
 set ucliGUI::state
 set ucliGUI::state
-set synopsys::env(time) 69525000
-set synopsys::env(time) 140735000
 set ucliGUI::state
 set ucliGUI::state
 synopsys::xml get_stop_data

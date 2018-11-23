@@ -1,6 +1,6 @@
 # Begin_DVE_Session_Save_Info
 # DVE full session
-# Saved on Thu Nov 22 15:59:36 2018
+# Saved on Thu Nov 22 18:47:41 2018
 # Designs open: 1
 #   Sim: /mnt/vol_NFS_Zener/WD_ESPEC/diegosalazar/Proyecto1_VF_M.O.S/simv
 # Toplevel windows open: 1
@@ -112,28 +112,28 @@ gui_show_toolbar -toolbar {Testbench}
 # End ToolBar settings
 
 # Docked window settings
-set HSPane.1 [gui_create_window -type HSPane -parent ${TopLevel.1} -dock_state left -dock_on_new_line true -dock_extent 336]
+set HSPane.1 [gui_create_window -type HSPane -parent ${TopLevel.1} -dock_state left -dock_on_new_line true -dock_extent 328]
 catch { set Hier.1 [gui_share_window -id ${HSPane.1} -type Hier] }
 catch { set Stack.1 [gui_share_window -id ${HSPane.1} -type Stack -silent] }
 catch { set Class.1 [gui_share_window -id ${HSPane.1} -type Class -silent] }
 catch { set Object.1 [gui_share_window -id ${HSPane.1} -type Object -silent] }
-gui_set_window_pref_key -window ${HSPane.1} -key dock_width -value_type integer -value 336
+gui_set_window_pref_key -window ${HSPane.1} -key dock_width -value_type integer -value 328
 gui_set_window_pref_key -window ${HSPane.1} -key dock_height -value_type integer -value -1
 gui_set_window_pref_key -window ${HSPane.1} -key dock_offset -value_type integer -value 0
-gui_update_layout -id ${HSPane.1} {{left 0} {top 0} {width 335} {height 325} {dock_state left} {dock_on_new_line true} {child_hier_colhier 329} {child_hier_coltype 42} {child_hier_colpd 0} {child_hier_col1 0} {child_hier_col2 1} {child_hier_col3 -1}}
-set DLPane.1 [gui_create_window -type DLPane -parent ${TopLevel.1} -dock_state left -dock_on_new_line true -dock_extent 472]
+gui_update_layout -id ${HSPane.1} {{left 0} {top 0} {width 327} {height 408} {dock_state left} {dock_on_new_line true} {child_hier_colhier 329} {child_hier_coltype 42} {child_hier_colpd 0} {child_hier_col1 0} {child_hier_col2 1} {child_hier_col3 -1}}
+set DLPane.1 [gui_create_window -type DLPane -parent ${TopLevel.1} -dock_state left -dock_on_new_line true -dock_extent 464]
 catch { set Data.1 [gui_share_window -id ${DLPane.1} -type Data] }
 catch { set Local.1 [gui_share_window -id ${DLPane.1} -type Local -silent] }
 catch { set Member.1 [gui_share_window -id ${DLPane.1} -type Member -silent] }
-gui_set_window_pref_key -window ${DLPane.1} -key dock_width -value_type integer -value 472
-gui_set_window_pref_key -window ${DLPane.1} -key dock_height -value_type integer -value 324
+gui_set_window_pref_key -window ${DLPane.1} -key dock_width -value_type integer -value 464
+gui_set_window_pref_key -window ${DLPane.1} -key dock_height -value_type integer -value 407
 gui_set_window_pref_key -window ${DLPane.1} -key dock_offset -value_type integer -value 0
-gui_update_layout -id ${DLPane.1} {{left 0} {top 0} {width 471} {height 325} {dock_state left} {dock_on_new_line true} {child_data_colvariable 252} {child_data_colvalue 89} {child_data_coltype 137} {child_data_col1 0} {child_data_col2 1} {child_data_col3 2}}
-set Assertion.1 [gui_create_window -type Assertion -parent ${TopLevel.1} -dock_state bottom -dock_on_new_line true -dock_extent 443]
+gui_update_layout -id ${DLPane.1} {{left 0} {top 0} {width 463} {height 408} {dock_state left} {dock_on_new_line true} {child_data_colvariable 252} {child_data_colvalue 89} {child_data_coltype 137} {child_data_col1 0} {child_data_col2 1} {child_data_col3 2}}
+set Assertion.1 [gui_create_window -type Assertion -parent ${TopLevel.1} -dock_state bottom -dock_on_new_line true -dock_extent 360]
 gui_set_window_pref_key -window ${Assertion.1} -key dock_width -value_type integer -value -1
-gui_set_window_pref_key -window ${Assertion.1} -key dock_height -value_type integer -value 443
+gui_set_window_pref_key -window ${Assertion.1} -key dock_height -value_type integer -value 360
 gui_set_window_pref_key -window ${Assertion.1} -key dock_offset -value_type integer -value 0
-gui_update_layout -id ${Assertion.1} {{left 0} {top 0} {width 1919} {height 442} {dock_state bottom} {dock_on_new_line true}}
+gui_update_layout -id ${Assertion.1} {{left 0} {top 0} {width 1919} {height 359} {dock_state bottom} {dock_on_new_line true}}
 set Console.1 [gui_create_window -type Console -parent ${TopLevel.1} -dock_state bottom -dock_on_new_line true -dock_extent 100]
 gui_set_window_pref_key -window ${Console.1} -key dock_width -value_type integer -value 1900
 gui_set_window_pref_key -window ${Console.1} -key dock_height -value_type integer -value 100
@@ -269,7 +269,7 @@ gui_view_scroll -id ${Hier.1} -horizontal -set 0
 gui_src_value_annotate -id ${Source.1} -switch false
 gui_set_env TOGGLE::VALUEANNOTATE 0
 gui_open_source -id ${Source.1}  -replace -active tbench_top.tb /mnt/vol_NFS_Zener/WD_ESPEC/diegosalazar/Proyecto1_VF_M.O.S/./test_environment2/Test.sv
-gui_view_scroll -id ${Source.1} -vertical -set 16
+gui_view_scroll -id ${Source.1} -vertical -set 0
 gui_src_set_reusable -id ${Source.1}
 # Warning: Class view not found.
 
@@ -280,7 +280,6 @@ gui_switch_assert -id ${Assertion.1} -type assertion
 if {[gui_exist_window -window ${TopLevel.1}]} {
 	gui_set_active_window -window ${TopLevel.1}
 	gui_set_active_window -window ${Source.1}
-	gui_set_active_window -window ${Assertion.1}
 }
 #</Session>
 

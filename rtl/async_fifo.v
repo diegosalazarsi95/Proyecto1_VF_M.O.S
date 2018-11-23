@@ -309,7 +309,7 @@ begin
 end
 endfunction
 
-// synopsys translate_off
+//synopsys translate_off
 
 
 /*always @(posedge wr_clk) begin
@@ -320,9 +320,9 @@ endfunction
 end*/
 //==============assertion============================
 	property afifo_overflow;
-		@(posedge wr_clk) (wr_en && full);
+		@(posedge wr_clk) disable iff (~wr_reset_n) ~(wr_en && full);
 	endproperty
-	assert_overflow_afifo: assert property (afifo_overflow) $display($time, "%m Error! afifo overflow!");
+	assert_overflow_afifo: assert property (afifo_overflow) else $display($time, "%m Error! afifo overflow!");
 //===================================================
 
 /*always @(posedge rd_clk) begin
@@ -335,10 +335,10 @@ end
 
 //==============assertion============================
 	property afifo_underflow;
-		@(posedge rd_clk) (rd_en && empty);
+		@(posedge rd_clk) disable iff (~wr_reset_n) ~(rd_en && empty);
 	endproperty
-	assert_underflow_afifo: assert property (afifo_underflow) $display($time, "%m error! afifo underflow!");
+	assert_underflow_afifo: assert property (afifo_underflow) else $display($time, "%m error! afifo underflow!");
 //===================================================
-// synopsys translate_on
+//synopsys translate_on
 
 endmodule
