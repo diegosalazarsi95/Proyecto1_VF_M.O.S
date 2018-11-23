@@ -1,4 +1,4 @@
-parameter 		TOP_PATH = tbench_top.u_dut;
+`define  		TOP_PATH tbench_top.u_dut //
 parameter       APP_AW   = 26 ;  // Application Address Width
 parameter       APP_DW   = 32 ;  // Application Data Width 
 parameter       APP_BW   = 4  ;   // Application Byte Width

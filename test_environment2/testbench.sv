@@ -1,11 +1,14 @@
 `include "Test.sv"
 `include "Interface.sv"
 `include "clk.sv"
+`include "assertions.sv"
 
 module tbench_top;
 wire sdram_clk;
 
 intf i_inter();
+
+Whitebox wbox();
 
 test tb(i_inter);
 
@@ -137,5 +140,7 @@ wire #(2.0) sdram_clk_d   = i_inter.sdram_clk;
      );
 `endif
 
+
+assertion my_assert();
 
 endmodule // tbench_top

@@ -1,7 +1,7 @@
 # DVE Simulation Rebuild/Restart Options
-# Saved on Thu Nov 22 17:20:53 2018
+# Saved on Fri Nov 23 13:45:39 2018
 set SIMSETUP::REBUILDOPTION 1
-set SIMSETUP::REBUILDCMD {}
+set SIMSETUP::REBUILDCMD {vcs -f filelist +define+S50 +define+VERBOSE +define+SDR_16BIT +incdir+./rtl +incdir+./rtl/model +incdir+./test_environment2 -sverilog -full64 -debug_access+all -timescale=1ns/10ps -PP -assert}
 set SIMSETUP::REBUILDDIR {}
 set SIMSETUP::RESTOREBP 1
 set SIMSETUP::RESTOREDUMP 1

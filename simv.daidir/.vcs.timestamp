@@ -1,4 +1,4 @@
-50       
+58       
 0 Test.sv
 0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/Test.sv
 0 ./rtl/Test.sv
@@ -47,6 +47,14 @@
 0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/clk.sv
 0 ./rtl/clk.sv
 0 ./rtl/model/clk.sv
+0 assertions.sv
+0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/assertions.sv
+0 ./rtl/assertions.sv
+0 ./rtl/model/assertions.sv
+0 Whitebox.sv
+0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/Whitebox.sv
+0 ./rtl/Whitebox.sv
+0 ./rtl/model/Whitebox.sv
 0 sdrc_define.v
 0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/sdrc_define.v
 35
@@ -85,7 +93,7 @@
 -sverilog
 -timescale=1ns/10ps
 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/linux64/bin/vcs1
-62
+64
 sysc_uni_pwd=/mnt/vol_NFS_Zener/WD_ESPEC/diegosalazar/Proyecto1_VF_M.O.S
 XMODIFIERS=@im=none
 XDG_VTNR=1
@@ -141,6 +149,8 @@ HISTCONTROL=ignoredups
 HARDWARE_PLATFORM=x86_64
 GNOME_SHELL_SESSION_MODE=classic
 GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GJS_DEBUG_TOPICS=JS ERROR;JS LOG
+GJS_DEBUG_OUTPUT=stderr
 GDM_LANG=es_CR.UTF-8
 GDMSESSION=gnome-classic
 FTK_KIT_DIR=/mnt/vol_NFS_Zener/tools/synopsys/pdks/xh018-ams/XFAB_snps_CustomDesigner_kit_v2_1_0
@@ -149,8 +159,10 @@ DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-Jhe4cMgYhZ,guid=833ef69a793ae3c
 COLORTERM=truecolor
 CNI_ROOT=/mnt/vol_NFS_Zener/tools/synopsys/apps/PyCell_Studio/N-2017.12_Py262
 0
-28
+30
 1534995302 ./rtl/sdrc_define.v
+1542991933 ./test_environment2/Whitebox.sv
+1543009197 ./test_environment2/assertions.sv
 1542747837 ./test_environment2/clk.sv
 1542747837 ./test_environment2/Interface.sv
 1542920781 ./test_environment2/estimulo4.sv
@@ -158,7 +170,7 @@ CNI_ROOT=/mnt/vol_NFS_Zener/tools/synopsys/apps/PyCell_Studio/N-2017.12_Py262
 1542920789 ./test_environment2/estimulo2.sv
 1542756548 ./test_environment2/estimulo1.sv
 1542747837 ./test_environment2/Monitor.sv
-1542933986 ./test_environment2/Driver.sv
+1542995324 ./test_environment2/Driver.sv
 1542747837 ./test_environment2/scoreboard.sv
 1542753577 ./test_environment2/Environment.sv
 1542920758 ./test_environment2/Environment2.sv
@@ -175,7 +187,7 @@ CNI_ROOT=/mnt/vol_NFS_Zener/tools/synopsys/apps/PyCell_Studio/N-2017.12_Py262
 1534995240 ./rtl/model/mt48lc8m8a2.v
 1534995242 ./rtl/model/mt48lc2m32b2.v
 1541183507 ./rtl/model/IS42VM16400K.V
-1542756853 ./test_environment2/testbench.sv
+1542992157 ./test_environment2/testbench.sv
 1542753351 filelist
 1519358599 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/linux64/lib/vcsdp_lite.tab
 5
@@ -184,4 +196,4 @@ CNI_ROOT=/mnt/vol_NFS_Zener/tools/synopsys/apps/PyCell_Studio/N-2017.12_Py262
 1519359429 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/linux64/lib/liberrorinf.so
 1519359412 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/linux64/lib/libsnpsmalloc.so
 1519359683 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/linux64/lib/libvfs.so
-1542934022 simv.daidir
+1543009227 simv.daidir
