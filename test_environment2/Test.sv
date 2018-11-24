@@ -2,13 +2,13 @@
 
 program test(intf i_intf);
   //declaring environment instance
-  environment2 env;
+  environment2 env2;
 
   initial begin
     //creating environment
-    env = new(i_intf);
-    env.driv.reset();
-    env.run_estimulo1();
+    env2 = new(i_intf);
+    env2.driv2.reset();
+    env2.run_estimulo5();
    #100;
    $finish;
     

@@ -13,20 +13,20 @@ gui_set_state_value -category Globals -key default_marker_mode_absolute -value f
 gui_set_state_value -category Globals -key default_marker_mode_relative -value false
 gui_set_state_value -category Globals -key recent_databases -value {{gui_open_db -file ac97.vpd}}
 gui_set_state_value -category Layout -key child_assertion_size_x -value 1919
-gui_set_state_value -category Layout -key child_assertion_size_y -value 320
+gui_set_state_value -category Layout -key child_assertion_size_y -value 318
 gui_set_state_value -category Layout -key child_console_size_x -value 1919
 gui_set_state_value -category Layout -key child_console_size_y -value 105
 gui_set_state_value -category Layout -key child_data_coltype -value 137
 gui_set_state_value -category Layout -key child_data_colvalue -value 89
 gui_set_state_value -category Layout -key child_data_colvariable -value 252
-gui_set_state_value -category Layout -key child_data_size_x -value 463
-gui_set_state_value -category Layout -key child_data_size_y -value 447
+gui_set_state_value -category Layout -key child_data_size_x -value 460
+gui_set_state_value -category Layout -key child_data_size_y -value 768
 gui_set_state_value -category Layout -key child_hier_col3 -value {-1}
 gui_set_state_value -category Layout -key child_hier_colhier -value 329
 gui_set_state_value -category Layout -key child_hier_colpd -value 0
 gui_set_state_value -category Layout -key child_hier_coltype -value 42
-gui_set_state_value -category Layout -key child_hier_size_x -value 284
-gui_set_state_value -category Layout -key child_hier_size_y -value 447
+gui_set_state_value -category Layout -key child_hier_size_x -value 281
+gui_set_state_value -category Layout -key child_hier_size_y -value 768
 gui_set_state_value -category Layout -key child_hier_sort_order -value 1
 gui_set_state_value -category Layout -key child_schematic_docknewline -value false
 gui_set_state_value -category Layout -key child_schematic_pos_x -value {-2}
@@ -36,8 +36,8 @@ gui_set_state_value -category Layout -key child_schematic_size_y -value 763
 gui_set_state_value -category Layout -key child_source_docknewline -value false
 gui_set_state_value -category Layout -key child_source_pos_x -value {-2}
 gui_set_state_value -category Layout -key child_source_pos_y -value {-15}
-gui_set_state_value -category Layout -key child_source_size_x -value 1175
-gui_set_state_value -category Layout -key child_source_size_y -value 442
+gui_set_state_value -category Layout -key child_source_size_x -value 1181
+gui_set_state_value -category Layout -key child_source_size_y -value 763
 gui_set_state_value -category Layout -key child_wave_colname -value 183
 gui_set_state_value -category Layout -key child_wave_colvalue -value 183
 gui_set_state_value -category Layout -key child_wave_left -value 370
@@ -72,41 +72,5 @@ gui_state_default_create -off
 gui_set_pref_value -category {Globals} -key {smart_resize} -value {false}
 gui_set_pref_value -category {Globals} -key {smart_resize} -value {true}
 gui_sim_run Ucli -exe ./simv -args {-ucligui  } -dir .
-gui_list_expand -id  Hier.1   tbench_top
-gui_list_select -id Data.1 -selected  { tbench_top.wbox.ack   }
-gui_list_select -id Data.1 -selected  { tbench_top.wbox.ack  tbench_top.wbox.strb   }
-gui_list_select -id Data.1 -selected  { tbench_top.wbox.ack  tbench_top.wbox.strb  tbench_top.wbox.cycle   }
-gui_list_select -id Data.1 -selected  { tbench_top.wbox.ack  tbench_top.wbox.strb  tbench_top.wbox.cycle  tbench_top.wbox.clk   }
-gui_list_select -id Data.1 -selected  { tbench_top.wbox.ack  tbench_top.wbox.strb  tbench_top.wbox.cycle  tbench_top.wbox.clk  tbench_top.wbox.ras   }
-gui_list_select -id Data.1 -selected  { tbench_top.wbox.ack  tbench_top.wbox.strb  tbench_top.wbox.cycle  tbench_top.wbox.clk  tbench_top.wbox.ras  tbench_top.wbox.cas   }
-gui_open_window Wave
-gui_list_add -id Wave.1 -from Data.1 { tbench_top.wbox.clk tbench_top.wbox.strb tbench_top.wbox.cycle tbench_top.wbox.ack tbench_top.wbox.ras tbench_top.wbox.cas } -insertionbar
 gui_open_window Assertion TopLevel.1
 gui_sim_continue  
-gui_list_expand -id  Assertion.1   tbench_top.my_assert.assert_ack_335
-gui_list_select -id Assertion.1 -selected  { @Attempt@35@tbench_top.my_assert.assert_ack_335@103275000@103275000@Failure   }
-gui_set_time 103275000 -id TopLevel.2
-gui_zoom -window Wave.1 -factor 0.5
-gui_zoom -window Wave.1 -factor 0.5
-gui_zoom -window Wave.1 -factor 0.5
-gui_zoom -window Wave.1 -factor 0.5
-gui_zoom -window Wave.1 -factor 0.5
-gui_zoom -window Wave.1 -factor 0.5
-gui_zoom -window Wave.1 -factor 0.5
-gui_zoom -window Wave.1 -factor 0.5
-gui_zoom -window Wave.1 -factor 0.5
-gui_zoom -window Wave.1 -factor 0.5
-gui_zoom -window Wave.1 -factor 0.5
-gui_list_select -id Wave.1 -selected  { tbench_top.wbox.ack   }
-gui_list_move  -id  Wave.1    -sid  Wave.1   -after tbench_top.wbox.clk {{tbench_top.wbox.ack}} 
-gui_list_select -id Assertion.1 -selected  { tbench_top.my_assert.assert_ack_335   }
-gui_list_add -id Wave.1 -from Assertion.1 { tbench_top.my_assert.assert_ack_335 } -insertionbar
-gui_list_select -id Wave.1 -selected  { tbench_top.my_assert.assert_ack_335   }
-gui_list_move  -id  Wave.1    -sid  Wave.1   -after tbench_top.wbox.cycle {{tbench_top.my_assert.assert_ack_335}} 
-gui_list_select -id Wave.1 -selected  { tbench_top.wbox.cycle   }
-gui_list_select -id Wave.1 -selected  { tbench_top.wbox.strb   }
-gui_marker_move -id  Wave.1 C1 103280605
-gui_list_select -id Wave.1 -selected  { tbench_top.wbox.ack   }
-gui_list_select -id Wave.1 -selected  { tbench_top.wbox.cycle   }
-gui_list_select -id Wave.1 -selected  { tbench_top.wbox.strb   }
-gui_close_window -window TopLevel.1

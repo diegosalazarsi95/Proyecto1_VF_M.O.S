@@ -3,6 +3,8 @@
   `include "scoreboard.sv"
 `endif
 
+`ifndef DRIVER_SV
+`define DRIVER_SV
 
 class driver;
   //Variables
@@ -75,3 +77,4 @@ task burst_write();
 endtask
 
 endclass
+`endif

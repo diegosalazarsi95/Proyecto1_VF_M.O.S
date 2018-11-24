@@ -3,7 +3,9 @@
 module assertion();
    
   Whitebox wbox();
-   
+  
+  `ifdef ASSERT 
+
   sequence pnop;
   	$fell (wbox.sdram_init_done) ##10000 (~(wbox.ras && !wbox.cs && wbox.we && wbox.cas));
   endsequence
@@ -107,5 +109,7 @@ module assertion();
 	endproperty
 
 	assert_ack_335: assert property (ack_cyc_stb) else $error("%m: Violation of Wishbone Rule_3.35: slave responding outside wb_cyc_i.");
+
+`endif
 
 endmodule

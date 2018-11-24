@@ -1,3 +1,9 @@
+`ifndef SCOREBOARD_SV
+  `include "scoreboard.sv"
+`endif
+
+`ifndef MONITOR_SV
+`define MONITOR_SV
 
 class monitor;
   //hay dos relojs hay que ver eso
@@ -64,5 +70,5 @@ task error();
     $display("###############################");
 endtask 
 
-
 endclass
+`endif

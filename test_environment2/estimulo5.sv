@@ -4,7 +4,7 @@
   `include "Driver2.sv"
 `endif
 
-class estimulo4;
+class estimulo5;
   virtual intf vif;
   scoreboard2    score2;
   driver2     driv2;
@@ -19,12 +19,13 @@ class estimulo4;
 
   task run();
     int k;
-    int number_oper = 2**(7)-1;
+    int number_oper1 = $urandom_range(10,0);
+    int number_oper2 = $urandom_range(10,0);
     reg [31:0] Addr;
     reg [31:0] data;
-    Addr = $urandom_range(2**(15),0);
-    for(k=0; k < number_oper; k++) begin
-      Addr = Addr + k ;
+
+    for(k=0; k < number_oper1; k++) begin
+      Addr = $urandom_range(2**(15),0);
       data = $random & 32'hFFFFFFFF;
       driv2.burst_write2(Addr,data);  
       #100;
@@ -32,6 +33,19 @@ class estimulo4;
       #100;
     end
 
+    driv2.reset();
+
+    for(k=0; k < number_oper2; k++) begin
+      Addr = $random & 32'h003FFFFF;
+      data = $random & 32'hFFFFFFFF;
+      driv2.burst_write2(Addr,data);  
+      #100;
+    end
+    for(k=0; k < number_oper2; k++) begin
+      mon2.burst_read_random();  
+      #100;
+    end
+
   endtask : run
 
-endclass : estimulo4
+endclass : estimulo5

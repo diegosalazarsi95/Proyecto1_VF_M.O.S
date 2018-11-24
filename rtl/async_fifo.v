@@ -311,7 +311,7 @@ endfunction
 
 //synopsys translate_off
 
-
+`ifdef ASSERT
 /*always @(posedge wr_clk) begin
    if (wr_en && full) begin
       $display($time, "%m Error! afifo overflow!");
@@ -340,5 +340,6 @@ end
 	assert_underflow_afifo: assert property (afifo_underflow) else $display($time, "%m error! afifo underflow!");
 //===================================================
 //synopsys translate_on
+`endif
 
 endmodule

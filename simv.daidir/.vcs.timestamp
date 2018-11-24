@@ -1,4 +1,4 @@
-58       
+74       
 0 Test.sv
 0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/Test.sv
 0 ./rtl/Test.sv
@@ -7,22 +7,34 @@
 0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/Environment2.sv
 0 ./rtl/Environment2.sv
 0 ./rtl/model/Environment2.sv
-0 Environment.sv
-0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/Environment.sv
-0 ./rtl/Environment.sv
-0 ./rtl/model/Environment.sv
-0 scoreboard.sv
-0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/scoreboard.sv
-0 ./rtl/scoreboard.sv
-0 ./rtl/model/scoreboard.sv
-0 Driver.sv
-0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/Driver.sv
-0 ./rtl/Driver.sv
-0 ./rtl/model/Driver.sv
+0 Monitor2.sv
+0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/Monitor2.sv
+0 ./rtl/Monitor2.sv
+0 ./rtl/model/Monitor2.sv
 0 Monitor.sv
 0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/Monitor.sv
 0 ./rtl/Monitor.sv
 0 ./rtl/model/Monitor.sv
+0 scoreboard.sv
+0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/scoreboard.sv
+0 ./rtl/scoreboard.sv
+0 ./rtl/model/scoreboard.sv
+0 scoreboard2.sv
+0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/scoreboard2.sv
+0 ./rtl/scoreboard2.sv
+0 ./rtl/model/scoreboard2.sv
+0 Driver2.sv
+0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/Driver2.sv
+0 ./rtl/Driver2.sv
+0 ./rtl/model/Driver2.sv
+0 Driver.sv
+0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/Driver.sv
+0 ./rtl/Driver.sv
+0 ./rtl/model/Driver.sv
+0 Environment.sv
+0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/Environment.sv
+0 ./rtl/Environment.sv
+0 ./rtl/model/Environment.sv
 0 estimulo1.sv
 0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/estimulo1.sv
 0 ./rtl/estimulo1.sv
@@ -39,6 +51,10 @@
 0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/estimulo4.sv
 0 ./rtl/estimulo4.sv
 0 ./rtl/model/estimulo4.sv
+0 estimulo5.sv
+0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/estimulo5.sv
+0 ./rtl/estimulo5.sv
+0 ./rtl/model/estimulo5.sv
 0 Interface.sv
 0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/Interface.sv
 0 ./rtl/Interface.sv
@@ -57,7 +73,8 @@
 0 ./rtl/model/Whitebox.sv
 0 sdrc_define.v
 0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/sdrc_define.v
-35
+36
++define+ASSERT
 +define+S50
 +define+SDR_16BIT
 +define+VERBOSE
@@ -159,35 +176,39 @@ DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-Jhe4cMgYhZ,guid=833ef69a793ae3c
 COLORTERM=truecolor
 CNI_ROOT=/mnt/vol_NFS_Zener/tools/synopsys/apps/PyCell_Studio/N-2017.12_Py262
 0
-30
+34
 1534995302 ./rtl/sdrc_define.v
 1542991933 ./test_environment2/Whitebox.sv
-1543018158 ./test_environment2/assertions.sv
+1543020201 ./test_environment2/assertions.sv
 1542747837 ./test_environment2/clk.sv
 1542747837 ./test_environment2/Interface.sv
-1542920781 ./test_environment2/estimulo4.sv
-1542920785 ./test_environment2/estimulo3.sv
-1542920789 ./test_environment2/estimulo2.sv
-1542756548 ./test_environment2/estimulo1.sv
-1542747837 ./test_environment2/Monitor.sv
-1542995324 ./test_environment2/Driver.sv
-1542747837 ./test_environment2/scoreboard.sv
-1542753577 ./test_environment2/Environment.sv
-1542920758 ./test_environment2/Environment2.sv
-1542754984 ./test_environment2/Test.sv
+1543043516 ./test_environment2/estimulo5.sv
+1543041065 ./test_environment2/estimulo4.sv
+1543042441 ./test_environment2/estimulo3.sv
+1543041758 ./test_environment2/estimulo2.sv
+1543040900 ./test_environment2/estimulo1.sv
+1543031990 ./test_environment2/Environment.sv
+1543033738 ./test_environment2/Driver.sv
+1543041403 ./test_environment2/Driver2.sv
+1543036936 ./test_environment2/scoreboard2.sv
+1543033633 ./test_environment2/scoreboard.sv
+1543033694 ./test_environment2/Monitor.sv
+1543043217 ./test_environment2/Monitor2.sv
+1543041010 ./test_environment2/Environment2.sv
+1543043453 ./test_environment2/Test.sv
 1534995304 ./rtl/sdrc_xfr_ctl.v
 1534995304 ./rtl/sdrc_req_gen.v
 1534995304 ./rtl/sdrc_bs_convert.v
 1534995302 ./rtl/sdrc_bank_fsm.v
 1534995304 ./rtl/sdrc_bank_ctl.v
 1534995302 ./rtl/sdrc_core.v
-1542934001 ./rtl/async_fifo.v
-1542933010 ./rtl/wb2sdrc.v
+1543019814 ./rtl/async_fifo.v
+1543020115 ./rtl/wb2sdrc.v
 1542924522 ./rtl/sdrc_top.v
 1534995240 ./rtl/model/mt48lc8m8a2.v
 1534995242 ./rtl/model/mt48lc2m32b2.v
 1541183507 ./rtl/model/IS42VM16400K.V
-1542992157 ./test_environment2/testbench.sv
+1543030726 ./test_environment2/testbench.sv
 1542753351 filelist
 1519358599 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/linux64/lib/vcsdp_lite.tab
 5
@@ -196,4 +217,4 @@ CNI_ROOT=/mnt/vol_NFS_Zener/tools/synopsys/apps/PyCell_Studio/N-2017.12_Py262
 1519359429 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/linux64/lib/liberrorinf.so
 1519359412 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/linux64/lib/libsnpsmalloc.so
 1519359683 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/linux64/lib/libvfs.so
-1543018165 simv.daidir
+1543043610 simv.daidir

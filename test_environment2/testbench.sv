@@ -8,7 +8,6 @@ wire sdram_clk;
 
 intf i_inter();
 
-Whitebox wbox();
 
 test tb(i_inter);
 
@@ -140,7 +139,9 @@ wire #(2.0) sdram_clk_d   = i_inter.sdram_clk;
      );
 `endif
 
+Whitebox wbox();
 
 assertion my_assert();
+
 
 endmodule // tbench_top

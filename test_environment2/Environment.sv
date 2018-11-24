@@ -1,6 +1,16 @@
-`include "scoreboard.sv"
+/*`include "scoreboard.sv"
 `include "Driver.sv"
-`include "Monitor.sv"
+`include "Monitor.sv"*/
+`ifndef MONITOR_SV
+  `include "Monitor.sv"
+`endif
+`ifndef DRIVER_SV
+  `include "Driver.sv"
+`endif
+
+`ifndef SCOREBOARD_SV
+  `include "scoreboard.sv"
+`endif
 
 class environment;
   scoreboard    score;
