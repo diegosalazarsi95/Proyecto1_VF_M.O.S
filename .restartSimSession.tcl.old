@@ -1,15 +1,15 @@
 # Begin_DVE_Session_Save_Info
 # DVE restart session
-# Saved on Fri Nov 23 15:34:53 2018
+# Saved on Fri Nov 23 18:09:40 2018
 # Designs open: 1
 #   Sim: /mnt/vol_NFS_Zener/WD_ESPEC/diegosalazar/Proyecto1_VF_M.O.S/simv
 # Toplevel windows open: 2
 # 	TopLevel.1
 # 	TopLevel.2
 #   Source.1: tbench_top.tb
-#   Wave.1: 6 signals
+#   Wave.1: 5 signals
 #   Group count = 1
-#   Group Group1 signal count = 6
+#   Group Group1 signal count = 5
 # End_DVE_Session_Save_Info
 
 # DVE version: M-2017.03-SP2-5_Full64
@@ -98,7 +98,7 @@ set _session_group_1 Group1
 gui_sg_create "$_session_group_1"
 set Group1 "$_session_group_1"
 
-gui_sg_addsignal -group "$_session_group_1" { tbench_top.wbox.clk tbench_top.wbox.ras tbench_top.wbox.cas tbench_top.wbox.cs tbench_top.wbox.we tbench_top.my_assert.a_autorefresh }
+gui_sg_addsignal -group "$_session_group_1" { tbench_top.wbox.clk tbench_top.wbox.strb tbench_top.wbox.cycle tbench_top.wbox.ack tbench_top.my_assert.assert_ack_335 }
 
 # Global: Highlighting
 
@@ -128,7 +128,7 @@ gui_list_set_filter -id ${Hier.1} -list { {Package 1} {All 0} {Process 1} {VirtP
 gui_list_set_filter -id ${Hier.1} -text {*}
 gui_change_design -id ${Hier.1} -design Sim
 catch {gui_list_expand -id ${Hier.1} tbench_top}
-catch {gui_list_select -id ${Hier.1} {tbench_top.my_assert}}
+catch {gui_list_select -id ${Hier.1} {tbench_top.wbox}}
 gui_view_scroll -id ${Hier.1} -vertical -set 0
 gui_view_scroll -id ${Hier.1} -horizontal -set 0
 
@@ -144,9 +144,9 @@ gui_list_set_filter -id ${Member.1} -text {*}
 # Data 'Data.1'
 gui_list_set_filter -id ${Data.1} -list { {Buffer 1} {Input 1} {Others 1} {Linkage 1} {Output 1} {LowPower 1} {Parameter 1} {All 1} {Aggregate 1} {LibBaseMember 1} {Event 1} {Assertion 1} {Constant 1} {Interface 1} {BaseMembers 1} {Signal 1} {$unit 1} {Inout 1} {Variable 1} }
 gui_list_set_filter -id ${Data.1} -text {*}
-gui_list_show_data -id ${Data.1} {tbench_top.my_assert}
+gui_list_show_data -id ${Data.1} {tbench_top.wbox}
 gui_show_window -window ${Data.1}
-catch { gui_list_select -id ${Data.1} {tbench_top.my_assert.a_autorefresh }}
+catch { gui_list_select -id ${Data.1} {tbench_top.wbox.clk tbench_top.wbox.strb tbench_top.wbox.cycle tbench_top.wbox.ack }}
 gui_view_scroll -id ${Data.1} -vertical -set 0
 gui_view_scroll -id ${Data.1} -horizontal -set 0
 gui_view_scroll -id ${Hier.1} -vertical -set 0
@@ -201,7 +201,7 @@ if {[gui_exist_window -window ${TopLevel.2}]} {
 if {[gui_exist_window -window ${TopLevel.1}]} {
 	gui_set_active_window -window ${TopLevel.1}
 	gui_set_active_window -window ${Source.1}
-	gui_set_active_window -window ${DLPane.1}
+	gui_set_active_window -window ${Assertion.1}
 }
 #</Session>
 

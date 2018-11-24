@@ -1,13 +1,13 @@
 # Begin_DVE_Session_Save_Info
 # DVE full session
-# Saved on Fri Nov 23 15:41:11 2018
+# Saved on Fri Nov 23 18:12:24 2018
 # Designs open: 1
 #   Sim: /mnt/vol_NFS_Zener/WD_ESPEC/diegosalazar/Proyecto1_VF_M.O.S/simv
 # Toplevel windows open: 1
 # 	TopLevel.2
-#   Wave.1: 6 signals
+#   Wave.1: 7 signals
 #   Group count = 1
-#   Group Group1 signal count = 6
+#   Group Group1 signal count = 7
 # End_DVE_Session_Save_Info
 
 # DVE version: M-2017.03-SP2-5_Full64
@@ -66,7 +66,7 @@ if {![gui_exist_window -window TopLevel.2]} {
 } else { 
     set TopLevel.2 TopLevel.2
 }
-gui_show_window -window ${TopLevel.2} -show_state maximized -rect {{1921 38} {3200 1024}}
+gui_show_window -window ${TopLevel.2} -show_state maximized -rect {{1920 38} {3199 1024}}
 
 # ToolBar settings
 gui_set_toolbar_attributes -toolbar {TimeOperations} -dock_state top
@@ -170,7 +170,7 @@ set _session_group_1 Group1
 gui_sg_create "$_session_group_1"
 set Group1 "$_session_group_1"
 
-gui_sg_addsignal -group "$_session_group_1" { tbench_top.wbox.clk tbench_top.wbox.ras tbench_top.wbox.cas tbench_top.wbox.cs tbench_top.wbox.we tbench_top.my_assert.a_autorefresh }
+gui_sg_addsignal -group "$_session_group_1" { tbench_top.wbox.clk tbench_top.wbox.ack tbench_top.wbox.strb tbench_top.wbox.cycle tbench_top.my_assert.assert_ack_335 tbench_top.wbox.ras tbench_top.wbox.cas }
 
 # Global: Highlighting
 
@@ -180,7 +180,7 @@ gui_change_stack_mode -mode list
 # Post database loading setting...
 
 # Restore C1 time
-gui_set_time -C1_only 100395000
+gui_set_time -C1_only 103280605
 
 
 
@@ -208,8 +208,9 @@ gui_list_set_height -id Wave -height 25
 set origGroupCreationState [gui_list_create_group_when_add -wave]
 gui_list_create_group_when_add -wave -disable
 gui_marker_set_ref -id ${Wave.1}  C1
-gui_wv_zoom_timerange -id ${Wave.1} 100002595 100943846
+gui_wv_zoom_timerange -id ${Wave.1} 102973058 103577218
 gui_list_add_group -id ${Wave.1} -after {New Group} {Group1}
+gui_list_select -id ${Wave.1} {tbench_top.wbox.strb }
 gui_seek_criteria -id ${Wave.1} {Any Edge}
 
 
@@ -225,9 +226,9 @@ if { $groupExD } {
 }
 gui_list_set_filter -id ${Wave.1} -list { {Buffer 1} {Input 1} {Others 1} {Linkage 1} {Output 1} {Parameter 1} {All 1} {Aggregate 1} {LibBaseMember 1} {Event 1} {Assertion 1} {Constant 1} {Interface 1} {BaseMembers 1} {Signal 1} {$unit 1} {Inout 1} {Variable 1} }
 gui_list_set_filter -id ${Wave.1} -text {*}
-gui_list_set_insertion_bar  -id ${Wave.1} -group Group1  -position in
+gui_list_set_insertion_bar  -id ${Wave.1} -group Group1  -item tbench_top.my_assert.assert_ack_335 -position below
 
-gui_marker_move -id ${Wave.1} {C1} 100395000
+gui_marker_move -id ${Wave.1} {C1} 103280605
 gui_view_scroll -id ${Wave.1} -vertical -set 0
 gui_show_grid -id ${Wave.1} -enable false
 # Restore toplevel window zorder

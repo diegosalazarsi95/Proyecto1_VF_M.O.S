@@ -1,63 +1,9 @@
 {
-    "_vcs_unit__2184009496": [
-        "_vcs_unit__2184009496",
-        "xyp5N",
-        "module",
-        1
-    ],
-    "sdrc_top": [
-        "sdrc_top",
-        "NTNU2",
-        "module",
-        11
-    ],
-    "mt48lc2m32b2": [
-        "mt48lc2m32b2",
-        "a3mSN",
-        "module",
-        9
-    ],
-    "tbench_top": [
-        "tbench_top",
-        "Mk7In",
-        "module",
-        7
-    ],
-    "std": [
-        "std",
-        "reYIK",
-        "module",
-        2
-    ],
-    "test": [
-        "test",
-        "x9Hvb",
-        "module",
-        3
-    ],
-    "Whitebox": [
-        "Whitebox",
-        "rBNSM",
-        "module",
-        6
-    ],
-    "clk": [
-        "clk",
-        "DLCGT",
-        "module",
-        5
-    ],
     "mt48lc8m8a2": [
         "mt48lc8m8a2",
         "Pj51K",
         "module",
         10
-    ],
-    "intf": [
-        "intf",
-        "k6LTY",
-        "module",
-        4
     ],
     "IS42VM16400K": [
         "IS42VM16400K",
@@ -65,17 +11,71 @@
         "module",
         8
     ],
-    "sdrc_core": [
-        "sdrc_core",
-        "yYhTI",
+    "_vcs_unit__2184009496": [
+        "_vcs_unit__2184009496",
+        "xyp5N",
         "module",
-        12
+        1
+    ],
+    "std": [
+        "std",
+        "reYIK",
+        "module",
+        2
+    ],
+    "Whitebox": [
+        "Whitebox",
+        "rBNSM",
+        "module",
+        6
+    ],
+    "test": [
+        "test",
+        "x9Hvb",
+        "module",
+        3
+    ],
+    "tbench_top": [
+        "tbench_top",
+        "Mk7In",
+        "module",
+        7
     ],
     "sdrc_bank_fsm": [
         "sdrc_bank_fsm",
         "ChjVu",
         "module",
         13
+    ],
+    "sdrc_top": [
+        "sdrc_top",
+        "NTNU2",
+        "module",
+        11
+    ],
+    "intf": [
+        "intf",
+        "k6LTY",
+        "module",
+        4
+    ],
+    "mt48lc2m32b2": [
+        "mt48lc2m32b2",
+        "a3mSN",
+        "module",
+        9
+    ],
+    "clk": [
+        "clk",
+        "DLCGT",
+        "module",
+        5
+    ],
+    "sdrc_core": [
+        "sdrc_core",
+        "yYhTI",
+        "module",
+        12
     ],
     "...MASTER...": [
         "SIM",

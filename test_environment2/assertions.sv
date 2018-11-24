@@ -16,6 +16,7 @@ module assertion();
   	$fell (wbox.sdram_init_done) ##10000 (~(wbox.ras && !wbox.cs && wbox.we && wbox.cas)) ##[0:$] (!wbox.ras && !wbox.cs && !wbox.we && wbox.cas) ##[0:$] (!wbox.ras && !wbox.cas && !wbox.cs && wbox.we) ##[0:$] (!wbox.ras && !wbox.cas && !wbox.cs && wbox.we) [=3];
   endsequence
 
+
   /*function new(virtual Whitebox wbox);
     this.wbox = wbox;
   endfunction//*/
@@ -24,7 +25,8 @@ module assertion();
 // check 
 //====================================  assertion init  =====================================================
 	property sdram_init;
-		@(posedge wbox.clk) $fell (wbox.sdram_init_done) |-> ## 10000  (~wbox.sdram_init_done);
+		@(posedge wbox.clk)
+		$fell (wbox.sdram_init_done) |-> ## 10000  (~wbox.sdram_init_done);
 	endproperty
 	a_init: assert property (sdram_init) else $error("%m: Violation inicialization time.");
 //====================================  fin init  ===========================================================
@@ -50,7 +52,7 @@ module assertion();
 //====================================  fin sdram_precharge  ================================================
 
 
-
+// check 
 //====================================  assertion autorefresh  ==============================================
 	property sdram_autorefresh;
 		//@(posedge wbox.clk) (!wbox.ras && !wbox.cas && !wbox.cs && wbox.we) |-> not ## [1:6] (~(!wbox.ras && !wbox.cas && !wbox.cs && wbox.we));
@@ -62,47 +64,46 @@ module assertion();
 
 
 //======================== Aserciones para las reglas del protocolo wishbone ================================
-
+// check 
 // 3.00: Todas las señales deben inicializarse (igual a cero) luego que el wb_rst_i sea 1.
 	property rst_i;
-		@(posedge wbox.clk) wbox.rst |-> ## 1 (wbox.cycle == 0 & wbox.strb == 0 & wbox.sdr_addr == 0 & wbox.sdr_dq == 0);
+		@(posedge wbox.clk) $fell (wbox.rst) |-> ##1 (wbox.cycle == 1 & wbox.strb == 1);
 	endproperty
 	assert_rst_300: assert property (rst_i) else $error("%m: Violation of Wishbone Rule_3.00: cyc and stb not reestablished when rst is.");
 
 
 
-
+// check 
 // 3.05: La señal de rst debe permanecer en alto por lo menos por un ciclo completo de reloj
 	property time_rst;
-		@(posedge wbox.clk) wbox.rst |-> ##[1:$] (wbox.rst == 1);
+		@(posedge wbox.clk) $rose(wbox.rst) |-> ##1 (wbox.rst == 1);
 	endproperty
 // La señal de rst va a mantener su valor de manera indefinida hasta que rst=1
 	assert_time_rst_305 : assert property (time_rst) else $error("%m Violation of Wishbone Rule_3.05: rst didn't asserted for at least one complete clk cicle");
 
 
-
+// check 
 // 3.10: Todas las señales deben de ser capaz de reaccionar al rst en cualquier momento
 	property all_signals_zero;
-		@(posedge wbox.clk) ~wbox.strb |-> ( wbox.ack == 0 );
+		@(posedge wbox.clk) $fell(wbox.rst) |-> ( ~wbox.strb && ~wbox.ack);
 	endproperty
 	
 	assert_all_signals_react_310: assert property (all_signals_zero) else $error("%m Violation of Wishbone Rule_3.10: ack didn't react to the rst");
 
 
-
+     
 
 // 3.25: La señal CYCLE debe asertarce siempre que STRB sea puesta en 1.
 	property cyc_stb;
-		@(posedge wbox.clk) wbox.strb |-> wbox.cycle;
+		@(posedge wbox.clk) disable iff(wbox.rst) wbox.strb |-> wbox.cycle;
 	endproperty
-
 	assert_cyc_stb_325: assert property (cyc_stb) else $error("%m: Violation of Wishbone Rule_3.25: cyc not asserted when stb is.");
 	
 
-
+// check 
 // 3.35: La señal ACK no debe responder a menos que CYCLE y STRB hayan sido puestas en 1
 	property ack_cyc_stb;
-		@(posedge wbox.clk)  wbox.ack |-> (wbox.cycle & wbox.strb);
+		@(posedge wbox.clk) disable iff(wbox.rst)  (wbox.cycle && wbox.strb) |-> wbox.ack ;
 	endproperty
 
 	assert_ack_335: assert property (ack_cyc_stb) else $error("%m: Violation of Wishbone Rule_3.35: slave responding outside wb_cyc_i.");
