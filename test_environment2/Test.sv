@@ -7,21 +7,9 @@ program test(intf i_intf);
   initial begin
     //creating environment
     env2 = new(i_intf);
-    env2.driv2.reset();
+    env2.driv.reset();
     `ifdef EST1
     	env2.run_estimulo1();
-    `endif
-    `ifdef EST2
-    	env2.run_estimulo2();
-    `endif
-    `ifdef EST3
-    	env2.run_estimulo3();
-    `endif
-    `ifdef EST4
-    	env2.run_estimulo4();
-    `endif
-    `ifdef EST5
-    	env2.run_estimulo5();
     `endif
    #100;
    $finish;

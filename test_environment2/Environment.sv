@@ -1,6 +1,3 @@
-/*`include "scoreboard.sv"
-`include "Driver.sv"
-`include "Monitor.sv"*/
 `ifndef MONITOR_SV
   `include "Monitor.sv"
 `endif

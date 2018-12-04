@@ -139,7 +139,7 @@ wire #(2.0) sdram_clk_d   = i_inter.sdram_clk;
      );
 `endif
 
-Whitebox wbox();
+//Whitebox wbox();
 
 assertion my_assert();
 
