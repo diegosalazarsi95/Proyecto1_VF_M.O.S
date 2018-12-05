@@ -7,28 +7,23 @@ module assertion();
   `ifdef ASSERT 
 
   sequence pnop;
-  	$fell (wbox.sdram_init_done) ##10000 (~(wbox.ras && !wbox.cs && wbox.we && wbox.cas));
+  	$rose (wbox.rst) ##10000 $stable(wbox.ras && !wbox.cs && wbox.we && wbox.cas);
   endsequence
 
   sequence p_precharge;
-  	$fell (wbox.sdram_init_done) ##10000 (~(wbox.ras && !wbox.cs && wbox.we && wbox.cas)) ##[0:$] (!wbox.ras && !wbox.cs && !wbox.we && wbox.cas) ; 
+  	$rose (wbox.rst) ##10000 $stable(wbox.ras && !wbox.cs && wbox.we && wbox.cas) ##[0:$] (!wbox.ras && !wbox.cs && !wbox.we && wbox.cas); 
   endsequence
 
   sequence p_autor;
-  	$fell (wbox.sdram_init_done) ##10000 (~(wbox.ras && !wbox.cs && wbox.we && wbox.cas)) ##[0:$] (!wbox.ras && !wbox.cs && !wbox.we && wbox.cas) ##[0:$] (!wbox.ras && !wbox.cas && !wbox.cs && wbox.we) ##[0:$] (!wbox.ras && !wbox.cas && !wbox.cs && wbox.we) [=3];
+  	$rose (wbox.rst) ##10000 $stable(wbox.ras && !wbox.cs && wbox.we && wbox.cas) ##[0:$] (!wbox.ras && !wbox.cs && !wbox.we && wbox.cas) ##[0:$] (!wbox.ras && !wbox.cas && !wbox.cs && wbox.we) ##[0:$] (!wbox.ras && !wbox.cas && !wbox.cs && wbox.we) [=3];
   endsequence
-
-
-  /*function new(virtual Whitebox wbox);
-    this.wbox = wbox;
-  endfunction//*/
 
 // ~~~~~~~~~~~~~~~~~~~~~ Aserciones para la inicialización de la SDRAM ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // check 
 //====================================  assertion init  =====================================================
 	property sdram_init;
 		@(posedge wbox.clk)
-		$fell (wbox.sdram_init_done) |-> ## [0:10000]  (~wbox.sdram_init_done);
+		$rose (wbox.rst) |-> ##10000 $stable(~wbox.rst);
 	endproperty
 	a_init: assert property (sdram_init) else $error("%m: Violation inicialization time.");
 //====================================  fin init  ===========================================================
@@ -38,7 +33,7 @@ module assertion();
 //====================================  assertion NOP  ======================================================
 	property sdram_NOP;
 		@(posedge wbox.clk) 
-		$fell (wbox.sdram_init_done) |-> ## 10000 (~(wbox.ras && !wbox.cs && wbox.we && wbox.cas));
+		$rose (wbox.rst) |-> ##10000 $stable(wbox.ras && !wbox.cs && wbox.we && wbox.cas);
 	endproperty
 	a_NOP: assert property (sdram_NOP) else $error("%m: Violation at NOP command time.");
 //====================================  fin NOP  ============================================================
@@ -48,7 +43,6 @@ module assertion();
 //====================================  assertion sdram_precharge  ==========================================
 
 	property sdram_precharge;
-		//@(posedge wbox.clk) (!wbox.ras && !wbox.cs && !wbox.we && wbox.cas) |->  ##1 (!wbox.ras && !wbox.cs && !wbox.we && wbox.cas);
 		@(posedge wbox.clk) pnop |->  ##[0:$] (!wbox.ras && !wbox.cs && !wbox.we && wbox.cas);
 	endproperty
 	a_precharge: assert property (sdram_precharge) else $error("%m: Violation precharge fail.");
@@ -59,7 +53,7 @@ module assertion();
 //====================================  assertion autorefresh  ==============================================
 	property sdram_autorefresh;
 		//@(posedge wbox.clk) (!wbox.ras && !wbox.cas && !wbox.cs && wbox.we) |-> not ## [1:6] (~(!wbox.ras && !wbox.cas && !wbox.cs && wbox.we));
-		@(posedge wbox.clk) $fell (wbox.sdram_init_done) |-> p_autor;
+		@(posedge wbox.clk) $rose (wbox.rst) |-> p_autor;
 	endproperty
 	a_autorefresh: assert property (sdram_autorefresh) else $error("%m: Violation too early autorefresh.");
 //====================================  autorefresh fin  ====================================================
@@ -70,7 +64,7 @@ module assertion();
 // check 
 // 3.00: Todas las señales deben inicializarse (igual a cero) luego que el wb_rst_i sea 1.
 	property rst_i;
-		@(posedge wbox.clk) $fell (wbox.rst) |-> ##1 (wbox.cycle == 1 & wbox.strb == 1);
+		@(posedge wbox.clk) $rose (wbox.rst) |-> ##1 (wbox.ras && wbox.cs && wbox.we && wbox.cas);
 	endproperty
 	assert_rst_300: assert property (rst_i) else $error("%m: Violation of Wishbone Rule_3.00: cyc and stb not reestablished when rst is.");
 

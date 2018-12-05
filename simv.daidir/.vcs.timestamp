@@ -1,0 +1,184 @@
+46       
+0 Test.sv
+0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/Test.sv
+0 ./rtl/Test.sv
+0 ./rtl/model/Test.sv
+0 Environment2.sv
+0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/Environment2.sv
+0 ./rtl/Environment2.sv
+0 ./rtl/model/Environment2.sv
+0 Monitor.sv
+0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/Monitor.sv
+0 ./rtl/Monitor.sv
+0 ./rtl/model/Monitor.sv
+0 scoreboard.sv
+0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/scoreboard.sv
+0 ./rtl/scoreboard.sv
+0 ./rtl/model/scoreboard.sv
+0 Driver.sv
+0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/Driver.sv
+0 ./rtl/Driver.sv
+0 ./rtl/model/Driver.sv
+0 Environment.sv
+0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/Environment.sv
+0 ./rtl/Environment.sv
+0 ./rtl/model/Environment.sv
+0 estimulo1.sv
+0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/estimulo1.sv
+0 ./rtl/estimulo1.sv
+0 ./rtl/model/estimulo1.sv
+0 Interface.sv
+0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/Interface.sv
+0 ./rtl/Interface.sv
+0 ./rtl/model/Interface.sv
+0 clk.sv
+0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/clk.sv
+0 ./rtl/clk.sv
+0 ./rtl/model/clk.sv
+0 assertions.sv
+0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/assertions.sv
+0 ./rtl/assertions.sv
+0 ./rtl/model/assertions.sv
+0 Whitebox.sv
+0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/Whitebox.sv
+0 ./rtl/Whitebox.sv
+0 ./rtl/model/Whitebox.sv
+0 sdrc_define.v
+0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/sdrc_define.v
+37
++define+ASSERT
++define+EST1
++define+S50
++define+SDR_16BIT
++define+VERBOSE
++incdir+./rtl
++incdir+./rtl/model
++incdir+./test_environment2
++itf+/mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/linux64/lib/vcsdp_lite.tab
++vcsd1
++vpi
+-Mamsrun=
+-Masflags=
+-Mcc=gcc
+-Mcfl= -pipe -fPIC -O -I/mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/include
+-Mcplusplus=g++
+-Mcrt0=
+-Mcrtn=
+-Mcsrc=
+-Mexternalobj=
+-Mldflags= -rdynamic
+-Mobjects= /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/linux64/lib/libvirsim.so /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/linux64/lib/liberrorinf.so /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/linux64/lib/libsnpsmalloc.so /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/linux64/lib/libvfs.so
+-Mout=simv
+-Msaverestoreobj=/mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/linux64/lib/vcs_save_restore_new.o
+-Msyslibs=-ldl -lm
+-Mvcsaceobjs=
+-Mxcflags= -pipe -fPIC -I/mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/include
+-assert
+-debug_access+all
+-f filelist
+-full64
+-gen_obj
+-picarchive
+-pp_used
+-sverilog
+-timescale=1ns/10ps
+/mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/linux64/bin/vcs1
+62
+sysc_uni_pwd=/mnt/vol_NFS_Zener/WD_ESPEC/diegosalazar/Proyecto1_VF_M.O.S
+XMODIFIERS=@im=none
+XDG_VTNR=1
+XDG_SESSION_TYPE=x11
+XDG_SESSION_ID=25
+XDG_SESSION_DESKTOP=gnome-classic
+XDG_SEAT=seat0
+XDG_RUNTIME_DIR=/run/user/1004
+XDG_MENU_PREFIX=gnome-
+XDG_DATA_DIRS=/home/diegosalazar/.local/share/flatpak/exports/share/:/var/lib/flatpak/exports/share/:/usr/local/share/:/usr/share/
+XDG_CURRENT_DESKTOP=GNOME-Classic:GNOME
+XAUTHORITY=/run/gdm/auth-for-diegosalazar-A0bIM5/database
+WINDOWPATH=1:1:1
+VTE_VERSION=4602
+VMR_MODE_FLAG=64
+VCS_MX_HOME_INTERNAL=1
+VCS_MODE_FLAG=64
+VCS_HOME=/mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5
+VCS_DEPTH=0
+VCS_ARG_ADDED_FOR_TMP=1
+VCS_ARCH=linux64
+USERNAME=diegosalazar
+UNAME=/bin/uname
+TOOL_HOME=/mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/linux64
+SYNOPSYS_HOME=/mnt/vol_NFS_Zener/tools/synopsys/apps
+SYNOPSYS=/mnt/vol_NFS_Zener/tools/synopsys/apps/syn2/N-2017.09-SP4
+SSH_AUTH_SOCK=/run/user/1004/keyring/ssh
+SSH_AGENT_PID=7952
+SNPS_VCS_CLANG_PATH=/fs/src/interfaces/LLVM_Project/QSCM/opt/llvm-3.9.1/linux64
+SNPSLMD_QUEUE=TRUE
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/7785,unix/unix:/tmp/.ICE-unix/7785
+SCRNAME=vcs
+SCRIPT_NAME=vcs
+QT_QPA_PLATFORMTHEME=qgnomeplatform
+QT_PLUGIN_PATH=/usr/lib64/kde4/plugins:/usr/lib/kde4/plugins
+QT_IM_MODULE=xim
+QT_GRAPHICSSYSTEM_CHECKED=1
+QTLIB=/usr/lib64/qt-3.3/lib
+QTINC=/usr/lib64/qt-3.3/include
+QTDIR=/usr/lib64/qt-3.3
+PERL_MM_OPT=INSTALL_BASE=/home/diegosalazar/perl5
+PERL_MB_OPT=--install_base /home/diegosalazar/perl5
+PERL_LOCAL_LIB_ROOT=:/home/diegosalazar/perl5
+PERL5LIB=/home/diegosalazar/perl5/lib/perl5:
+OVA_UUM=0
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LC_ALL=C
+KDEDIRS=/usr
+IMSETTINGS_MODULE=none
+IMSETTINGS_INTEGRATE_DESKTOP=yes
+ICV_HOME_DIR=/mnt/vol_NFS_Zener/tools/synopsys/apps/icvalidator/N-2017.12-SP1-2
+HISTCONTROL=ignoredups
+HARDWARE_PLATFORM=x86_64
+GNOME_SHELL_SESSION_MODE=classic
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GDM_LANG=es_CR.UTF-8
+GDMSESSION=gnome-classic
+FTK_KIT_DIR=/mnt/vol_NFS_Zener/tools/synopsys/pdks/xh018-ams/XFAB_snps_CustomDesigner_kit_v2_1_0
+DESKTOP_SESSION=gnome-classic
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-Jhe4cMgYhZ,guid=833ef69a793ae3c7c04f32225bf6dcb6
+COLORTERM=truecolor
+CNI_ROOT=/mnt/vol_NFS_Zener/tools/synopsys/apps/PyCell_Studio/N-2017.12_Py262
+0
+27
+1534995302 ./rtl/sdrc_define.v
+1543963252 ./test_environment2/Whitebox.sv
+1544045978 ./test_environment2/assertions.sv
+1542747837 ./test_environment2/clk.sv
+1542747837 ./test_environment2/Interface.sv
+1544034620 ./test_environment2/estimulo1.sv
+1543962512 ./test_environment2/Environment.sv
+1543033738 ./test_environment2/Driver.sv
+1543962520 ./test_environment2/scoreboard.sv
+1543033694 ./test_environment2/Monitor.sv
+1543962498 ./test_environment2/Environment2.sv
+1543962553 ./test_environment2/Test.sv
+1534995304 ./rtl/sdrc_xfr_ctl.v
+1534995304 ./rtl/sdrc_req_gen.v
+1534995304 ./rtl/sdrc_bs_convert.v
+1534995302 ./rtl/sdrc_bank_fsm.v
+1534995304 ./rtl/sdrc_bank_ctl.v
+1534995302 ./rtl/sdrc_core.v
+1543019814 ./rtl/async_fifo.v
+1543020115 ./rtl/wb2sdrc.v
+1542924522 ./rtl/sdrc_top.v
+1534995240 ./rtl/model/mt48lc8m8a2.v
+1534995242 ./rtl/model/mt48lc2m32b2.v
+1541183507 ./rtl/model/IS42VM16400K.V
+1543077689 ./test_environment2/testbench.sv
+1542753351 filelist
+1519358599 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/linux64/lib/vcsdp_lite.tab
+5
+0 
+1519359937 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/linux64/lib/libvirsim.so
+1519359429 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/linux64/lib/liberrorinf.so
+1519359412 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/linux64/lib/libsnpsmalloc.so
+1519359683 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/linux64/lib/libvfs.so
+1544046004 simv.daidir

@@ -1,6 +1,10 @@
 Chronologic VCS simulator copyright 1991-2017
 Contains Synopsys proprietary information.
-Compiler version M-2017.03-SP2-5_Full64; Runtime version M-2017.03-SP2-5_Full64;  Dec  5 15:38 2018
+Compiler version M-2017.03-SP2-5_Full64; Runtime version M-2017.03-SP2-5_Full64;  Dec  5 15:39 2018
+VCD+ Writer M-2017.03-SP2-5_Full64 Copyright (c) 1991-2017 by Synopsys Inc.
+The design has assertions or cover properties.
+The assertion browser can be used to view them. Click on the assertion toolbar button or use the menu 'Window->Panes->Assertion' to open it.
+The file '/mnt/vol_NFS_Zener/WD_ESPEC/diegosalazar/Proyecto1_VF_M.O.S/inter.vpd' was opened successfully.
 [ DRIVER ] ----- Reset Started -----
 Time =    100132 ns : OPERATION = PCHG  : bank = 0 
 Time =    100132 ns : OPERATION = PCHG  : bank = 1 
@@ -4710,7 +4714,8 @@ Time =    116012 ns : OPERATION = CKSR   : Clock Suspend during Read
 [ MONITOR ] ----- Burst Read -----
 $finish called from file "./test_environment2/Test.sv", line 15.
 $finish at simulation time    116220 ns
+Simulation complete, time is 116220000 ps.
            V C S   S i m u l a t i o n   R e p o r t 
 Time: 116220000 ps
-CPU Time:      0.500 seconds;       Data structure size:   0.1Mb
-Wed Dec  5 15:38:58 2018
+CPU Time:      0.450 seconds;       Data structure size:   0.1Mb
+Wed Dec  5 15:39:20 2018
