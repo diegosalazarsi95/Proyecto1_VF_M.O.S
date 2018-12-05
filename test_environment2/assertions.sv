@@ -28,7 +28,7 @@ module assertion();
 //====================================  assertion init  =====================================================
 	property sdram_init;
 		@(posedge wbox.clk)
-		$fell (wbox.sdram_init_done) |-> ## 10000  (~wbox.sdram_init_done);
+		$fell (wbox.sdram_init_done) |-> ## [0:10000]  (~wbox.sdram_init_done);
 	endproperty
 	a_init: assert property (sdram_init) else $error("%m: Violation inicialization time.");
 //====================================  fin init  ===========================================================
@@ -37,7 +37,8 @@ module assertion();
 // check 
 //====================================  assertion NOP  ======================================================
 	property sdram_NOP;
-		@(posedge wbox.clk) $fell (wbox.sdram_init_done) |-> ## 10000 (~(wbox.ras && !wbox.cs && wbox.we && wbox.cas));
+		@(posedge wbox.clk) 
+		$fell (wbox.sdram_init_done) |-> ## 10000 (~(wbox.ras && !wbox.cs && wbox.we && wbox.cas));
 	endproperty
 	a_NOP: assert property (sdram_NOP) else $error("%m: Violation at NOP command time.");
 //====================================  fin NOP  ============================================================
