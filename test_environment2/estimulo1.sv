@@ -1,5 +1,5 @@
 `ifndef SCOREBOARD2_SV
-  `include "scoreboard2.sv"
+  `include "scoreboard.sv"
   `include "Monitor.sv"
   `include "Driver.sv"
 `endif
