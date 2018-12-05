@@ -25,7 +25,23 @@ interface intf;
 	logic				sdr_ras_n 	;
 	logic				sdr_cas_n 	;
 	logic				sdr_we_n 	;
-
+	logic	[12:0] 		sdr_addr    ;
 	logic 				sdr_init_done; // SDRAM Init Done
+
+	//--------------------------------------------
+	// Configuration parameters
+	//--------------------------------------------
+	logic	[1:0]		cfg_req_depth		;
+	logic 				cfg_sdr_en			;
+    logic 	[12:0]		cfg_sdr_mode_reg	;
+    logic 	[3:0]		cfg_sdr_tras_d		;
+    logic 	[3:0]		cfg_sdr_trp_d		;
+    logic 	[3:0]		cfg_sdr_trcd_d		;
+    logic 	[2:0]		cfg_sdr_cas			;
+    logic 	[3:0]		cfg_sdr_trcar_d		;
+    logic 	[3:0]		cfg_sdr_twr_d		;
+    
+    logic 	[`SDR_RFSH_TIMER_W-1 : 0]		cfg_sdr_rfsh		;
+    logic 	[`SDR_RFSH_ROW_CNT_W -1 : 0]	cfg_sdr_rfmax		;
 
 endinterface
