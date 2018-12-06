@@ -2,7 +2,6 @@
 `include "Interface.sv"
 `include "clk.sv"
 `include "assertions.sv"
-
 module tbench_top;
 wire sdram_clk;
 
@@ -81,18 +80,17 @@ wire #(2.0) sdram_clk_d   = i_inter.sdram_clk;
 
     /* Parameters */
           .sdr_init_done      (i_inter.sdr_init_done   ),
-          .cfg_req_depth      (2'h3                    ),	        //how many req. buffer should hold
-          .cfg_sdr_en         (1'b1                    ),
-          .cfg_sdr_mode_reg   (13'h033                 ),
-          .cfg_sdr_tras_d     (4'h4                    ),
-          .cfg_sdr_trp_d      (4'h2                    ),
-          .cfg_sdr_trcd_d     (4'h2                    ),
-          .cfg_sdr_cas        (3'h3                    ),
-          .cfg_sdr_trcar_d    (4'h7                    ),
-          .cfg_sdr_twr_d      (4'h1                    ),
-          .cfg_sdr_rfsh       (12'h100                 ), // reduced from 12'hC35
-          .cfg_sdr_rfmax      (3'h6                    )
-
+          .cfg_req_depth      (i_inter.cfg_req_depth   ),	  //how many req. buffer should hold
+          .cfg_sdr_en         (i_inter.cfg_sdr_en      ),   //Habilita el controlador
+          .cfg_sdr_mode_reg   (i_inter.cfg_sdr_mode_reg),   //SDRAM Mode Register
+          .cfg_sdr_tras_d     (i_inter.cfg_sdr_tras_d  ),   //SDRAM activa para la precarga, especificada en los relojes
+          .cfg_sdr_trp_d      (i_inter.cfg_sdr_trp_d   ),   //Período de comando de precarga de SDRAM (tRP), especificado en los relojes.
+          .cfg_sdr_trcd_d     (i_inter.cfg_sdr_trcd_d  ),   //SDRAM activa para leer o escribir el retardo (tRCD), especificado en los relojes.
+          .cfg_sdr_cas        (i_inter.cfg_sdr_cas     ),   //Latencia SDRAM CAS, especificada en los relojes
+          .cfg_sdr_trcar_d    (i_inter.cfg_sdr_trcd_d  ),   //SDRAM activa a activa / período de comando de actualización automática (tRC), especificado en los relojes.
+          .cfg_sdr_twr_d      (i_inter.cfg_sdr_twr_d   ),   //Tiempo de recuperación de escritura (tWR) de SDRAM, especificado en los relojes
+          .cfg_sdr_rfsh       (i_inter.cfg_sdr_rfsh    ), //Período entre los comandos de actualización automática emitidos por el controlador, especificados en los relojes.
+          .cfg_sdr_rfmax      (i_inter.cfg_sdr_rfmax   )  //Número máximo de filas a renovar a la vez (tRFSH)
 );
 
 

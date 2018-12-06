@@ -1,3 +1,4 @@
+`include "../rtl/sdrc_define.v"
 interface intf;
 	parameter dw = 32;
 	//-------------------------------------------

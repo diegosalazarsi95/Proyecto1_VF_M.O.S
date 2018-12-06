@@ -19,6 +19,19 @@ endfunction
   //Reset task, Reset the Interface signals to default/initial values
 task reset();
   $display("[ DRIVER ] ----- Reset Started -----");
+  //Configuracion 
+  vif.cfg_req_depth     = 2'h3;
+  vif.cfg_sdr_en        = 1'b1;
+  vif.cfg_sdr_mode_reg  = 13'h033;
+  vif.cfg_sdr_tras_d    = 4'h4;
+  vif.cfg_sdr_trp_d     = 4'h2;
+  vif.cfg_sdr_trcd_d    = 4'h2;
+  vif.cfg_sdr_cas       = 3'h3;
+  vif.cfg_sdr_trcar_d   = 4'h7;
+  vif.cfg_sdr_twr_d     = 4'h1;
+  vif.cfg_sdr_rfsh      = 12'h100;
+  vif.cfg_sdr_rfmax     = 3'h6;
+
   vif.wb_addr_i     = 0;
   vif.wb_dat_i      = 0;
   vif.wb_sel_i      = 4'h0;

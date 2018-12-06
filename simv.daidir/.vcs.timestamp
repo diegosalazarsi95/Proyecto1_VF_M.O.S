@@ -1,4 +1,4 @@
-46       
+48       
 0 Test.sv
 0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/Test.sv
 0 ./rtl/Test.sv
@@ -31,6 +31,8 @@
 0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/Interface.sv
 0 ./rtl/Interface.sv
 0 ./rtl/model/Interface.sv
+0 ../rtl/sdrc_define.v
+0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/../rtl/sdrc_define.v
 0 clk.sv
 0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/clk.sv
 0 ./rtl/clk.sv
@@ -45,8 +47,7 @@
 0 ./rtl/model/Whitebox.sv
 0 sdrc_define.v
 0 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/etc/systemverilog/sdrc_define.v
-37
-+define+ASSERT
+36
 +define+EST1
 +define+S50
 +define+SDR_16BIT
@@ -147,15 +148,16 @@ DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-Jhe4cMgYhZ,guid=833ef69a793ae3c
 COLORTERM=truecolor
 CNI_ROOT=/mnt/vol_NFS_Zener/tools/synopsys/apps/PyCell_Studio/N-2017.12_Py262
 0
-27
+28
 1534995302 ./rtl/sdrc_define.v
 1543963252 ./test_environment2/Whitebox.sv
 1544045978 ./test_environment2/assertions.sv
 1542747837 ./test_environment2/clk.sv
-1542747837 ./test_environment2/Interface.sv
+1534995302 ./rtl/../rtl/sdrc_define.v
+1544055970 ./test_environment2/Interface.sv
 1544034620 ./test_environment2/estimulo1.sv
 1543962512 ./test_environment2/Environment.sv
-1543033738 ./test_environment2/Driver.sv
+1544055309 ./test_environment2/Driver.sv
 1543962520 ./test_environment2/scoreboard.sv
 1543033694 ./test_environment2/Monitor.sv
 1543962498 ./test_environment2/Environment2.sv
@@ -172,7 +174,7 @@ CNI_ROOT=/mnt/vol_NFS_Zener/tools/synopsys/apps/PyCell_Studio/N-2017.12_Py262
 1534995240 ./rtl/model/mt48lc8m8a2.v
 1534995242 ./rtl/model/mt48lc2m32b2.v
 1541183507 ./rtl/model/IS42VM16400K.V
-1543077689 ./test_environment2/testbench.sv
+1544055966 ./test_environment2/testbench.sv
 1542753351 filelist
 1519358599 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/linux64/lib/vcsdp_lite.tab
 5
@@ -181,4 +183,4 @@ CNI_ROOT=/mnt/vol_NFS_Zener/tools/synopsys/apps/PyCell_Studio/N-2017.12_Py262
 1519359429 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/linux64/lib/liberrorinf.so
 1519359412 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/linux64/lib/libsnpsmalloc.so
 1519359683 /mnt/vol_NFS_Zener/tools/synopsys/apps/vcs-mx2/M-2017.03-SP2-5/linux64/lib/libvfs.so
-1544046004 simv.daidir
+1544055978 simv.daidir
