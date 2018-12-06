@@ -1,15 +1,8 @@
-`define NOP (ras_n && cas_n && we_n && ~CS)
-
-`define Active (~ras_n && cas_n && we_n && ~CS)
-
-`define Read (ras_n && ~cas_n && we_n && ~CS)
-
-`define Write (ras_n && ~cas_n && ~we_n && ~CS)
-
-`define Burst_terminate (ras_n && cas_n && ~we_n && ~CS)
-
-`define Recharge (~ras_n && cas_n && ~we_n && ~CS)
-
-`define Auto_refresh (~ras_n && ~cas_n && we_n && ~CS)
-
-`define Load_mode_Reg (~ras_n && ~cas_n && ~we_n && ~CS)
+`define NOP (ras && cas && we && ~cs)
+`define Active (~ras && cas && we && ~cs)
+`define Read (ras && ~cas && we && ~cs)
+`define Write (ras && ~cas && ~we && ~cs)
+`define Burst_terminate (ras && cas && ~we && ~cs)
+`define Recharge (~ras && cas && ~we && ~cs)
+`define Auto_refresh (~ras && ~cas && we && ~cs)
+`define Load_mode_Reg (~ras && ~cas && ~we && ~cs)
