@@ -1,57 +1,15 @@
 {
+    "mt48lc2m32b2": [
+        "mt48lc2m32b2",
+        "a3mSN",
+        "module",
+        9
+    ],
     "_vcs_unit__2184009496": [
         "_vcs_unit__2184009496",
         "xyp5N",
         "module",
         1
-    ],
-    "std": [
-        "std",
-        "reYIK",
-        "module",
-        2
-    ],
-    "tbench_top": [
-        "tbench_top",
-        "Mk7In",
-        "module",
-        8
-    ],
-    "sdrc_bank_fsm": [
-        "sdrc_bank_fsm",
-        "ChjVu",
-        "module",
-        12
-    ],
-    "test": [
-        "test",
-        "x9Hvb",
-        "module",
-        3
-    ],
-    "intf": [
-        "intf",
-        "k6LTY",
-        "module",
-        4
-    ],
-    "Whitebox": [
-        "Whitebox",
-        "rBNSM",
-        "module",
-        6
-    ],
-    "...MASTER...": [
-        "SIM",
-        "amcQw",
-        "module",
-        13
-    ],
-    "mt48lc8m8a2": [
-        "mt48lc8m8a2",
-        "Pj51K",
-        "module",
-        10
     ],
     "clk": [
         "clk",
@@ -59,11 +17,53 @@
         "module",
         5
     ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module",
+        13
+    ],
+    "std": [
+        "std",
+        "reYIK",
+        "module",
+        2
+    ],
     "assertion": [
         "assertion",
         "IzkTr",
         "module",
         7
+    ],
+    "test": [
+        "test",
+        "x9Hvb",
+        "module",
+        3
+    ],
+    "Whitebox": [
+        "Whitebox",
+        "rBNSM",
+        "module",
+        6
+    ],
+    "mt48lc8m8a2": [
+        "mt48lc8m8a2",
+        "Pj51K",
+        "module",
+        10
+    ],
+    "intf": [
+        "intf",
+        "k6LTY",
+        "module",
+        4
+    ],
+    "tbench_top": [
+        "tbench_top",
+        "Mk7In",
+        "module",
+        8
     ],
     "sdrc_top": [
         "sdrc_top",
@@ -71,10 +71,10 @@
         "module",
         11
     ],
-    "mt48lc2m32b2": [
-        "mt48lc2m32b2",
-        "a3mSN",
+    "sdrc_bank_fsm": [
+        "sdrc_bank_fsm",
+        "ChjVu",
         "module",
-        9
+        12
     ]
 }

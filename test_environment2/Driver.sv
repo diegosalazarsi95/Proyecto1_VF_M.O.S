@@ -1,4 +1,3 @@
-//`include "Interface.sv"
 `ifndef SCOREBOARD_SV
   `include "scoreboard.sv"
 `endif
@@ -19,7 +18,7 @@ endfunction
   //Reset task, Reset the Interface signals to default/initial values
 task reset();
   $display("[ DRIVER ] ----- Reset Started -----");
-  //Configuracion 
+  //Configuracion Controlador
   vif.cfg_req_depth     = 2'h3;
   vif.cfg_sdr_en        = 1'b1;
   vif.cfg_sdr_mode_reg  = 13'h033;
@@ -34,7 +33,7 @@ task reset();
 
   vif.wb_addr_i     = 0;
   vif.wb_dat_i      = 0;
-  vif.wb_sel_i      = 4'h0;
+  vif.wb_sel_i      = 4'h0;//se cambio
   vif.wb_we_i       = 0;
   vif.wb_stb_i      = 0;
   vif.wb_cyc_i      = 0;
@@ -59,8 +58,6 @@ task burst_write();
 	begin
     score.bl_fifo.push_back(bl);
     score.address_fifo.push_back(Address);
-  //afifo.push_back(Address);
-	//bfifo.push_back(bl);
     @(negedge vif.wb_clk_i);
     $display("Write Address: %x, Burst Size: %d",Address,bl);
 

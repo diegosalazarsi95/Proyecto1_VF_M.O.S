@@ -11,6 +11,7 @@ program test(intf i_intf);
     `ifdef EST1
     	env2.run_estimulo1();
     `endif
+    env2.run_estimulo2();
    #100;
    $finish;
  end
