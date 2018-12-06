@@ -4,6 +4,9 @@ module coverage (intf intf);
 	parameter LOAD_MODE_REG = ~intf.sdr_ras_n && ~intf.sdr_cas_n && ~sdr_we_n && ~intf.sdr_cs_n;
 
 
+
+	/* ------------------------------------------------------------------------------------------*/
+	/* ------------------------------------------------------------------------------------------*/
 	/* Grupo de cobertura ubicado a la salida del controlador */
 	covergroup controllerOut @ (posedge intf.sdram_clk iff LOAD_MODE_REG);
 		CASLatency : coverpoint intf.sdr_addr[6:4] {
@@ -30,6 +33,9 @@ module coverage (intf intf);
 		}
 
 	endgroup : controllerOut
+
+	/* ------------------------------------------------------------------------------------------*/
+	/* ------------------------------------------------------------------------------------------*/
 
 	/* Grupo de cobertura a la entrada del controlador */
 	covergroup controllerIn @ (posedge intf.wb_clk_i);
@@ -58,6 +64,8 @@ module coverage (intf intf);
 
 	endgroup : controllerIn
 
+	/* ------------------------------------------------------------------------------------------*/
+	/* ------------------------------------------------------------------------------------------*/
 
 	/* Grupo de cobertura de los parámetros de funcionamiento del controlador */
 	
@@ -108,9 +116,29 @@ module coverage (intf intf);
 	   	}
 	endgroup : memoryAccess
 
+	/* ------------------------------------------------------------------------------------------*/
+	/* ------------------------------------------------------------------------------------------*/
+
 	/* Grupo de cobertura de la aleatorización de los estímulos */
+
+
+
+
+
+
+
+
+
+	/* ------------------------------------------------------------------------------------------*/
+	/* ------------------------------------------------------------------------------------------*/
 
 	/* Grupo de cobertura de las aserciones */
 	/* NOTA: este grupo de cobertura puede moverse a el módulo de aserciones */
+
+
+
+
+	
+
 
 endmodule
