@@ -13,12 +13,14 @@
 `include "estimulo2.sv"
 `include "estimulo3.sv"
 `include "estimulo4.sv"
+`include "estimulo5.sv"
 
 class environment2 extends environment;
 	estimulo1 est1;
   estimulo2 est2;
   estimulo3 est3;
   estimulo4 est4;
+  estimulo5 est5;
 
 	function new(virtual intf vif);
     	super.new(vif);
@@ -26,6 +28,7 @@ class environment2 extends environment;
       est2 = new(vif,score,driv,mon);
       est3 = new(vif,score,driv,mon);
       est4 = new(vif,score,driv,mon);
+      est5 = new(vif,score,driv,mon);
   	endfunction
 
 	task run_estimulo1();
@@ -43,5 +46,9 @@ class environment2 extends environment;
   task run_estimulo4();
     est4.run();
   endtask : run_estimulo4
+
+  task run_estimulo5();
+    est5.run();
+  endtask : run_estimulo5
 
 endclass : environment2

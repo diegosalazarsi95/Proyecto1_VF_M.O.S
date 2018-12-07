@@ -130,8 +130,10 @@ class estimulo2;
 
 
   task run();
+    $display("[ Estimulo 2 ] ----- Start -----");
     modo_wr_rafaga(1'b1);
     //modo_wr_rafaga(1'b0);
+    $display("[ Estimulo 2 ] ----- END -----");
   endtask : run
 
 //----------------------------------------

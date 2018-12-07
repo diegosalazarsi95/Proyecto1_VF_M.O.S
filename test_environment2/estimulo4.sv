@@ -37,7 +37,7 @@ class estimulo4;
     int total;
     driv.reset();
     //Escritura en diferente banco, diferente fila, diferente/misma columna (G/H)
-    $display("[ Estimulo ] ----- Prueba G Write -----");
+    $display("[ Estimulo 4 ] ----- Prueba G Write -----");
     column = $urandom_range(2**9-1,0);
     for (int i = 0; i < 50; i++) begin
       row = $urandom_range(2**12-1,0);
@@ -53,7 +53,7 @@ class estimulo4;
       driv.burst_write({row,2'b11,column}, 8'h01);
       #100;
     end
-    $display("[ Estimulo ] ----- Prueba G Read -----");
+    $display("[ Estimulo 4 ] ----- Prueba G Read -----");
     total = $size(score.address_fifo);
     for (int i = 0; i < total; i++) begin
       score.random_element_t();
@@ -61,7 +61,7 @@ class estimulo4;
       #100;
     end
 
-    $display("[ Estimulo ] ----- Prueba H Write -----");
+    $display("[ Estimulo 4 ] ----- Prueba H Write -----");
     for (int i = 0; i < 1; i++) begin
       row = $urandom_range(2**12-1,0);
       column = $urandom_range(2**9-1,0);
@@ -80,7 +80,7 @@ class estimulo4;
       driv.burst_write({row,2'b11,column,3'b000}, 8'h01);
       #100;
     end
-    $display("[ Estimulo ] ----- Prueba H Read -----");
+    $display("[ Estimulo 4 ] ----- Prueba H Read -----");
     total = $size(score.address_fifo);
     for (int i = 0; i < total; i++) begin
       score.random_element_t();

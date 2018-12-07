@@ -115,27 +115,27 @@ module assertion();
 												/* Aserciones para el proyecto 3 */
 
 // El registro MODE REG de la memoria se debe configurar de maner válida para lecturas de página completa
-	parameter LOAD_MODE_REG = (~wbox.ras && ~wbox.cas && ~wbox.we && ~wbox.cs);
-	parameter FULLPAGE_READ = (wbox.sdr_addr[0] && wbox.sdr_addr[1] && wbox.sdr_addr[2]);
+	`define LOAD_MODE_REG  (~wbox.ras && ~wbox.cas && ~wbox.we && ~wbox.cs)
+	`define FULLPAGE_READ  (wbox.sdr_addr[0] && wbox.sdr_addr[1] && wbox.sdr_addr[2])
 	
 	property fullpage_read;
-		@(posedge wbox.clk_ram) ($rose(LOAD_MODE_REG)  && FULLPAGE_READ) |-> wbox.sdr_addr[3];
+		@(posedge wbox.clk_ram) ($rose(`LOAD_MODE_REG)  && `FULLPAGE_READ) |-> wbox.sdr_addr[3];
 	endproperty
 	assert_fullpage_read : assert property (fullpage_read) else $error("%m: SDRAM Mode Register Configuration Invalid for: Full Page Burst Read");
 
 // La latencia CAS debe ser de 2 o 3 ciclos dependiendo del valor almacenado en MODE REG
 // Esto es un checker
-	parameter READ_COMMAND = (wbox.ras && ~wbox.cas && wbox.we && ~wbox.cs);
-	parameter CASLATENCY_2 = (~wbox.WB_cfg_sdr_mode_reg[6] && wbox.WB_cfg_sdr_mode_reg[5] && ~wbox.WB_cfg_sdr_mode_reg[4]);
-	parameter CASLATENCY_3 = (~wbox.WB_cfg_sdr_mode_reg[6] && wbox.WB_cfg_sdr_mode_reg[5] &&  wbox.WB_cfg_sdr_mode_reg[4]);
+	`define READ_COMMAND (wbox.ras && ~wbox.cas && wbox.we && ~wbox.cs)
+	`define CASLATENCY_2 (~wbox.WB_cfg_sdr_mode_reg[6] && wbox.WB_cfg_sdr_mode_reg[5] && ~wbox.WB_cfg_sdr_mode_reg[4])
+	`define CASLATENCY_3 (~wbox.WB_cfg_sdr_mode_reg[6] && wbox.WB_cfg_sdr_mode_reg[5] &&  wbox.WB_cfg_sdr_mode_reg[4])
 
 	property cas_latency_2;
-		@(posedge  wbox.clk_ram) (READ_COMMAND && CASLATENCY_2) |=> ##2 ~($isunknown(wbox.sdr_dq))
+		@(posedge  wbox.clk_ram) (`READ_COMMAND && `CASLATENCY_2) |=> ##2 ~($isunknown(wbox.sdr_dq));
 	endproperty
 	cover_cas_latency_2 : assert property (cas_latency_2) else $error("%m: violated CAS latency of 2 clock cycles.");
 
 	property cas_latency_3;
-		@(posedge  wbox.clk_ram) (READ_COMMAND && CASLATENCY_3) |=> ##3 ~($isunknown(wbox.sdr_dq))
+		@(posedge  wbox.clk_ram) (`READ_COMMAND && `CASLATENCY_3) |=> ##3 ~($isunknown(wbox.sdr_dq));
 	endproperty
 	cover_cas_latency_3 : assert property (cas_latency_3) else $error("%m: violated CAS latency of 3 clock cycles.");
 

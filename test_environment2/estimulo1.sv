@@ -28,6 +28,7 @@ class estimulo1;
     int k,y;
     reg [31:0] Addr;
     reg [7:0] bl;
+    $display("[ Estimulo 1 ] ----- Start -----");
   	for(k=0; k < 1; k++) begin
       Addr = $random & 32'h003FFFFF;
       bl = $urandom_range(10,1);
@@ -39,6 +40,7 @@ class estimulo1;
       mon.burst_read();  
       #100;
     end
+    $display("[ Estimulo 1 ] ----- END -----");
   endtask : run
 
 endclass : estimulo1

@@ -34,7 +34,7 @@ class estimulo3;
     reg [8:0]   column;
     reg [11:0]  row;
     reg [1:0]   bank;
-
+    $display("[ Estimulo 3 ] ----- Start -----");
     driv.reset();
     //Escritura en diferente banco, misma fila, misma columna/diferente columna (E/F)
     row = $urandom_range(2**12-1,0);
@@ -58,6 +58,7 @@ class estimulo3;
       mon.burst_read(); 
       #100;
     end
+    $display("[ Estimulo 3 ] ----- END -----");
   endtask : run
 
 

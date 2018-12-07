@@ -23,6 +23,10 @@ program test(intf i_intf);
     `ifdef EST4
       env2.run_estimulo4();
     `endif
+
+    `ifdef EST5
+      env2.run_estimulo5();
+    `endif
     
     env2.mon.error();
    #100;

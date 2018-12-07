@@ -2,6 +2,7 @@
 `include "Interface.sv"
 `include "clk.sv"
 `include "assertions.sv"
+`include "coverage.sv"
 module tbench_top;
 wire sdram_clk;
 
@@ -68,14 +69,14 @@ wire #(2.0) sdram_clk_d   = i_inter.sdram_clk;
 /* Interface to SDRAMs */
           .sdram_clk          (i_inter.sdram_clk       ),
           .sdram_resetn       (i_inter.wb_rst_i        ),
-          .sdr_cs_n           (sdr_cs_n                ),
-          .sdr_cke            (sdr_cke                 ),
-          .sdr_ras_n          (sdr_ras_n               ),
-          .sdr_cas_n          (sdr_cas_n               ),
-          .sdr_we_n           (sdr_we_n                ),
+          .sdr_cs_n           (i_inter.sdr_cs_n        ),
+          .sdr_cke            (i_inter.sdr_cke         ),
+          .sdr_ras_n          (i_inter.sdr_ras_n       ),
+          .sdr_cas_n          (i_inter.sdr_cas_n       ),
+          .sdr_we_n           (i_inter.sdr_we_n        ),
           .sdr_dqm            (sdr_dqm                 ),
           .sdr_ba             (sdr_ba                  ),
-          .sdr_addr           (sdr_addr                ), 
+          .sdr_addr           (i_inter.sdr_addr        ), 
           .sdr_dq             (sdr_dq                  ),
 
     /* Parameters */
@@ -96,50 +97,50 @@ wire #(2.0) sdram_clk_d   = i_inter.sdram_clk;
 
 `ifdef SDR_32BIT
      mt48lc2m32b2 #(.data_bits(32)) u_sdram32 (
-          .Dq                 (sdr_dq             ), 
-          .Addr               (sdr_addr[10:0]     ), 
-          .Ba                 (sdr_ba             ), 
-          .Clk                (sdram_clk_d        ), 
-          .Cke                (sdr_cke            ), 
-          .Cs_n               (sdr_cs_n           ), 
-          .Ras_n              (sdr_ras_n          ), 
-          .Cas_n              (sdr_cas_n          ), 
-          .We_n               (sdr_we_n           ), 
-          .Dqm                (sdr_dqm            )
+          .Dq                 (sdr_dq                     ), 
+          .Addr               (i_inter.sdr_addr[10:0]     ), 
+          .Ba                 (sdr_ba                     ), 
+          .Clk                (sdram_clk_d                ), 
+          .Cke                (i_inter.sdr_cke            ), 
+          .Cs_n               (i_inter.sdr_cs_n           ), 
+          .Ras_n              (i_inter.sdr_ras_n          ), 
+          .Cas_n              (i_inter.sdr_cas_n          ), 
+          .We_n               (i_inter.sdr_we_n           ), 
+          .Dqm                (sdr_dqm                    )
      );
 
 `elsif SDR_16BIT
      IS42VM16400K u_sdram16 (
-          .dq                 (sdr_dq             ), 
-          .addr               (sdr_addr[11:0]     ), 
-          .ba                 (sdr_ba             ), 
-          .clk                (sdram_clk_d        ), 
-          .cke                (sdr_cke            ), 
-          .csb                (sdr_cs_n           ), 
-          .rasb               (sdr_ras_n          ), 
-          .casb               (sdr_cas_n          ), 
-          .web                (sdr_we_n           ), 
-          .dqm                (sdr_dqm            )
+          .dq                 (sdr_dq                     ), 
+          .addr               (i_inter.sdr_addr[11:0]     ), 
+          .ba                 (sdr_ba                     ), 
+          .clk                (sdram_clk_d                ), 
+          .cke                (i_inter.sdr_cke            ), 
+          .csb                (i_inter.sdr_cs_n           ), 
+          .rasb               (i_inter.sdr_ras_n          ), 
+          .casb               (i_inter.sdr_cas_n          ), 
+          .web                (i_inter.sdr_we_n           ), 
+          .dqm                (sdr_dqm                    )
     );
 
 `else 
      mt48lc8m8a2 #(.data_bits(8)) u_sdram8 (
-          .Dq                 (sdr_dq             ), 
-          .Addr               (sdr_addr[11:0]     ), 
-          .Ba                 (sdr_ba             ), 
-          .Clk                (sdram_clk_d        ), 
-          .Cke                (sdr_cke            ), 
-          .Cs_n               (sdr_cs_n           ), 
-          .Ras_n              (sdr_ras_n          ), 
-          .Cas_n              (sdr_cas_n          ), 
-          .We_n               (sdr_we_n           ), 
-          .Dqm                (sdr_dqm            )
+          .Dq                 (sdr_dq                     ), 
+          .Addr               (i_inter.sdr_addr[11:0]     ), 
+          .Ba                 (sdr_ba                     ), 
+          .Clk                (sdram_clk_d                ), 
+          .Cke                (i_inter.sdr_cke            ), 
+          .Cs_n               (i_inter.sdr_cs_n           ), 
+          .Ras_n              (i_inter.sdr_ras_n          ), 
+          .Cas_n              (i_inter.sdr_cas_n          ), 
+          .We_n               (i_inter.sdr_we_n           ), 
+          .Dqm                (sdr_dqm                    )
      );
 `endif
 
 //Whitebox wbox();
 
 assertion my_assert();
-
+coverage my_coverage(i_inter);
 
 endmodule // tbench_top

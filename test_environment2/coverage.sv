@@ -1,13 +1,13 @@
 
 module coverage (intf intf);
 
-	parameter LOAD_MODE_REG = ~intf.sdr_ras_n && ~intf.sdr_cas_n && ~sdr_we_n && ~intf.sdr_cs_n;
+	`define LOAD_MODE_REG ~intf.sdr_ras_n && ~intf.sdr_cas_n && ~intf.sdr_we_n && ~intf.sdr_cs_n
 
 	/* ------------------------------------------------------------------------------------------*/
 	/* ------------------------------------------------------------------------------------------*/
 	
 	/* Grupo de cobertura ubicado a la salida del controlador */
-	covergroup controllerOut @ (posedge intf.sdram_clk iff LOAD_MODE_REG);
+	covergroup controllerOut @ (posedge intf.sdram_clk iff `LOAD_MODE_REG);
 		CASLatency : coverpoint intf.sdr_addr[6:4] {
 			bins lat2  = {3'b010};
 			bins lat3  = {3'b011};
@@ -18,7 +18,7 @@ module coverage (intf intf);
 		   	bins bLength2 = {3'b001};
 		   	bins bLength4 = {3'b010};
 		   	bins bLength8 = {3'b011};
-		   	bins fullPage = {3'b111 iff (intf.cfg_sdr_mode_reg[3] == 1'b0) };
+		   	//bins fullPage = {3'b111 iff (intf.cfg_sdr_mode_reg[3] == 1'b0) };
 	   	}
 
 		BurstType : coverpoint intf.sdr_addr[3]{
@@ -48,7 +48,7 @@ module coverage (intf intf);
 		   	bins bLength2 = {3'b001};
 		   	bins bLength4 = {3'b010};
 		   	bins bLength8 = {3'b011};
-		   	bins fullPage = {3'b111 iff (intf.cfg_sdr_mode_reg[3] == 1'b0) };
+		   	//bins fullPage = {3'b111 iff (intf.cfg_sdr_mode_reg[3] == 1'b0) };
 		}
 
 		BurstType : coverpoint intf.cfg_sdr_mode_reg[3]{
@@ -81,7 +81,7 @@ module coverage (intf intf);
 		}
 
 		CntrlrEnable : coverpoint intf.cfg_sdr_en {
-			bins disable = {1'b0};
+			//bins disable = {1'b0};
 			bins enable  = {1'b1};
 		}
 
@@ -115,6 +115,10 @@ module coverage (intf intf);
 	   	}
 	endgroup : memoryAccess
 
+	controllerOut assert1 = new();
+	controllerIn  assert2 = new();
+	cntrlrParams  assert3 = new();
+	memoryAccess  assert4 = new();
 	/* ------------------------------------------------------------------------------------------*/
 	/* ------------------------------------------------------------------------------------------*/
 
