@@ -11,7 +11,20 @@ program test(intf i_intf);
     `ifdef EST1
     	env2.run_estimulo1();
     `endif
-    env2.run_estimulo2();
+
+    `ifdef EST2
+      env2.run_estimulo2();
+    `endif
+
+    `ifdef EST3
+      env2.run_estimulo3();
+    `endif
+
+    `ifdef EST4
+      env2.run_estimulo4();
+    `endif
+    
+    env2.mon.error();
    #100;
    $finish;
  end

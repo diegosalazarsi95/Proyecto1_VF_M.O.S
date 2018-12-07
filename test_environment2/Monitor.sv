@@ -44,13 +44,33 @@ task burst_read;
           @ (posedge vif.wb_clk_i);
         end 
         while(vif.wb_ack_o == 1'b0);
-         	if(vif.wb_dat_o !== exp_data) begin
+        //CODIGO NUEVO
+        //Se modifica para incluir largo de rafaga de 1
+          if(vif.cfg_sdr_mode_reg[2:0] == 3'b000)begin
+            if(vif.wb_dat_o[15:0] !== exp_data[15:0]) begin
+              $display("READ ERROR: Burst-No: %d Addr: %x Rxp: %x Exd: %x",j,vif.wb_addr_i,vif.wb_dat_o,exp_data);
+              ErrCnt = ErrCnt+1;
+            end 
+            else begin
+              $display("READ STATUS: Burst-No: %d Addr: %x Rxd: %x",j,vif.wb_addr_i,vif.wb_dat_o);
+            end
+          end // if(vif.cfg_sdr_mode_reg[2:0] == 3'b000)
+          else begin
+            if(vif.wb_dat_o !== exp_data) begin
+              $display("READ ERROR: Burst-No: %d Addr: %x Rxp: %x Exd: %x",j,vif.wb_addr_i,vif.wb_dat_o,exp_data);
+              ErrCnt = ErrCnt+1;
+            end 
+            else begin
+              $display("READ STATUS: Burst-No: %d Addr: %x Rxd: %x",j,vif.wb_addr_i,vif.wb_dat_o);
+            end
+          end
+         	/*if(vif.wb_dat_o !== exp_data) begin
          	  $display("READ ERROR: Burst-No: %d Addr: %x Rxp: %x Exd: %x",j,vif.wb_addr_i,vif.wb_dat_o,exp_data);
             ErrCnt = ErrCnt+1;
          	end 
           else begin
             $display("READ STATUS: Burst-No: %d Addr: %x Rxd: %x",j,vif.wb_addr_i,vif.wb_dat_o);
-          end 
+          end*/ 
              @ (negedge vif.sdram_clk);
       end
 	   vif.wb_stb_i        <= 0;

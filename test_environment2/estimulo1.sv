@@ -35,8 +35,6 @@ class estimulo1;
       #100;
     end
     for(k=0; k < 1; k++) begin
-      y = $size(score.address_fifo);
-      $display("real size: %d",y);
       score.random_element_t();
       mon.burst_read();  
       #100;

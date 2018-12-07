@@ -1,9 +1,9 @@
 {
-    "mt48lc2m32b2": [
-        "mt48lc2m32b2",
-        "a3mSN",
+    "clk": [
+        "clk",
+        "DLCGT",
         "module",
-        9
+        5
     ],
     "_vcs_unit__2184009496": [
         "_vcs_unit__2184009496",
@@ -11,29 +11,11 @@
         "module",
         1
     ],
-    "clk": [
-        "clk",
-        "DLCGT",
-        "module",
-        5
-    ],
-    "...MASTER...": [
-        "SIM",
-        "amcQw",
-        "module",
-        13
-    ],
     "std": [
         "std",
         "reYIK",
         "module",
         2
-    ],
-    "assertion": [
-        "assertion",
-        "IzkTr",
-        "module",
-        7
     ],
     "test": [
         "test",
@@ -47,17 +29,23 @@
         "module",
         6
     ],
-    "mt48lc8m8a2": [
-        "mt48lc8m8a2",
-        "Pj51K",
-        "module",
-        10
-    ],
     "intf": [
         "intf",
         "k6LTY",
         "module",
         4
+    ],
+    "sdrc_bank_fsm": [
+        "sdrc_bank_fsm",
+        "ChjVu",
+        "module",
+        12
+    ],
+    "assertion": [
+        "assertion",
+        "IzkTr",
+        "module",
+        7
     ],
     "tbench_top": [
         "tbench_top",
@@ -65,16 +53,28 @@
         "module",
         8
     ],
+    "mt48lc2m32b2": [
+        "mt48lc2m32b2",
+        "a3mSN",
+        "module",
+        9
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module",
+        13
+    ],
+    "mt48lc8m8a2": [
+        "mt48lc8m8a2",
+        "Pj51K",
+        "module",
+        10
+    ],
     "sdrc_top": [
         "sdrc_top",
         "NTNU2",
         "module",
         11
-    ],
-    "sdrc_bank_fsm": [
-        "sdrc_bank_fsm",
-        "ChjVu",
-        "module",
-        12
     ]
 }

@@ -59,7 +59,7 @@ task burst_write();
     score.bl_fifo.push_back(bl);
     score.address_fifo.push_back(Address);
     @(negedge vif.wb_clk_i);
-    $display("Write Address: %x, Burst Size: %d",Address,bl);
+    $display("Write Address: %h, Burst Size: %d",Address,bl);
 
     for(i=0; i < bl; i++) begin
       vif.wb_stb_i        = 1;
@@ -74,7 +74,7 @@ task burst_write();
         @ (posedge vif.wb_clk_i);
       end while(vif.wb_ack_o == 1'b0);
         @ (negedge vif.wb_clk_i);
-        $display("Status: Burst-No: %d  Write Address: %x  WriteData: %x ",i,vif.wb_addr_i,vif.wb_dat_i);
+        $display("Status: Burst-No: %d  Write Address: %h  WriteData: %h ",i,vif.wb_addr_i,vif.wb_dat_i);
     end
     vif.wb_stb_i        = 0;
     vif.wb_cyc_i        = 0;
