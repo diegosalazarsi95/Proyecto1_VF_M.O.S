@@ -3,10 +3,9 @@ module coverage (intf intf);
 
 	parameter LOAD_MODE_REG = ~intf.sdr_ras_n && ~intf.sdr_cas_n && ~sdr_we_n && ~intf.sdr_cs_n;
 
-
-
 	/* ------------------------------------------------------------------------------------------*/
 	/* ------------------------------------------------------------------------------------------*/
+	
 	/* Grupo de cobertura ubicado a la salida del controlador */
 	covergroup controllerOut @ (posedge intf.sdram_clk iff LOAD_MODE_REG);
 		CASLatency : coverpoint intf.sdr_addr[6:4] {
@@ -90,21 +89,21 @@ module coverage (intf intf);
 
 	/* Grupo de cobertura del acceso a diferentes regiones de memoria */
 	covergroup memoryAccess @ (posedge intf.wb_clk_i);
-	   	bankAccess : coverpoint intf.wb_addr_i[11:10] {
+	   	bankAccess : coverpoint intf.wb_addr_i[10:9] {
 	   		bins bankA = {2'b00};
 	   		bins bankB = {2'b01};
 	   		bins bankC = {2'b10};
 	   		bins bankD = {2'b11};
 	   	}
 
-	   	colAccess : coverpoint intf.wb_addr_i[9:2] {
-	   		bins colsA = {0, 63};
-	   		bins colsB = {64, 127};
-	   		bins colsC = {128, 191};
-	   		bins colsD = {192, 255};
+	   	colAccess : coverpoint intf.wb_addr_i[8:0] {
+	   		bins colsA = {0,   127};
+	   		bins colsB = {128, 255};
+	   		bins colsC = {256, 383};
+	   		bins colsD = {384, 511};
 	   	}
 
-	   	rowAccess : coverpoint intf.wb_addr_i[23:12] {
+	   	rowAccess : coverpoint intf.wb_addr_i[22:11] {
 	   		bins rowsA = {0, 511};
 	   		bins rowsB = {512, 1023};
 	   		bins rowsC = {1024, 1535};
@@ -118,27 +117,5 @@ module coverage (intf intf);
 
 	/* ------------------------------------------------------------------------------------------*/
 	/* ------------------------------------------------------------------------------------------*/
-
-	/* Grupo de cobertura de la aleatorización de los estímulos */
-
-
-
-
-
-
-
-
-
-	/* ------------------------------------------------------------------------------------------*/
-	/* ------------------------------------------------------------------------------------------*/
-
-	/* Grupo de cobertura de las aserciones */
-	/* NOTA: este grupo de cobertura puede moverse a el módulo de aserciones */
-
-
-
-
-	
-
 
 endmodule

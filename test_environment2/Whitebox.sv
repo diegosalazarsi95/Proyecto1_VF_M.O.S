@@ -28,10 +28,6 @@ interface Whitebox();
 	logic                  WB_app_last_wr        ; // Indicate last Write of Burst Transfer
 	logic 	[dw-1:0]       WB_app_wr_data        ; // sdr write data
 	logic 	[dw-1:0]       WB_app_rd_data        ; // sdr read data
-
-	/****************************************
-	*  These logic has to be implemented using Pads  *
-	*****************************************/
 	logic 	[SDR_DW-1:0]   WB_pad_sdr_din        ; // SDRA Data Input
 	logic 	[SDR_DW-1:0]   WB_sdr_dout           ; // SDRAM Data Output
 	logic 	[SDR_BW-1:0]   WB_sdr_den_n          ; // SDRAM Data Output enable
@@ -76,6 +72,7 @@ interface Whitebox();
 	assign strb		    	= `TOP_PATH.wb_stb_i;
 	assign cycle			= `TOP_PATH.wb_cyc_i;
 	assign ack	        	= `TOP_PATH.wb_ack_o;
+	assign clk_ram 			= `TOP_PATH.sdram_clk;
 	assign ras 				= `TOP_PATH.sdr_ras_n;
 	assign cas 				= `TOP_PATH.sdr_cas_n;
 	assign cs 				= `TOP_PATH.sdr_cs_n;
@@ -83,5 +80,29 @@ interface Whitebox();
 	assign sdram_init_done	= `TOP_PATH.sdr_init_done;
     assign sdr_addr         = `TOP_PATH.sdr_addr;
     assign sdr_dq           = `TOP_PATH.sdr_dq;
+
+    //--------------------------------------------
+	// Controller configuration signals
+	//--------------------------------------------
+	logic 	[3:0] 			WB_cfg_sdr_tras_d      ;
+	logic	[3:0]           WB_cfg_sdr_trp_d       ;
+	logic	[3:0]           WB_cfg_sdr_trcd_d	   ;
+	logic					WB_cfg_sdr_en          ;
+	logic	[1:0] 			WB_cfg_req_depth       ;
+	logic	[12:0] 			WB_cfg_sdr_mode_reg    ;
+	logic	[2:0] 			WB_cfg_sdr_cas         ; 
+	logic 	[3:0] 			WB_cfg_sdr_trcar_d     ;
+	logic 	[3:0]           WB_cfg_sdr_twr_d       ; 
+
+	assign WB_cfg_sdr_tras_d 	= `TOP_PATH.cfg_sdr_tras_d;
+	assign WB_cfg_sdr_trp_d 	= `TOP_PATH.cfg_sdr_trp_d;
+	assign WB_cfg_sdr_trcd_d 	= `TOP_PATH.cfg_sdr_trcd_d;
+	assign WB_cfg_sdr_en 		= `TOP_PATH.cfg_sdr_en;
+	assign WB_cfg_req_depth 	= `TOP_PATH.cfg_req_depth;
+	assign WB_cfg_sdr_mode_reg 	= `TOP_PATH.cfg_sdr_mode_reg;
+	assign WB_cfg_sdr_cas 		= `TOP_PATH.cfg_sdr_cas;
+	assign WB_cfg_sdr_trcar_d	= `TOP_PATH.cfg_sdr_trcar_d;
+	assign WB_cfg_sdr_twr_d		= `TOP_PATH.cfg_sdr_twr_d;
+
 
 endinterface
