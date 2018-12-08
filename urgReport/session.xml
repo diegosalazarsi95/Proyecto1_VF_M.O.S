@@ -1,0 +1,50 @@
+<session version="1.1" release="M-2017.03-SP2-5" timestp="2018-12-08 01:00:47 GMT">
+  <hvp>
+    <datadef>
+      <metdef name="Line" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Cond" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Toggle" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Assert" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Group" type="percent" aggregator="average" builtin="1" />
+    </datadef>
+  </hvp>
+  <old_coverage>
+  <scope type="top" name="top">
+    <metric name="Line" value="1378/2727" />
+    <metric name="Cond" value="585/960" />
+    <metric name="Toggle" value="6494/9536" />
+    <metric name="Assert" value="33/33" />
+    <metric name="Group" value="92.7083%" />
+  </scope>
+  <scope type="instance" name="top">
+  </scope>
+  <scope type="group" name="top">
+    <scope type="group" name="tbench_top.my_coverage::memoryAccess">
+      <metric name="Group" value="70.8333%" />
+    </scope>
+    <scope type="group" name="tbench_top.my_coverage::controllerIn">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="tbench_top.my_coverage::cntrlrParams">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="tbench_top.my_coverage::controllerOut">
+      <metric name="Group" value="100%" />
+    </scope>
+  </scope>
+  <scope type="assert" name="Statistics">
+    <scorelist type="total" name="Design Hierarchy Assert">
+      <score name="Assert" value="33/33" />
+      <score name="Score" value="100.00" />
+    </scorelist>
+    <scorelist type="total" name="Module List Assert">
+      <score name="Assert" value="29/29" />
+      <score name="Score" value="100.00" />
+    </scorelist>
+    <scorelist type="total" name="Assertion">
+      <score name="Assert" value="33/33" />
+      <score name="Score" value="100.00" />
+    </scorelist>
+  </scope>
+  </old_coverage>
+</session>

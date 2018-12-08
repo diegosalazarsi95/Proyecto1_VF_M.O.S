@@ -1,4 +1,4 @@
-./test_environment2/testbench.sv
+./test_environment3/testbench.sv
 ./rtl/model/IS42VM16400K.V
 ./rtl/model/mt48lc2m32b2.v
 ./rtl/model/mt48lc8m8a2.v

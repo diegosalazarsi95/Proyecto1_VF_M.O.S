@@ -1,0 +1,1776 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: sdrc_bank_ctl</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | <a href="groups.html" ><b>groups</b></a> | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_sdrc_bank_ctl'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_sdrc_bank_ctl')">sdrc_bank_ctl</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>ASSERT</td></tr><tr>
+<td class="s6 cl rt"> 66.24</td>
+<td class="s4 cl rt"><a href="mod0.html#Line" > 48.39</a></td>
+<td class="s8 cl rt"><a href="mod0.html#Cond" > 80.88</a></td>
+<td class="s6 cl rt"><a href="mod0.html#Toggle" > 69.45</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/mnt/vol_NFS_Zener/WD_ESPEC/diegosalazar/Proyecto1_VF_M.O.S/./rtl/sdrc_bank_ctl.v')">/mnt/vol_NFS_Zener/WD_ESPEC/diegosalazar/Proyecto1_VF_M.O.S/./rtl/sdrc_bank_ctl.v</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod0.html#inst_tag_0"  onclick="showContent('inst_tag_0')">tbench_top.u_dut.u_sdrc_core.u_bank_ctl</a></td>
+<td class="s6 cl rt"> 66.24</td>
+<td class="s4 cl rt"><a href="mod0.html#Line" > 48.39</a></td>
+<td class="s8 cl rt"><a href="mod0.html#Cond" > 80.88</a></td>
+<td class="s6 cl rt"><a href="mod0.html#Toggle" > 69.45</a></td>
+<td class="wht cl rt"></td>
+</tr></table></div>
+</div>
+<br clear=all>
+<div name='tag_sdrc_bank_ctl'>
+<hr>
+<a name="inst_tag_0"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_0" >tbench_top.u_dut.u_sdrc_core.u_bank_ctl</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>ASSERT</td></tr><tr>
+<td class="s6 cl rt"> 66.24</td>
+<td class="s4 cl rt"><a href="mod0.html#Line" > 48.39</a></td>
+<td class="s8 cl rt"><a href="mod0.html#Cond" > 80.88</a></td>
+<td class="s6 cl rt"><a href="mod0.html#Toggle" > 69.45</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>ASSERT</td></tr><tr>
+<td class="s7 cl rt"> 73.20</td>
+<td class="s7 cl rt"> 75.38</td>
+<td class="s7 cl rt"> 79.04</td>
+<td class="s6 cl rt"> 65.18</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s8 cl rt"> 87.74</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s7 cl rt"> 75.48</td>
+<td class="wht cl rt"></td>
+<td><a href="mod3.html#inst_tag_3" >u_sdrc_core</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod13.html#inst_tag_15" id="tag_urg_inst_15">bank0_fsm</a></td>
+<td class="s7 cl rt"> 73.42</td>
+<td class="s7 cl rt"> 77.36</td>
+<td class="s7 cl rt"> 78.46</td>
+<td class="s6 cl rt"> 64.43</td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod13.html#inst_tag_16" id="tag_urg_inst_16">bank1_fsm</a></td>
+<td class="s7 cl rt"> 72.90</td>
+<td class="s7 cl rt"> 77.36</td>
+<td class="s7 cl rt"> 78.46</td>
+<td class="s6 cl rt"> 62.89</td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod13.html#inst_tag_17" id="tag_urg_inst_17">bank2_fsm</a></td>
+<td class="s7 cl rt"> 72.90</td>
+<td class="s7 cl rt"> 77.36</td>
+<td class="s7 cl rt"> 78.46</td>
+<td class="s6 cl rt"> 62.89</td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod13.html#inst_tag_18" id="tag_urg_inst_18">bank3_fsm</a></td>
+<td class="s7 cl rt"> 72.39</td>
+<td class="s7 cl rt"> 77.36</td>
+<td class="s7 cl rt"> 76.92</td>
+<td class="s6 cl rt"> 62.89</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+</div>
+</div>
+<hr>
+Since this is the module's only instance, the coverage report is the same as for the module.</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_sdrc_bank_ctl'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod0.html" >sdrc_bank_ctl</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s4"><td class="lf">TOTAL</td><td></td><td>31</td><td>15</td><td>48.39</td></tr>
+<tr class="s2"><td class="lf">ALWAYS</td><td>229</td><td>17</td><td>5</td><td>29.41</td></tr>
+<tr class="wht"><td class="lf">ALWAYS</td><td>317</td><td>0</td><td>0</td><td></td></tr>
+<tr class="s7"><td class="lf">ALWAYS</td><td>332</td><td>14</td><td>10</td><td>71.43</td></tr>
+</table>
+<pre class="code"><br clear=all>
+228                        always @ (*) begin
+229        1/1                b2x_req = 1'b0;
+230        1/1                b2x_ba =   xfr_ba;
+231                     
+232        1/1                if(`TARGET_DESIGN == `ASIC) begin // Support Multiple Rank request only on ASIC
+233        <font color = "red">0/1     ==>           if (rank_req[0]) begin </font>
+234        <font color = "red">0/1     ==>  	    b2x_req = 1'b1;</font>
+235        <font color = "red">0/1     ==>  	    b2x_ba = xfr_ba;</font>
+236                              end // if (rank_req[0])
+237        <font color = "red">0/1     ==>  	 else if (rank_req[1]) begin </font>
+238        <font color = "red">0/1     ==>  	   b2x_req = 1'b1;</font>
+239        <font color = "red">0/1     ==>  	   b2x_ba = rank_ba[3:2];</font>
+240                             end // if (rank_req[1])
+241        <font color = "red">0/1     ==>          else if (rank_req[2]) begin </font>
+242        <font color = "red">0/1     ==>  	  b2x_req = 1'b1;</font>
+243        <font color = "red">0/1     ==>  	  b2x_ba = rank_ba[5:4];</font>
+244                             end // if (rank_req[2])
+245        <font color = "red">0/1     ==>          else if (rank_req[3]) begin </font>
+246        <font color = "red">0/1     ==>  	  b2x_req = 1'b1;</font>
+247        <font color = "red">0/1     ==>  	  b2x_ba = rank_ba[7:6];</font>
+248                             end // if (rank_req[3])
+                   <font color = "red">==>  MISSING_ELSE</font>
+249                           end else begin // If FPGA
+250        1/1                   if (rank_req[0]) begin 
+251        1/1          	    b2x_req = 1'b1;
+252                     	 end
+                        MISSING_ELSE
+253                           end
+254                       end // always @ (rank_req or rank_fifo_mt or r2b_ba or rank_ba)
+255                     
+256                        assign b2x_idle = rank_fifo_mt;
+257                        assign b2x_start = i2x_start[b2x_ba];
+258                        assign b2x_last = i2x_last[b2x_ba];
+259                        assign b2x_wrap = i2x_wrap[b2x_ba];
+260                     
+261                        assign b2x_addr = (b2x_ba == 2'b11) ? i2x_addr3 :
+262                     		     (b2x_ba == 2'b10) ? i2x_addr2 :
+263                     		     (b2x_ba == 2'b01) ? i2x_addr1 : i2x_addr0;
+264                        
+265                        assign b2x_len = (b2x_ba == 2'b11) ? i2x_len3 :
+266                     		    (b2x_ba == 2'b10) ? i2x_len2 :
+267                     		    (b2x_ba == 2'b01) ? i2x_len1 : i2x_len0;
+268                        
+269                        assign b2x_cmd = (b2x_ba == 2'b11) ? i2x_cmd3 :
+270                     		    (b2x_ba == 2'b10) ? i2x_cmd2 :
+271                     		    (b2x_ba == 2'b01) ? i2x_cmd1 : i2x_cmd0;
+272                        
+273                        assign b2x_id = (b2x_ba == 2'b11) ? i2x_id3 :
+274                     		   (b2x_ba == 2'b10) ? i2x_id2 :
+275                     		   (b2x_ba == 2'b01) ? i2x_id1 : i2x_id0;
+276                        
+277                        assign x2i_ack[0] = (b2x_ba == 2'b00) ? x2b_ack : 1'b0;
+278                        assign x2i_ack[1] = (b2x_ba == 2'b01) ? x2b_ack : 1'b0;
+279                        assign x2i_ack[2] = (b2x_ba == 2'b10) ? x2b_ack : 1'b0;
+280                        assign x2i_ack[3] = (b2x_ba == 2'b11) ? x2b_ack : 1'b0;
+281                     
+282                        // Rank Fifo
+283                        // On a write write to selected rank and increment rank_cnt
+284                        // On a read shift rank_ba right 2 bits and decrement rank_cnt
+285                     
+286                        assign rank_fifo_wr = b2r_ack;
+287                     
+288                        assign rank_fifo_rd = b2x_req &amp; b2x_cmd[1] &amp; x2b_ack;
+289                        
+290                        assign rank_wr_sel[0] = (rank_cnt == 3'h0) ? rank_fifo_wr : 
+291                     			   (rank_cnt == 3'h1) ? rank_fifo_wr &amp; rank_fifo_rd : 
+292                     			   1'b0;
+293                     
+294                        assign rank_wr_sel[1] = (rank_cnt == 3'h1) ? rank_fifo_wr &amp; ~rank_fifo_rd :
+295                     			   (rank_cnt == 3'h2) ? rank_fifo_wr &amp; rank_fifo_rd :
+296                     			   1'b0; 
+297                     
+298                        assign rank_wr_sel[2] = (rank_cnt == 3'h2) ? rank_fifo_wr &amp; ~rank_fifo_rd :
+299                     			   (rank_cnt == 3'h3) ? rank_fifo_wr &amp; rank_fifo_rd :
+300                     			   1'b0; 
+301                     
+302                        assign rank_wr_sel[3] = (rank_cnt == 3'h3) ? rank_fifo_wr &amp; ~rank_fifo_rd :
+303                     			   (rank_cnt == 3'h4) ? rank_fifo_wr &amp; rank_fifo_rd :
+304                     			   1'b0; 
+305                     
+306                        assign rank_fifo_mt = (rank_cnt == 3'b0) ? 1'b1 : 1'b0;
+307                     
+308                        assign rank_fifo_full = (rank_cnt[2]) ? 1'b1 : 
+309                     			   (rank_cnt[1:0] == a2b_req_depth) ? 1'b1 : 1'b0; 
+310                     
+311                        // FIFO Check
+312                     
+313                        // synopsys translate_off
+314                     
+315                        always @ (posedge clk) begin
+316                     
+317        <font color = "grey">unreachable  </font>      if (~rank_fifo_wr &amp; rank_fifo_rd &amp;&amp; rank_cnt == 3'h0) begin
+318        <font color = "grey">unreachable  </font>	 $display (&quot;%t: %m: ERROR!!! Read from empty Fifo&quot;, $time);
+319        <font color = "grey">unreachable  </font>	 $stop;
+320                           end // if (rank_fifo_rd &amp;&amp; rank_cnt == 3'h0)
+                   <font color = "red">==>  MISSING_ELSE</font>
+321                     
+322        <font color = "grey">unreachable  </font>      if (rank_fifo_wr &amp;&amp; ~rank_fifo_rd &amp;&amp; rank_cnt == 3'h4) begin
+323        <font color = "grey">unreachable  </font>	 $display (&quot;%t: %m: ERROR!!! Write to full Fifo&quot;, $time);
+324        <font color = "grey">unreachable  </font>	 $stop;
+325                           end // if (rank_fifo_wr &amp;&amp; ~rank_fifo_rd &amp;&amp; rank_cnt == 3'h4)
+                   <font color = "red">==>  MISSING_ELSE</font>
+326                           
+327                        end // always @ (posedge clk)
+328                        
+329                        // synopsys translate_on
+330                           
+331                        always @ (posedge clk)
+332        1/1                if (~reset_n) begin
+333        1/1          	 rank_cnt &lt;= 3'b0;
+334        1/1          	 rank_ba &lt;= 8'b0;
+335        1/1          	 rank_ba_last &lt;= 4'b0;
+336                     
+337                           end // if (~reset_n)
+338                           else begin
+339                     
+340        1/1          	 rank_cnt &lt;= (rank_fifo_wr &amp; ~rank_fifo_rd) ? rank_cnt + 3'b1 :
+341                     		     (~rank_fifo_wr &amp; rank_fifo_rd) ? rank_cnt - 3'b1 :
+342                     		     rank_cnt;
+343                     
+344        1/1          	 rank_ba[1:0] &lt;= (rank_wr_sel[0]) ? r2b_ba :
+345                     			 (rank_fifo_rd) ? rank_ba[3:2] : rank_ba[1:0];
+346                     	 
+347        1/1          	 rank_ba[3:2] &lt;= (rank_wr_sel[1]) ? r2b_ba :
+348                     			 (rank_fifo_rd) ? rank_ba[5:4] : rank_ba[3:2];
+349                     	 
+350        1/1          	 rank_ba[5:4] &lt;= (rank_wr_sel[2]) ? r2b_ba :
+351                     			 (rank_fifo_rd) ? rank_ba[7:6] : rank_ba[5:4];
+352                     	 
+353        1/1          	 rank_ba[7:6] &lt;= (rank_wr_sel[3]) ? r2b_ba :
+354                     			 (rank_fifo_rd) ? 2'b00 : rank_ba[7:6];
+355                     
+356        1/1          	 if(`TARGET_DESIGN == `ASIC) begin // This Logic is implemented for ASIC Only
+357                     	    // Note: Currenly top-level does not generate the
+358                     	    // sdr_req_norm_dma_last signal and can be tied zero at top-level
+359        <font color = "red">0/1     ==>              rank_ba_last[0] &lt;= (rank_wr_sel[0]) ? sdr_req_norm_dma_last :</font>
+360                                                 (rank_fifo_rd) ?  rank_ba_last[1] : rank_ba_last[0];
+361                     
+362        <font color = "red">0/1     ==>              rank_ba_last[1] &lt;= (rank_wr_sel[1]) ? sdr_req_norm_dma_last :</font>
+363                                                    (rank_fifo_rd) ?  rank_ba_last[2] : rank_ba_last[1];
+364                     
+365        <font color = "red">0/1     ==>              rank_ba_last[2] &lt;= (rank_wr_sel[2]) ? sdr_req_norm_dma_last :</font>
+366                                                    (rank_fifo_rd) ?  rank_ba_last[3] : rank_ba_last[2];
+367                     
+368        <font color = "red">0/1     ==>              rank_ba_last[3] &lt;= (rank_wr_sel[3]) ? sdr_req_norm_dma_last :</font>
+369                                                    (rank_fifo_rd) ?  1'b0 : rank_ba_last[3];
+370                              end
+                        MISSING_ELSE
+</pre>
+<hr>
+<a name="Cond"></a>
+Cond Coverage for Module : <a href="mod0.html" >sdrc_bank_ctl</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s8"><td class="lf">Conditions</td><td>136</td><td>110</td><td>80.88</td></tr>
+<tr class="s8"><td class="lf">Logical</td><td>136</td><td>110</td><td>80.88</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       175
+ EXPRESSION ((r2b_ba == 2'b0) ? ((r2b_req &amp; (~rank_fifo_full))) : 1'b0)
+             --------1-------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       176
+ EXPRESSION ((r2b_ba == 2'b1) ? ((r2b_req &amp; (~rank_fifo_full))) : 1'b0)
+             --------1-------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       177
+ EXPRESSION ((r2b_ba == 2'b10) ? ((r2b_req &amp; (~rank_fifo_full))) : 1'b0)
+             --------1--------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       178
+ EXPRESSION ((r2b_ba == 2'b11) ? ((r2b_req &amp; (~rank_fifo_full))) : 1'b0)
+             --------1--------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       210
+ EXPRESSION 
+ Number  Term
+      1  (rank_cnt &lt; 3'h2) ? 1'b0 : ((rank_ba[3:2] == 2'b0) ? ((i2x_req[0] &amp; (~i2x_cmd0[1]))) : ((rank_ba[3:2] == 2'b1) ? ((i2x_req[1] &amp; (~i2x_cmd1[1]))) : ((rank_ba[3:2] == 2'b10) ? ((i2x_req[2] &amp; (~i2x_cmd2[1]))) : ((i2x_req[3] &amp; (~i2x_cmd3[1])))))))
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       210
+ SUB-EXPRESSION 
+ Number  Term
+      1  (rank_ba[3:2] == 2'b0) ? ((i2x_req[0] &amp; (~i2x_cmd0[1]))) : ((rank_ba[3:2] == 2'b1) ? ((i2x_req[1] &amp; (~i2x_cmd1[1]))) : ((rank_ba[3:2] == 2'b10) ? ((i2x_req[2] &amp; (~i2x_cmd2[1]))) : ((i2x_req[3] &amp; (~i2x_cmd3[1]))))))
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       210
+ SUB-EXPRESSION 
+ Number  Term
+      1  (rank_ba[3:2] == 2'b1) ? ((i2x_req[1] &amp; (~i2x_cmd1[1]))) : ((rank_ba[3:2] == 2'b10) ? ((i2x_req[2] &amp; (~i2x_cmd2[1]))) : ((i2x_req[3] &amp; (~i2x_cmd3[1])))))
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       210
+ SUB-EXPRESSION ((rank_ba[3:2] == 2'b10) ? ((i2x_req[2] &amp; (~i2x_cmd2[1]))) : ((i2x_req[3] &amp; (~i2x_cmd3[1]))))
+                 -----------1-----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       216
+ EXPRESSION 
+ Number  Term
+      1  (rank_cnt &lt; 3'h3) ? 1'b0 : ((rank_ba[5:4] == 2'b0) ? ((i2x_req[0] &amp; (~i2x_cmd0[1]))) : ((rank_ba[5:4] == 2'b1) ? ((i2x_req[1] &amp; (~i2x_cmd1[1]))) : ((rank_ba[5:4] == 2'b10) ? ((i2x_req[2] &amp; (~i2x_cmd2[1]))) : ((i2x_req[3] &amp; (~i2x_cmd3[1])))))))
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       216
+ SUB-EXPRESSION 
+ Number  Term
+      1  (rank_ba[5:4] == 2'b0) ? ((i2x_req[0] &amp; (~i2x_cmd0[1]))) : ((rank_ba[5:4] == 2'b1) ? ((i2x_req[1] &amp; (~i2x_cmd1[1]))) : ((rank_ba[5:4] == 2'b10) ? ((i2x_req[2] &amp; (~i2x_cmd2[1]))) : ((i2x_req[3] &amp; (~i2x_cmd3[1]))))))
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       216
+ SUB-EXPRESSION 
+ Number  Term
+      1  (rank_ba[5:4] == 2'b1) ? ((i2x_req[1] &amp; (~i2x_cmd1[1]))) : ((rank_ba[5:4] == 2'b10) ? ((i2x_req[2] &amp; (~i2x_cmd2[1]))) : ((i2x_req[3] &amp; (~i2x_cmd3[1])))))
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       216
+ SUB-EXPRESSION ((rank_ba[5:4] == 2'b10) ? ((i2x_req[2] &amp; (~i2x_cmd2[1]))) : ((i2x_req[3] &amp; (~i2x_cmd3[1]))))
+                 -----------1-----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       222
+ EXPRESSION 
+ Number  Term
+      1  (rank_cnt &lt; 3'h4) ? 1'b0 : ((rank_ba[7:6] == 2'b0) ? ((i2x_req[0] &amp; (~i2x_cmd0[1]))) : ((rank_ba[7:6] == 2'b1) ? ((i2x_req[1] &amp; (~i2x_cmd1[1]))) : ((rank_ba[7:6] == 2'b10) ? ((i2x_req[2] &amp; (~i2x_cmd2[1]))) : ((i2x_req[3] &amp; (~i2x_cmd3[1])))))))
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uRed"><td>0</td><td class="lf">Not Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       222
+ SUB-EXPRESSION 
+ Number  Term
+      1  (rank_ba[7:6] == 2'b0) ? ((i2x_req[0] &amp; (~i2x_cmd0[1]))) : ((rank_ba[7:6] == 2'b1) ? ((i2x_req[1] &amp; (~i2x_cmd1[1]))) : ((rank_ba[7:6] == 2'b10) ? ((i2x_req[2] &amp; (~i2x_cmd2[1]))) : ((i2x_req[3] &amp; (~i2x_cmd3[1]))))))
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uRed"><td>0</td><td class="lf">Not Covered</td></tr>
+<tr class="uRed"><td>1</td><td class="lf">Not Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       222
+ SUB-EXPRESSION 
+ Number  Term
+      1  (rank_ba[7:6] == 2'b1) ? ((i2x_req[1] &amp; (~i2x_cmd1[1]))) : ((rank_ba[7:6] == 2'b10) ? ((i2x_req[2] &amp; (~i2x_cmd2[1]))) : ((i2x_req[3] &amp; (~i2x_cmd3[1])))))
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uRed"><td>0</td><td class="lf">Not Covered</td></tr>
+<tr class="uRed"><td>1</td><td class="lf">Not Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       222
+ SUB-EXPRESSION ((rank_ba[7:6] == 2'b10) ? ((i2x_req[2] &amp; (~i2x_cmd2[1]))) : ((i2x_req[3] &amp; (~i2x_cmd3[1]))))
+                 -----------1-----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uRed"><td>0</td><td class="lf">Not Covered</td></tr>
+<tr class="uRed"><td>1</td><td class="lf">Not Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       261
+ EXPRESSION ((b2x_ba == 2'b11) ? i2x_addr3 : ((b2x_ba == 2'b10) ? i2x_addr2 : ((b2x_ba == 2'b1) ? i2x_addr1 : i2x_addr0)))
+             --------1--------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       261
+ SUB-EXPRESSION ((b2x_ba == 2'b10) ? i2x_addr2 : ((b2x_ba == 2'b1) ? i2x_addr1 : i2x_addr0))
+                 --------1--------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       261
+ SUB-EXPRESSION ((b2x_ba == 2'b1) ? i2x_addr1 : i2x_addr0)
+                 --------1-------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       265
+ EXPRESSION ((b2x_ba == 2'b11) ? i2x_len3 : ((b2x_ba == 2'b10) ? i2x_len2 : ((b2x_ba == 2'b1) ? i2x_len1 : i2x_len0)))
+             --------1--------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       265
+ SUB-EXPRESSION ((b2x_ba == 2'b10) ? i2x_len2 : ((b2x_ba == 2'b1) ? i2x_len1 : i2x_len0))
+                 --------1--------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       265
+ SUB-EXPRESSION ((b2x_ba == 2'b1) ? i2x_len1 : i2x_len0)
+                 --------1-------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       269
+ EXPRESSION ((b2x_ba == 2'b11) ? i2x_cmd3 : ((b2x_ba == 2'b10) ? i2x_cmd2 : ((b2x_ba == 2'b1) ? i2x_cmd1 : i2x_cmd0)))
+             --------1--------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       269
+ SUB-EXPRESSION ((b2x_ba == 2'b10) ? i2x_cmd2 : ((b2x_ba == 2'b1) ? i2x_cmd1 : i2x_cmd0))
+                 --------1--------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       269
+ SUB-EXPRESSION ((b2x_ba == 2'b1) ? i2x_cmd1 : i2x_cmd0)
+                 --------1-------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       273
+ EXPRESSION ((b2x_ba == 2'b11) ? i2x_id3 : ((b2x_ba == 2'b10) ? i2x_id2 : ((b2x_ba == 2'b1) ? i2x_id1 : i2x_id0)))
+             --------1--------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       273
+ SUB-EXPRESSION ((b2x_ba == 2'b10) ? i2x_id2 : ((b2x_ba == 2'b1) ? i2x_id1 : i2x_id0))
+                 --------1--------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       273
+ SUB-EXPRESSION ((b2x_ba == 2'b1) ? i2x_id1 : i2x_id0)
+                 --------1-------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       277
+ EXPRESSION ((b2x_ba == 2'b0) ? x2b_ack : 1'b0)
+             --------1-------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       278
+ EXPRESSION ((b2x_ba == 2'b1) ? x2b_ack : 1'b0)
+             --------1-------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       279
+ EXPRESSION ((b2x_ba == 2'b10) ? x2b_ack : 1'b0)
+             --------1--------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       280
+ EXPRESSION ((b2x_ba == 2'b11) ? x2b_ack : 1'b0)
+             --------1--------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       290
+ EXPRESSION ((rank_cnt == 3'b0) ? rank_fifo_wr : ((rank_cnt == 3'b1) ? ((rank_fifo_wr &amp; rank_fifo_rd)) : 1'b0))
+             ---------1--------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       290
+ SUB-EXPRESSION ((rank_cnt == 3'b1) ? ((rank_fifo_wr &amp; rank_fifo_rd)) : 1'b0)
+                 ---------1--------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       294
+ EXPRESSION ((rank_cnt == 3'b1) ? ((rank_fifo_wr &amp; (~rank_fifo_rd))) : ((rank_cnt == 3'h2) ? ((rank_fifo_wr &amp; rank_fifo_rd)) : 1'b0))
+             ---------1--------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       294
+ SUB-EXPRESSION ((rank_cnt == 3'h2) ? ((rank_fifo_wr &amp; rank_fifo_rd)) : 1'b0)
+                 ---------1--------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       298
+ EXPRESSION ((rank_cnt == 3'h2) ? ((rank_fifo_wr &amp; (~rank_fifo_rd))) : ((rank_cnt == 3'h3) ? ((rank_fifo_wr &amp; rank_fifo_rd)) : 1'b0))
+             ---------1--------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       298
+ SUB-EXPRESSION ((rank_cnt == 3'h3) ? ((rank_fifo_wr &amp; rank_fifo_rd)) : 1'b0)
+                 ---------1--------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       302
+ EXPRESSION ((rank_cnt == 3'h3) ? ((rank_fifo_wr &amp; (~rank_fifo_rd))) : ((rank_cnt == 3'h4) ? ((rank_fifo_wr &amp; rank_fifo_rd)) : 1'b0))
+             ---------1--------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       302
+ SUB-EXPRESSION ((rank_cnt == 3'h4) ? ((rank_fifo_wr &amp; rank_fifo_rd)) : 1'b0)
+                 ---------1--------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uRed"><td>1</td><td class="lf">Not Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       306
+ EXPRESSION ((rank_cnt == 3'b0) ? 1'b1 : 1'b0)
+             ---------1--------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       308
+ EXPRESSION (rank_cnt[2] ? 1'b1 : ((rank_cnt[1:0] == a2b_req_depth) ? 1'b1 : 1'b0))
+             -----1-----
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uRed"><td>1</td><td class="lf">Not Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       308
+ SUB-EXPRESSION ((rank_cnt[1:0] == a2b_req_depth) ? 1'b1 : 1'b0)
+                 ----------------1---------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       340
+ EXPRESSION (((rank_fifo_wr &amp; (~rank_fifo_rd))) ? ((rank_cnt + 3'b1)) : ((((~rank_fifo_wr) &amp; rank_fifo_rd)) ? ((rank_cnt - 3'b1)) : rank_cnt))
+             -----------------1----------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       340
+ SUB-EXPRESSION ((((~rank_fifo_wr) &amp; rank_fifo_rd)) ? ((rank_cnt - 3'b1)) : rank_cnt)
+                 -----------------1----------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       344
+ EXPRESSION (rank_wr_sel[0] ? r2b_ba : (rank_fifo_rd ? rank_ba[3:2] : rank_ba[1:0]))
+             -------1------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       344
+ SUB-EXPRESSION (rank_fifo_rd ? rank_ba[3:2] : rank_ba[1:0])
+                 ------1-----
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       347
+ EXPRESSION (rank_wr_sel[1] ? r2b_ba : (rank_fifo_rd ? rank_ba[5:4] : rank_ba[3:2]))
+             -------1------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       347
+ SUB-EXPRESSION (rank_fifo_rd ? rank_ba[5:4] : rank_ba[3:2])
+                 ------1-----
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       350
+ EXPRESSION (rank_wr_sel[2] ? r2b_ba : (rank_fifo_rd ? rank_ba[7:6] : rank_ba[5:4]))
+             -------1------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       350
+ SUB-EXPRESSION (rank_fifo_rd ? rank_ba[7:6] : rank_ba[5:4])
+                 ------1-----
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       353
+ EXPRESSION (rank_wr_sel[3] ? r2b_ba : (rank_fifo_rd ? 2'b0 : rank_ba[7:6]))
+             -------1------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uRed"><td>1</td><td class="lf">Not Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       353
+ SUB-EXPRESSION (rank_fifo_rd ? 2'b0 : rank_ba[7:6])
+                 ------1-----
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       359
+ EXPRESSION (rank_wr_sel[0] ? sdr_req_norm_dma_last : (rank_fifo_rd ? rank_ba_last[1] : rank_ba_last[0]))
+             -------1------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uRed"><td>0</td><td class="lf">Not Covered</td></tr>
+<tr class="uRed"><td>1</td><td class="lf">Not Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       359
+ SUB-EXPRESSION (rank_fifo_rd ? rank_ba_last[1] : rank_ba_last[0])
+                 ------1-----
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uRed"><td>0</td><td class="lf">Not Covered</td></tr>
+<tr class="uRed"><td>1</td><td class="lf">Not Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       362
+ EXPRESSION (rank_wr_sel[1] ? sdr_req_norm_dma_last : (rank_fifo_rd ? rank_ba_last[2] : rank_ba_last[1]))
+             -------1------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uRed"><td>0</td><td class="lf">Not Covered</td></tr>
+<tr class="uRed"><td>1</td><td class="lf">Not Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       362
+ SUB-EXPRESSION (rank_fifo_rd ? rank_ba_last[2] : rank_ba_last[1])
+                 ------1-----
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uRed"><td>0</td><td class="lf">Not Covered</td></tr>
+<tr class="uRed"><td>1</td><td class="lf">Not Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       365
+ EXPRESSION (rank_wr_sel[2] ? sdr_req_norm_dma_last : (rank_fifo_rd ? rank_ba_last[3] : rank_ba_last[2]))
+             -------1------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uRed"><td>0</td><td class="lf">Not Covered</td></tr>
+<tr class="uRed"><td>1</td><td class="lf">Not Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       365
+ SUB-EXPRESSION (rank_fifo_rd ? rank_ba_last[3] : rank_ba_last[2])
+                 ------1-----
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uRed"><td>0</td><td class="lf">Not Covered</td></tr>
+<tr class="uRed"><td>1</td><td class="lf">Not Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       368
+ EXPRESSION (rank_wr_sel[3] ? sdr_req_norm_dma_last : (rank_fifo_rd ? 1'b0 : rank_ba_last[3]))
+             -------1------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uRed"><td>0</td><td class="lf">Not Covered</td></tr>
+<tr class="uRed"><td>1</td><td class="lf">Not Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       368
+ SUB-EXPRESSION (rank_fifo_rd ? 1'b0 : rank_ba_last[3])
+                 ------1-----
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uRed"><td>0</td><td class="lf">Not Covered</td></tr>
+<tr class="uRed"><td>1</td><td class="lf">Not Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       374
+ EXPRESSION ((xfr_ba == 2'b0) ? 1'b1 : 1'b0)
+             --------1-------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       375
+ EXPRESSION ((xfr_ba == 2'b1) ? 1'b1 : 1'b0)
+             --------1-------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       376
+ EXPRESSION ((xfr_ba == 2'b10) ? 1'b1 : 1'b0)
+             --------1--------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       377
+ EXPRESSION ((xfr_ba == 2'b11) ? 1'b1 : 1'b0)
+             --------1--------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       565
+ EXPRESSION ((xfr_bank_sel == 2'h3) ? bank3_row : ((xfr_bank_sel == 2'h2) ? bank2_row : ((xfr_bank_sel == 2'b1) ? bank1_row : bank0_row)))
+             -----------1----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       565
+ SUB-EXPRESSION ((xfr_bank_sel == 2'h2) ? bank2_row : ((xfr_bank_sel == 2'b1) ? bank1_row : bank0_row))
+                 -----------1----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       565
+ SUB-EXPRESSION ((xfr_bank_sel == 2'b1) ? bank1_row : bank0_row)
+                 -----------1----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<hr>
+<a name="Toggle"></a>
+Toggle Coverage for Module : <a href="mod0.html" >sdrc_bank_ctl</a><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s5">
+<td>Totals</td>
+<td class="rt">79</td>
+<td class="rt">46</td>
+<td class="rt">58.23 </td>
+</tr><tr class="s6">
+<td>Total Bits</td>
+<td class="rt">694</td>
+<td class="rt">482</td>
+<td class="rt">69.45 </td>
+</tr><tr class="s6">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">347</td>
+<td class="rt">241</td>
+<td class="rt">69.45 </td>
+</tr><tr class="s6">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">347</td>
+<td class="rt">241</td>
+<td class="rt">69.45 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s7">
+<td>Ports</td>
+<td class="rt">37</td>
+<td class="rt">26</td>
+<td class="rt">70.27 </td>
+</tr><tr class="s6">
+<td>Port Bits</td>
+<td class="rt">216</td>
+<td class="rt">132</td>
+<td class="rt">61.11 </td>
+</tr><tr class="s6">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">108</td>
+<td class="rt">66</td>
+<td class="rt">61.11 </td>
+</tr><tr class="s6">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">108</td>
+<td class="rt">66</td>
+<td class="rt">61.11 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s4">
+<td>Signals</td>
+<td class="rt">42</td>
+<td class="rt">20</td>
+<td class="rt">47.62 </td>
+</tr><tr class="s7">
+<td>Signal Bits</td>
+<td class="rt">478</td>
+<td class="rt">350</td>
+<td class="rt">73.22 </td>
+</tr><tr class="s7">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">239</td>
+<td class="rt">175</td>
+<td class="rt">73.22 </td>
+</tr><tr class="s7">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">239</td>
+<td class="rt">175</td>
+<td class="rt">73.22 </td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Port Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td><td class="alfsrt">Direction</td></tr><tr>
+<td>clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>reset_n</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>a2b_req_depth[1:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_req</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_start</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_last</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_write</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_wrap</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_req_id[3:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_ba[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_raddr[12:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_caddr[0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_caddr[7:1]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_caddr[12:8]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_len[0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_len[1]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>r2b_len[6:2]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>b2r_arb_ok</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2r_ack</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>sdr_req_norm_dma_last</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>b2x_idle</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_req</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_start</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_last</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_tras_ok</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_wrap</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_id[3:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_ba[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_addr[12:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_len[0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_len[1]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_len[6:2]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>b2x_cmd[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>x2b_ack</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>x2b_pre_ok[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>x2b_refresh</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>x2b_act_ok</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>x2b_rdok</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>x2b_wrok</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>tras_delay[3:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>trp_delay[3:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>trcd_delay[3:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>xfr_bank_sel[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Signal Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td></tr><tr>
+<td>r2i_req[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>i2r_ack[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>i2x_req[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>i2x_start[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>i2x_last[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>i2x_wrap[3:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>tras_ok[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>i2x_addr0[12:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>i2x_addr1[11:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>i2x_addr1[12]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>i2x_addr2[11:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>i2x_addr2[12]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>i2x_addr3[11:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>i2x_addr3[12]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>i2x_len0[0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>i2x_len0[1]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>i2x_len0[6:2]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>i2x_len1[0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>i2x_len1[1]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>i2x_len1[6:2]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>i2x_len2[0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>i2x_len2[1]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>i2x_len2[6:2]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>i2x_len3[0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>i2x_len3[1]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>i2x_len3[6:2]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>i2x_cmd0[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>i2x_cmd1[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>i2x_cmd2[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>i2x_cmd3[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>i2x_id0[3:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>i2x_id1[3:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>i2x_id2[3:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>i2x_id3[3:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>x2i_ack[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>curr_id[3:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>xfr_ba[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>xfr_ba_last</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>xfr_ok[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rank_ba[5:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rank_ba[7:6]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>rank_ba_last[3:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>rank_cnt[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rank_cnt[2]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>rank_req[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rank_req[3]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>rank_wr_sel[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rank_wr_sel[3]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>rank_fifo_wr</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rank_fifo_rd</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rank_fifo_full</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rank_fifo_mt</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>bank0_row[12:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>bank1_row[11:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>bank1_row[12]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>bank2_row[11:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>bank2_row[12]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>bank3_row[11:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>bank3_row[12]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>cur_row[12:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="inst_tag_0">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+    <li>
+      <a href="#Toggle">Toggle</a>    </li>
+  </ul>
+  <ul name="tag_sdrc_bank_ctl">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+    <li>
+      <a href="#Toggle">Toggle</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

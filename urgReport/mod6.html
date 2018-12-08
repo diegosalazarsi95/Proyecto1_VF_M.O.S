@@ -1,0 +1,3961 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: async_fifo</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | <a href="groups.html" ><b>groups</b></a> | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_async_fifo'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_async_fifo')">async_fifo</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 94.22</td>
+<td class="s10 cl rt"><a href="mod6.html#Line" >100.00</a></td>
+<td class="s8 cl rt"><a href="mod6.html#Cond" > 89.29</a></td>
+<td class="s8 cl rt"><a href="mod6.html#Toggle" > 87.59</a></td>
+<td class="s10 cl rt"><a href="mod6.html#Assert" >100.00</a></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/mnt/vol_NFS_Zener/WD_ESPEC/diegosalazar/Proyecto1_VF_M.O.S/./rtl/async_fifo.v')">/mnt/vol_NFS_Zener/WD_ESPEC/diegosalazar/Proyecto1_VF_M.O.S/./rtl/async_fifo.v</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod6.html#inst_tag_8"  onclick="showContent('inst_tag_8')">tbench_top.u_dut.u_wb2sdrc.u_rddatafifo</a></td>
+<td class="s8 cl rt"> 86.51</td>
+<td class="s9 cl rt"><a href="mod6.html#inst_tag_8_Line" > 95.95</a></td>
+<td class="s5 cl rt"><a href="mod6.html#inst_tag_8_Cond" > 57.14</a></td>
+<td class="s9 cl rt"><a href="mod6.html#inst_tag_8_Toggle" > 92.96</a></td>
+<td class="s10 cl rt"><a href="mod6.html#inst_tag_8_Assert" >100.00</a></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod6.html#inst_tag_7"  onclick="showContent('inst_tag_7')">tbench_top.u_dut.u_wb2sdrc.u_wrdatafifo</a></td>
+<td class="s9 cl rt"> 92.10</td>
+<td class="s9 cl rt"><a href="mod6.html#inst_tag_7_Line" > 97.30</a></td>
+<td class="s7 cl rt"><a href="mod6.html#inst_tag_7_Cond" > 78.57</a></td>
+<td class="s9 cl rt"><a href="mod6.html#inst_tag_7_Toggle" > 92.54</a></td>
+<td class="s10 cl rt"><a href="mod6.html#inst_tag_7_Assert" >100.00</a></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod6.html#inst_tag_6"  onclick="showContent('inst_tag_6')">tbench_top.u_dut.u_wb2sdrc.u_cmdfifo</a></td>
+<td class="s9 cl rt"> 94.31</td>
+<td class="s10 cl rt"><a href="mod6.html#inst_tag_6_Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod6.html#inst_tag_6_Cond" >100.00</a></td>
+<td class="s7 cl rt"><a href="mod6.html#inst_tag_6_Toggle" > 77.25</a></td>
+<td class="s10 cl rt"><a href="mod6.html#inst_tag_6_Assert" >100.00</a></td>
+</tr></table></div>
+</div>
+<br clear=all>
+<div name='inst_tag_8'>
+<hr>
+<a name="inst_tag_8"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_8" >tbench_top.u_dut.u_wb2sdrc.u_rddatafifo</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>ASSERT</td></tr><tr>
+<td class="s8 cl rt"> 86.51</td>
+<td class="s9 cl rt"><a href="mod6.html#inst_tag_8_Line" > 95.95</a></td>
+<td class="s5 cl rt"><a href="mod6.html#inst_tag_8_Cond" > 57.14</a></td>
+<td class="s9 cl rt"><a href="mod6.html#inst_tag_8_Toggle" > 92.96</a></td>
+<td class="s10 cl rt"><a href="mod6.html#inst_tag_8_Assert" >100.00</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>ASSERT</td></tr><tr>
+<td class="s8 cl rt"> 86.51</td>
+<td class="s9 cl rt"> 95.95</td>
+<td class="s5 cl rt"> 57.14</td>
+<td class="s9 cl rt"> 92.96</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s8 cl rt"> 88.40</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s6 cl rt"> 69.44</td>
+<td class="s8 cl rt"> 84.17</td>
+<td class="s10 cl rt">100.00</td>
+<td><a href="mod10.html#inst_tag_12" >u_wb2sdrc</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>ASSERT</td></tr><tr>
+<td colspan=6>no children</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<div name='inst_tag_7'>
+<hr>
+<a name="inst_tag_7"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_7" >tbench_top.u_dut.u_wb2sdrc.u_wrdatafifo</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 92.10</td>
+<td class="s9 cl rt"><a href="mod6.html#inst_tag_7_Line" > 97.30</a></td>
+<td class="s7 cl rt"><a href="mod6.html#inst_tag_7_Cond" > 78.57</a></td>
+<td class="s9 cl rt"><a href="mod6.html#inst_tag_7_Toggle" > 92.54</a></td>
+<td class="s10 cl rt"><a href="mod6.html#inst_tag_7_Assert" >100.00</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 92.10</td>
+<td class="s9 cl rt"> 97.30</td>
+<td class="s7 cl rt"> 78.57</td>
+<td class="s9 cl rt"> 92.54</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s8 cl rt"> 88.40</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s6 cl rt"> 69.44</td>
+<td class="s8 cl rt"> 84.17</td>
+<td class="s10 cl rt">100.00</td>
+<td><a href="mod10.html#inst_tag_12" >u_wb2sdrc</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>ASSERT</td></tr><tr>
+<td colspan=6>no children</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<div name='inst_tag_6'>
+<hr>
+<a name="inst_tag_6"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_6" >tbench_top.u_dut.u_wb2sdrc.u_cmdfifo</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 94.31</td>
+<td class="s10 cl rt"><a href="mod6.html#inst_tag_6_Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod6.html#inst_tag_6_Cond" >100.00</a></td>
+<td class="s7 cl rt"><a href="mod6.html#inst_tag_6_Toggle" > 77.25</a></td>
+<td class="s10 cl rt"><a href="mod6.html#inst_tag_6_Assert" >100.00</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 94.31</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s7 cl rt"> 77.25</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s8 cl rt"> 88.40</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s6 cl rt"> 69.44</td>
+<td class="s8 cl rt"> 84.17</td>
+<td class="s10 cl rt">100.00</td>
+<td><a href="mod10.html#inst_tag_12" >u_wb2sdrc</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>ASSERT</td></tr><tr>
+<td colspan=6>no children</td>
+</tr></table><br clear=all>
+</div>
+</div>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_async_fifo'>
+<a name="Line"></a>
+Line Coverage for Module : <a name="1442224497"></a>
+<a href="mod6.html" >async_fifo</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>74</td><td>74</td><td>100.00</td></tr>
+<tr class="wht"><td class="lf">INITIAL</td><td>85</td><td>0</td><td>0</td><td></td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>115</td><td>11</td><td>11</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>138</td><td>2</td><td>2</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>148</td><td>5</td><td>5</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>175</td><td>11</td><td>11</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>203</td><td>1</td><td>1</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>212</td><td>5</td><td>5</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ROUTINE</td><td>230</td><td>7</td><td>7</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ROUTINE</td><td>245</td><td>7</td><td>7</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ROUTINE</td><td>259</td><td>11</td><td>11</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ROUTINE</td><td>281</td><td>11</td><td>11</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ROUTINE</td><td>303</td><td>3</td><td>3</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+84                        initial begin
+85         <font color = "grey">unreachable  </font>    if (AW == 0) begin
+86         <font color = "grey">unreachable  </font>      $display (&quot;%m : ERROR!!! Fifo depth %d not in range 2 to 256&quot;, DP);
+87                          end // if (AW == 0)
+                   <font color = "red">==>  MISSING_ELSE</font>
+88                        end // initial begin
+89                      
+90                         // synopsys translate_on
+91                      
+92                        //range_2: assert(AW==0) $display(&quot;%m : ERROR!!! Fifo depth %d not in range 2 to 256&quot;, DP);
+93                      
+94                      
+95                      
+96                      
+97                         reg [W-1 : 0]    mem[DP-1 : 0];
+98                      
+99                         /*********************** write side ************************/
+100                        reg [AW:0] sync_rd_ptr_0, sync_rd_ptr_1; 
+101                        wire [AW:0] sync_rd_ptr;
+102                        reg [AW:0] wr_ptr, grey_wr_ptr;
+103                        reg [AW:0] grey_rd_ptr;
+104                        reg full_q;
+105                        wire full_c;
+106                        wire afull_c;
+107                        wire [AW:0] wr_ptr_inc = wr_ptr + 1'b1;
+108                        wire [AW:0] wr_cnt = get_cnt(wr_ptr, sync_rd_ptr);
+109                     
+110                        assign full_c  = (wr_cnt == FULL_DP) ? 1'b1 : 1'b0;
+111                        assign afull_c = (wr_cnt == FULL_DP-1) ? 1'b1 : 1'b0;
+112                     
+113                     
+114                        always @(posedge wr_clk or negedge wr_reset_n) begin
+115        1/1          	if (!wr_reset_n) begin
+116        1/1          		wr_ptr &lt;= 0;
+117        1/1          		grey_wr_ptr &lt;= 0;
+118        1/1          		full_q &lt;= 0;	
+119                     	end
+120        1/1          	else if (wr_en) begin
+121        1/1          		wr_ptr &lt;= wr_ptr_inc;
+122        1/1          		grey_wr_ptr &lt;= bin2grey(wr_ptr_inc);
+123        1/1          		if (wr_cnt == (FULL_DP-1)) begin
+124        1/1          			full_q &lt;= 1'b1;
+125                     		end
+                        MISSING_ELSE
+126                     	end
+127                     	else begin
+128        1/1          	    	if (full_q &amp;&amp; (wr_cnt&lt;FULL_DP)) begin
+129        1/1          			full_q &lt;= 1'b0;
+130                     	     	end
+                        MISSING_ELSE
+131                     	end
+132                         end
+133                     
+134                         assign full  = (WR_FAST == 1) ? full_c : full_q;
+135                         assign afull = afull_c;
+136                     
+137                         always @(posedge wr_clk) begin
+138        1/1          	if (wr_en) begin
+139        1/1          		mem[wr_ptr[AW-1:0]] &lt;= wr_data;
+140                     	end
+                        MISSING_ELSE
+141                         end
+142                     
+143                         wire [AW:0] grey_rd_ptr_dly ;
+144                         assign #1 grey_rd_ptr_dly = grey_rd_ptr;
+145                     
+146                         // read pointer synchronizer
+147                         always @(posedge wr_clk or negedge wr_reset_n) begin
+148        1/1          	if (!wr_reset_n) begin
+149        1/1          		sync_rd_ptr_0 &lt;= 0;
+150        1/1          		sync_rd_ptr_1 &lt;= 0;
+151                     	end
+152                     	else begin
+153        1/1          		sync_rd_ptr_0 &lt;= grey_rd_ptr_dly;		
+154        1/1          		sync_rd_ptr_1 &lt;= sync_rd_ptr_0;
+155                     	end
+156                         end
+157                     
+158                         assign sync_rd_ptr = grey2bin(sync_rd_ptr_1);
+159                     
+160                        /************************ read side *****************************/
+161                        reg [AW:0] sync_wr_ptr_0, sync_wr_ptr_1; 
+162                        wire [AW:0] sync_wr_ptr;
+163                        reg [AW:0] rd_ptr;
+164                        reg empty_q;
+165                        wire empty_c;
+166                        wire aempty_c;
+167                        wire [AW:0] rd_ptr_inc = rd_ptr + 1'b1;
+168                        wire [AW:0] sync_wr_ptr_dec = sync_wr_ptr - 1'b1;
+169                        wire [AW:0] rd_cnt = get_cnt(sync_wr_ptr, rd_ptr);
+170                      
+171                        assign empty_c  = (rd_cnt == 0) ? 1'b1 : 1'b0;
+172                        assign aempty_c = (rd_cnt == 1) ? 1'b1 : 1'b0;
+173                     
+174                        always @(posedge rd_clk or negedge rd_reset_n) begin
+175        1/1                if (!rd_reset_n) begin
+176        1/1                   rd_ptr &lt;= 0;
+177        1/1          	 grey_rd_ptr &lt;= 0;
+178        1/1          	 empty_q &lt;= 1'b1;
+179                           end
+180                           else begin
+181        1/1                   if (rd_en) begin
+182        1/1                      rd_ptr &lt;= rd_ptr_inc;
+183        1/1                      grey_rd_ptr &lt;= bin2grey(rd_ptr_inc);
+184        1/1                      if (rd_cnt==(EMPTY_DP+1)) begin
+185        1/1                         empty_q &lt;= 1'b1;
+186                                 end
+                        MISSING_ELSE
+187                              end
+188                              else begin
+189        1/1                      if (empty_q &amp;&amp; (rd_cnt!=EMPTY_DP)) begin
+190        1/1          	      empty_q &lt;= 1'b0;
+191                     	    end
+                        MISSING_ELSE
+192                              end
+193                            end
+194                         end
+195                     
+196                         assign empty  = (RD_FAST == 1) ? empty_c : empty_q;
+197                         assign aempty = aempty_c;
+198                     
+199                         reg [W-1 : 0]  rd_data_q;
+200                     
+201                        wire [W-1 : 0] rd_data_c = mem[rd_ptr[AW-1:0]];
+202                        always @(posedge rd_clk) begin
+203        1/1          	rd_data_q &lt;= rd_data_c;
+204                        end
+205                        assign rd_data  = (RD_FAST == 1) ? rd_data_c : rd_data_q;
+206                     
+207                         wire [AW:0] grey_wr_ptr_dly ;
+208                         assign #1 grey_wr_ptr_dly =  grey_wr_ptr;
+209                     
+210                         // write pointer synchronizer
+211                         always @(posedge rd_clk or negedge rd_reset_n) begin
+212        1/1          	if (!rd_reset_n) begin
+213        1/1          	   sync_wr_ptr_0 &lt;= 0;
+214        1/1          	   sync_wr_ptr_1 &lt;= 0;
+215                     	end
+216                     	else begin
+217        1/1          	   sync_wr_ptr_0 &lt;= grey_wr_ptr_dly;		
+218        1/1          	   sync_wr_ptr_1 &lt;= sync_wr_ptr_0;
+219                     	end
+220                         end
+221                         assign sync_wr_ptr = grey2bin(sync_wr_ptr_1);
+222                     
+223                     	
+224                     /************************ functions ******************************/
+225                     function [AW:0] bin2grey;
+226                     input [AW:0] bin;
+227                     reg [8:0] bin_8;
+228                     reg [8:0] grey_8;
+229                     begin
+230        1/1          	bin_8 = bin;
+231        1/1          	grey_8[1:0] = do_grey(bin_8[2:0]);
+232        1/1          	grey_8[3:2] = do_grey(bin_8[4:2]);
+233        1/1          	grey_8[5:4] = do_grey(bin_8[6:4]);
+234        1/1          	grey_8[7:6] = do_grey(bin_8[8:6]);
+235        1/1          	grey_8[8] = bin_8[8];
+236        1/1          	bin2grey = grey_8;
+237                     end
+238                     endfunction
+239                     
+240                     function [AW:0] grey2bin;
+241                     input [AW:0] grey;
+242                     reg [8:0] grey_8;
+243                     reg [8:0] bin_8;
+244                     begin
+245        1/1          	grey_8 = grey;
+246        1/1          	bin_8[8] = grey_8[8];
+247        1/1          	bin_8[7:6] = do_bin({bin_8[8], grey_8[7:6]});
+248        1/1          	bin_8[5:4] = do_bin({bin_8[6], grey_8[5:4]});
+249        1/1          	bin_8[3:2] = do_bin({bin_8[4], grey_8[3:2]});
+250        1/1          	bin_8[1:0] = do_bin({bin_8[2], grey_8[1:0]});
+251        1/1          	grey2bin = bin_8;
+252                     end
+253                     endfunction
+254                     
+255                     
+256                     function [1:0] do_grey;
+257                     input [2:0] bin;
+258                     begin
+259        1/1          	if (bin[2]) begin  // do reverse grey
+260        1/1          		case (bin[1:0]) 
+261        1/1          			2'b00: do_grey = 2'b10;
+262        1/1          			2'b01: do_grey = 2'b11;
+263        1/1          			2'b10: do_grey = 2'b01;
+264        1/1          			2'b11: do_grey = 2'b00;
+                   <font color = "red">==>  MISSING_DEFAULT</font>
+265                     		endcase
+266                     	end
+267                     	else begin
+268        1/1          		case (bin[1:0]) 
+269        1/1          			2'b00: do_grey = 2'b00;
+270        1/1          			2'b01: do_grey = 2'b01;
+271        1/1          			2'b10: do_grey = 2'b11;
+272        1/1          			2'b11: do_grey = 2'b10;
+                   <font color = "red">==>  MISSING_DEFAULT</font>
+273                     		endcase
+274                     	end
+275                     end
+276                     endfunction
+277                     
+278                     function [1:0] do_bin;
+279                     input [2:0] grey;
+280                     begin
+281        1/1          	if (grey[2]) begin	// actually bin[2]
+282        1/1          		case (grey[1:0])
+283        1/1          			2'b10: do_bin = 2'b00;
+284        1/1          			2'b11: do_bin = 2'b01;
+285        1/1          			2'b01: do_bin = 2'b10;
+286        1/1          			2'b00: do_bin = 2'b11;
+                   <font color = "red">==>  MISSING_DEFAULT</font>
+287                     		endcase
+288                     	end
+289                     	else begin
+290        1/1          		case (grey[1:0])
+291        1/1          			2'b00: do_bin = 2'b00;
+292        1/1          			2'b01: do_bin = 2'b01;
+293        1/1          			2'b11: do_bin = 2'b10;
+294        1/1          			2'b10: do_bin = 2'b11;
+                   <font color = "red">==>  MISSING_DEFAULT</font>
+295                     		endcase
+296                     	end
+297                     end
+298                     endfunction
+299                     			
+300                     function [AW:0] get_cnt;
+301                     input [AW:0] wr_ptr, rd_ptr;
+302                     begin
+303        1/1          	if (wr_ptr &gt;= rd_ptr) begin
+304        1/1          		get_cnt = (wr_ptr - rd_ptr);	
+305                     	end
+306                     	else begin
+307        1/1          		get_cnt = DP*2 - (rd_ptr - wr_ptr);
+</pre>
+<hr>
+<a name="Cond"></a>
+Cond Coverage for Module : <a name="1139812180"></a>
+<a href="mod6.html" >async_fifo ( parameter W=36,DP=4,WR_FAST=0,RD_FAST=0,FULL_DP=4,EMPTY_DP=0,AW=2 + W=33,DP=4,WR_FAST=0,RD_FAST=1,FULL_DP=4,EMPTY_DP=0,AW=2 ) </a><br clear=all>
+Cond Coverage for Module self-instances : 
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>COND</td></tr><tr>
+<td class="s9 cl rt"> 94.31</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table>
+<span class=inst><a href="mod6.html#inst_tag_6_Cond" >tbench_top.u_dut.u_wb2sdrc.u_cmdfifo</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>COND</td></tr><tr>
+<td class="s8 cl rt"> 86.51</td>
+<td class="s5 cl rt"> 57.14</td>
+</tr></table>
+<span class=inst><a href="mod6.html#inst_tag_8_Cond" >tbench_top.u_dut.u_wb2sdrc.u_rddatafifo</a></span></div>
+<br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">Conditions</td><td>14</td><td>14</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">Logical</td><td>14</td><td>14</td><td>100.00</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       110
+ EXPRESSION ((wr_cnt == FULL_DP) ? 1'b1 : 1'b0)
+             ---------1---------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       111
+ EXPRESSION ((wr_cnt == (FULL_DP - 1)) ? 1'b1 : 1'b0)
+             ------------1------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       128
+ EXPRESSION (full_q &amp;&amp; (wr_cnt &lt; FULL_DP))
+             ---1--    ---------2--------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       171
+ EXPRESSION ((rd_cnt == 3'b0) ? 1'b1 : 1'b0)
+             --------1-------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       172
+ EXPRESSION ((rd_cnt == 3'b1) ? 1'b1 : 1'b0)
+             --------1-------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       189
+ EXPRESSION (empty_q &amp;&amp; (rd_cnt != EMPTY_DP))
+             ---1---    ----------2---------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<hr>
+<a name="Cond"></a>
+Cond Coverage for Module : <a name="1842096591"></a>
+<a href="mod6.html" >async_fifo ( parameter W=36,DP=8,WR_FAST=0,RD_FAST=1,FULL_DP=8,EMPTY_DP=0,AW=3 ) </a><br clear=all>
+Cond Coverage for Module self-instances : 
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>COND</td></tr><tr>
+<td class="s9 cl rt"> 92.10</td>
+<td class="s7 cl rt"> 78.57</td>
+</tr></table>
+<span class=inst><a href="mod6.html#inst_tag_7_Cond" >tbench_top.u_dut.u_wb2sdrc.u_wrdatafifo</a></span></div>
+<br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s7"><td class="lf">Conditions</td><td>14</td><td>11</td><td>78.57</td></tr>
+<tr class="s7"><td class="lf">Logical</td><td>14</td><td>11</td><td>78.57</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       110
+ EXPRESSION ((wr_cnt == FULL_DP) ? 1'b1 : 1'b0)
+             ---------1---------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uRed"><td>1</td><td class="lf">Not Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       111
+ EXPRESSION ((wr_cnt == (FULL_DP - 1)) ? 1'b1 : 1'b0)
+             ------------1------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       128
+ EXPRESSION (full_q &amp;&amp; (wr_cnt &lt; FULL_DP))
+             ---1--    ---------2--------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uRed"><td>1</td><td>0</td><td class="lf">Not Covered</td></tr>
+<tr class="uRed"><td>1</td><td>1</td><td class="lf">Not Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       171
+ EXPRESSION ((rd_cnt == 4'b0) ? 1'b1 : 1'b0)
+             --------1-------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       172
+ EXPRESSION ((rd_cnt == 4'b1) ? 1'b1 : 1'b0)
+             --------1-------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       189
+ EXPRESSION (empty_q &amp;&amp; (rd_cnt != EMPTY_DP))
+             ---1---    ----------2---------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<hr>
+<a name="Toggle"></a>
+Toggle Coverage for Module : <a name="1254653991"></a>
+<a href="mod6.html" >async_fifo ( parameter W=36,DP=4,WR_FAST=0,RD_FAST=0,FULL_DP=4,EMPTY_DP=0,AW=2 ) </a><br clear=all>
+Toggle Coverage for Module self-instances : 
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s9 cl rt"> 94.31</td>
+<td class="s7 cl rt"> 77.25</td>
+</tr></table>
+<span class=inst><a href="mod6.html#inst_tag_6_Toggle" >tbench_top.u_dut.u_wb2sdrc.u_cmdfifo</a></span></div>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s8">
+<td>Totals</td>
+<td class="rt">37</td>
+<td class="rt">33</td>
+<td class="rt">89.19 </td>
+</tr><tr class="s7">
+<td>Total Bits</td>
+<td class="rt">422</td>
+<td class="rt">326</td>
+<td class="rt">77.25 </td>
+</tr><tr class="s7">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">211</td>
+<td class="rt">163</td>
+<td class="rt">77.25 </td>
+</tr><tr class="s7">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">211</td>
+<td class="rt">163</td>
+<td class="rt">77.25 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s8">
+<td>Ports</td>
+<td class="rt">12</td>
+<td class="rt">10</td>
+<td class="rt">83.33 </td>
+</tr><tr class="s7">
+<td>Port Bits</td>
+<td class="rt">164</td>
+<td class="rt">116</td>
+<td class="rt">70.73 </td>
+</tr><tr class="s7">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">82</td>
+<td class="rt">58</td>
+<td class="rt">70.73 </td>
+</tr><tr class="s7">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">82</td>
+<td class="rt">58</td>
+<td class="rt">70.73 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s9">
+<td>Signals</td>
+<td class="rt">25</td>
+<td class="rt">23</td>
+<td class="rt">92.00 </td>
+</tr><tr class="s8">
+<td>Signal Bits</td>
+<td class="rt">258</td>
+<td class="rt">210</td>
+<td class="rt">81.40 </td>
+</tr><tr class="s8">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">129</td>
+<td class="rt">105</td>
+<td class="rt">81.40 </td>
+</tr><tr class="s8">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">129</td>
+<td class="rt">105</td>
+<td class="rt">81.40 </td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Port Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td><td class="alfsrt">Direction</td></tr><tr>
+<td>rd_data[22:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>rd_data[25:23]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>rd_data[26]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>rd_data[35:27]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>wr_data[22:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>wr_data[25:23]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>wr_data[26]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>wr_data[35:27]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>wr_clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>wr_reset_n</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>wr_en</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rd_clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rd_reset_n</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rd_en</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>full</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>empty</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>afull</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>aempty</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Signal Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td></tr><tr>
+<td>sync_rd_ptr_0[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>sync_rd_ptr_1[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>sync_rd_ptr[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>wr_ptr[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>grey_wr_ptr[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>grey_rd_ptr[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>full_q</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>full_c</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>afull_c</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>wr_ptr_inc[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>wr_cnt[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>grey_rd_ptr_dly[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>sync_wr_ptr_0[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>sync_wr_ptr_1[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>sync_wr_ptr[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_ptr[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>empty_q</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>empty_c</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>aempty_c</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_ptr_inc[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>sync_wr_ptr_dec[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_cnt[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_data_q[22:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_data_q[25:23]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>rd_data_q[26]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_data_q[35:27]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>rd_data_c[22:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_data_c[25:23]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>rd_data_c[26]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_data_c[35:27]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>grey_wr_ptr_dly[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+<hr>
+<a name="Toggle"></a>
+Toggle Coverage for Module : <a name="1842096591"></a>
+<a href="mod6.html" >async_fifo ( parameter W=36,DP=8,WR_FAST=0,RD_FAST=1,FULL_DP=8,EMPTY_DP=0,AW=3 ) </a><br clear=all>
+Toggle Coverage for Module self-instances : 
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s9 cl rt"> 92.10</td>
+<td class="s9 cl rt"> 92.54</td>
+</tr></table>
+<span class=inst><a href="mod6.html#inst_tag_7_Toggle" >tbench_top.u_dut.u_wb2sdrc.u_wrdatafifo</a></span></div>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s7">
+<td>Totals</td>
+<td class="rt">37</td>
+<td class="rt">29</td>
+<td class="rt">78.38 </td>
+</tr><tr class="s9">
+<td>Total Bits</td>
+<td class="rt">456</td>
+<td class="rt">422</td>
+<td class="rt">92.54 </td>
+</tr><tr class="s9">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">228</td>
+<td class="rt">211</td>
+<td class="rt">92.54 </td>
+</tr><tr class="s9">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">228</td>
+<td class="rt">211</td>
+<td class="rt">92.54 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s8">
+<td>Ports</td>
+<td class="rt">12</td>
+<td class="rt">10</td>
+<td class="rt">83.33 </td>
+</tr><tr class="s9">
+<td>Port Bits</td>
+<td class="rt">164</td>
+<td class="rt">154</td>
+<td class="rt">93.90 </td>
+</tr><tr class="s9">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">82</td>
+<td class="rt">77</td>
+<td class="rt">93.90 </td>
+</tr><tr class="s9">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">82</td>
+<td class="rt">77</td>
+<td class="rt">93.90 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s7">
+<td>Signals</td>
+<td class="rt">25</td>
+<td class="rt">19</td>
+<td class="rt">76.00 </td>
+</tr><tr class="s9">
+<td>Signal Bits</td>
+<td class="rt">292</td>
+<td class="rt">268</td>
+<td class="rt">91.78 </td>
+</tr><tr class="s9">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">146</td>
+<td class="rt">134</td>
+<td class="rt">91.78 </td>
+</tr><tr class="s9">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">146</td>
+<td class="rt">134</td>
+<td class="rt">91.78 </td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Port Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td><td class="alfsrt">Direction</td></tr><tr>
+<td>rd_data[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>rd_data[35:32]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>wr_data[35:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>wr_clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>wr_reset_n</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>wr_en</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rd_clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rd_reset_n</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rd_en</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>full</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>empty</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>afull</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>aempty</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Signal Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td></tr><tr>
+<td>sync_rd_ptr_0[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>sync_rd_ptr_1[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>sync_rd_ptr[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>wr_ptr[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>grey_wr_ptr[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>grey_rd_ptr[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>full_q</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>full_c</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>afull_c</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>wr_ptr_inc[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>wr_cnt[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>wr_cnt[3]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>grey_rd_ptr_dly[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>sync_wr_ptr_0[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>sync_wr_ptr_1[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>sync_wr_ptr[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_ptr[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>empty_q</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>empty_c</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>aempty_c</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_ptr_inc[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>sync_wr_ptr_dec[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_cnt[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_cnt[3]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>rd_data_q[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_data_q[35:32]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>rd_data_c[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_data_c[35:32]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>grey_wr_ptr_dly[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+<hr>
+<a name="Toggle"></a>
+Toggle Coverage for Module : <a name="924641269"></a>
+<a href="mod6.html" >async_fifo ( parameter W=33,DP=4,WR_FAST=0,RD_FAST=1,FULL_DP=4,EMPTY_DP=0,AW=2 ) </a><br clear=all>
+Toggle Coverage for Module self-instances : 
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s8 cl rt"> 86.51</td>
+<td class="s9 cl rt"> 92.96</td>
+</tr></table>
+<span class=inst><a href="mod6.html#inst_tag_8_Toggle" >tbench_top.u_dut.u_wb2sdrc.u_rddatafifo</a></span></div>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s6">
+<td>Totals</td>
+<td class="rt">37</td>
+<td class="rt">25</td>
+<td class="rt">67.57 </td>
+</tr><tr class="s9">
+<td>Total Bits</td>
+<td class="rt">398</td>
+<td class="rt">370</td>
+<td class="rt">92.96 </td>
+</tr><tr class="s9">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">199</td>
+<td class="rt">185</td>
+<td class="rt">92.96 </td>
+</tr><tr class="s9">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">199</td>
+<td class="rt">185</td>
+<td class="rt">92.96 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s6">
+<td>Ports</td>
+<td class="rt">12</td>
+<td class="rt">8</td>
+<td class="rt">66.67 </td>
+</tr><tr class="s9">
+<td>Port Bits</td>
+<td class="rt">152</td>
+<td class="rt">144</td>
+<td class="rt">94.74 </td>
+</tr><tr class="s9">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">76</td>
+<td class="rt">72</td>
+<td class="rt">94.74 </td>
+</tr><tr class="s9">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">76</td>
+<td class="rt">72</td>
+<td class="rt">94.74 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s6">
+<td>Signals</td>
+<td class="rt">25</td>
+<td class="rt">17</td>
+<td class="rt">68.00 </td>
+</tr><tr class="s9">
+<td>Signal Bits</td>
+<td class="rt">246</td>
+<td class="rt">226</td>
+<td class="rt">91.87 </td>
+</tr><tr class="s9">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">123</td>
+<td class="rt">113</td>
+<td class="rt">91.87 </td>
+</tr><tr class="s9">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">123</td>
+<td class="rt">113</td>
+<td class="rt">91.87 </td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Port Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td><td class="alfsrt">Direction</td></tr><tr>
+<td>rd_data[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>rd_data[32]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>wr_data[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>wr_data[32]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>wr_clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>wr_reset_n</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>wr_en</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rd_clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rd_reset_n</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rd_en</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>full</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>empty</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>afull</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>aempty</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Signal Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td></tr><tr>
+<td>sync_rd_ptr_0[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>sync_rd_ptr_1[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>sync_rd_ptr[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>wr_ptr[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>grey_wr_ptr[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>grey_rd_ptr[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>full_q</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>full_c</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>afull_c</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>wr_ptr_inc[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>wr_cnt[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>wr_cnt[2:1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>grey_rd_ptr_dly[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>sync_wr_ptr_0[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>sync_wr_ptr_1[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>sync_wr_ptr[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_ptr[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>empty_q</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>empty_c</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>aempty_c</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_ptr_inc[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>sync_wr_ptr_dec[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_cnt[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_cnt[2:1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>rd_data_q[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_data_q[32]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>rd_data_c[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_data_c[32]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>grey_wr_ptr_dly[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+<hr>
+<a name="Assert"></a>
+Assert Coverage for Module : <a name="1442224497"></a>
+<a href="mod6.html" >async_fifo</a><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Attempted</th><th nowrap width=80>Percent</th><th nowrap width=80>Succeeded/Matched</th><th nowrap width=80>Percent</th></tr><tr>
+<td class="wht cl"><a href="#774504640" >Assertions</a></td>
+<td class="wht cl rt">2</td>
+<td class="s10 cl rt">2</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">2</td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl"><a href="#341206677" >Cover properties</a></td>
+<td class="wht cl rt">0</td>
+<td class="wht cl rt">0</td>
+<td class="wht cl"></td>
+<td class="wht cl rt">0</td>
+<td class="wht cl"></td>
+</tr><tr>
+<td class="wht cl"><a href="#1694170054" >Cover sequences</a></td>
+<td class="wht cl rt">0</td>
+<td class="wht cl rt">0</td>
+<td class="wht cl"></td>
+<td class="wht cl rt">0</td>
+<td class="wht cl"></td>
+</tr><tr>
+<td class="wht cl"><b>Total</b></td>
+<td class="wht cl rt">2</td>
+<td class="s10 cl rt">2</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">2</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<hr>
+<br clear=all>
+<a name="774504640"></a>
+<b>Assertion Details</b><br clear=all>
+<br clear=all>
+<table align=left class="sortable noborder">
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td>Attempts</td><td>Real Successes</td><td>Failures</td><td>Incomplete</td></tr><tr>
+<td class="wht cl"><a name="2082828746"></a>
+assert_overflow_afifo</td>
+<td class="s9 cl rt">439830</td>
+<td class="s9 cl rt">336980</td>
+<td class="s9 cl rt">0</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="515263398"></a>
+assert_underflow_afifo</td>
+<td class="s9 cl rt">351864</td>
+<td class="s9 cl rt">269584</td>
+<td class="s9 cl rt">0</td>
+<td class="wht cl rt">0</td>
+</tr></table><br clear=all>
+</div>
+<div name='inst_tag_8'>
+<a name="inst_tag_8_Line"></a>
+<b>Line Coverage for Instance : <a href="mod6.html#inst_tag_8" >tbench_top.u_dut.u_wb2sdrc.u_rddatafifo</a></b><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s9"><td class="lf">TOTAL</td><td></td><td>74</td><td>71</td><td>95.95</td></tr>
+<tr class="wht"><td class="lf">INITIAL</td><td>85</td><td>0</td><td>0</td><td></td></tr>
+<tr class="s8"><td class="lf">ALWAYS</td><td>115</td><td>11</td><td>9</td><td>81.82</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>138</td><td>2</td><td>2</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>148</td><td>5</td><td>5</td><td>100.00</td></tr>
+<tr class="s9"><td class="lf">ALWAYS</td><td>175</td><td>11</td><td>10</td><td>90.91</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>203</td><td>1</td><td>1</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>212</td><td>5</td><td>5</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ROUTINE</td><td>230</td><td>7</td><td>7</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ROUTINE</td><td>245</td><td>7</td><td>7</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ROUTINE</td><td>259</td><td>11</td><td>11</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ROUTINE</td><td>281</td><td>11</td><td>11</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ROUTINE</td><td>303</td><td>3</td><td>3</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+84                        initial begin
+85         <font color = "grey">unreachable  </font>    if (AW == 0) begin
+86         <font color = "grey">unreachable  </font>      $display (&quot;%m : ERROR!!! Fifo depth %d not in range 2 to 256&quot;, DP);
+87                          end // if (AW == 0)
+                   <font color = "red">==>  MISSING_ELSE</font>
+88                        end // initial begin
+89                      
+90                         // synopsys translate_on
+91                      
+92                        //range_2: assert(AW==0) $display(&quot;%m : ERROR!!! Fifo depth %d not in range 2 to 256&quot;, DP);
+93                      
+94                      
+95                      
+96                      
+97                         reg [W-1 : 0]    mem[DP-1 : 0];
+98                      
+99                         /*********************** write side ************************/
+100                        reg [AW:0] sync_rd_ptr_0, sync_rd_ptr_1; 
+101                        wire [AW:0] sync_rd_ptr;
+102                        reg [AW:0] wr_ptr, grey_wr_ptr;
+103                        reg [AW:0] grey_rd_ptr;
+104                        reg full_q;
+105                        wire full_c;
+106                        wire afull_c;
+107                        wire [AW:0] wr_ptr_inc = wr_ptr + 1'b1;
+108                        wire [AW:0] wr_cnt = get_cnt(wr_ptr, sync_rd_ptr);
+109                     
+110                        assign full_c  = (wr_cnt == FULL_DP) ? 1'b1 : 1'b0;
+111                        assign afull_c = (wr_cnt == FULL_DP-1) ? 1'b1 : 1'b0;
+112                     
+113                     
+114                        always @(posedge wr_clk or negedge wr_reset_n) begin
+115        1/1          	if (!wr_reset_n) begin
+116        1/1          		wr_ptr &lt;= 0;
+117        1/1          		grey_wr_ptr &lt;= 0;
+118        1/1          		full_q &lt;= 0;	
+119                     	end
+120        1/1          	else if (wr_en) begin
+121        1/1          		wr_ptr &lt;= wr_ptr_inc;
+122        1/1          		grey_wr_ptr &lt;= bin2grey(wr_ptr_inc);
+123        1/1          		if (wr_cnt == (FULL_DP-1)) begin
+124        <font color = "red">0/1     ==>  			full_q &lt;= 1'b1;</font>
+125                     		end
+                        MISSING_ELSE
+126                     	end
+127                     	else begin
+128        1/1          	    	if (full_q &amp;&amp; (wr_cnt&lt;FULL_DP)) begin
+129        <font color = "red">0/1     ==>  			full_q &lt;= 1'b0;</font>
+130                     	     	end
+                        MISSING_ELSE
+131                     	end
+132                         end
+133                     
+134                         assign full  = (WR_FAST == 1) ? full_c : full_q;
+135                         assign afull = afull_c;
+136                     
+137                         always @(posedge wr_clk) begin
+138        1/1          	if (wr_en) begin
+139        1/1          		mem[wr_ptr[AW-1:0]] &lt;= wr_data;
+140                     	end
+                        MISSING_ELSE
+141                         end
+142                     
+143                         wire [AW:0] grey_rd_ptr_dly ;
+144                         assign #1 grey_rd_ptr_dly = grey_rd_ptr;
+145                     
+146                         // read pointer synchronizer
+147                         always @(posedge wr_clk or negedge wr_reset_n) begin
+148        1/1          	if (!wr_reset_n) begin
+149        1/1          		sync_rd_ptr_0 &lt;= 0;
+150        1/1          		sync_rd_ptr_1 &lt;= 0;
+151                     	end
+152                     	else begin
+153        1/1          		sync_rd_ptr_0 &lt;= grey_rd_ptr_dly;		
+154        1/1          		sync_rd_ptr_1 &lt;= sync_rd_ptr_0;
+155                     	end
+156                         end
+157                     
+158                         assign sync_rd_ptr = grey2bin(sync_rd_ptr_1);
+159                     
+160                        /************************ read side *****************************/
+161                        reg [AW:0] sync_wr_ptr_0, sync_wr_ptr_1; 
+162                        wire [AW:0] sync_wr_ptr;
+163                        reg [AW:0] rd_ptr;
+164                        reg empty_q;
+165                        wire empty_c;
+166                        wire aempty_c;
+167                        wire [AW:0] rd_ptr_inc = rd_ptr + 1'b1;
+168                        wire [AW:0] sync_wr_ptr_dec = sync_wr_ptr - 1'b1;
+169                        wire [AW:0] rd_cnt = get_cnt(sync_wr_ptr, rd_ptr);
+170                      
+171                        assign empty_c  = (rd_cnt == 0) ? 1'b1 : 1'b0;
+172                        assign aempty_c = (rd_cnt == 1) ? 1'b1 : 1'b0;
+173                     
+174                        always @(posedge rd_clk or negedge rd_reset_n) begin
+175        1/1                if (!rd_reset_n) begin
+176        1/1                   rd_ptr &lt;= 0;
+177        1/1          	 grey_rd_ptr &lt;= 0;
+178        1/1          	 empty_q &lt;= 1'b1;
+179                           end
+180                           else begin
+181        1/1                   if (rd_en) begin
+182        1/1                      rd_ptr &lt;= rd_ptr_inc;
+183        1/1                      grey_rd_ptr &lt;= bin2grey(rd_ptr_inc);
+184        1/1                      if (rd_cnt==(EMPTY_DP+1)) begin
+185        1/1                         empty_q &lt;= 1'b1;
+186                                 end
+                   <font color = "red">==>  MISSING_ELSE</font>
+187                              end
+188                              else begin
+189        1/1                      if (empty_q &amp;&amp; (rd_cnt!=EMPTY_DP)) begin
+190        <font color = "red">0/1     ==>  	      empty_q &lt;= 1'b0;</font>
+191                     	    end
+                        MISSING_ELSE
+192                              end
+193                            end
+194                         end
+195                     
+196                         assign empty  = (RD_FAST == 1) ? empty_c : empty_q;
+197                         assign aempty = aempty_c;
+198                     
+199                         reg [W-1 : 0]  rd_data_q;
+200                     
+201                        wire [W-1 : 0] rd_data_c = mem[rd_ptr[AW-1:0]];
+202                        always @(posedge rd_clk) begin
+203        1/1          	rd_data_q &lt;= rd_data_c;
+204                        end
+205                        assign rd_data  = (RD_FAST == 1) ? rd_data_c : rd_data_q;
+206                     
+207                         wire [AW:0] grey_wr_ptr_dly ;
+208                         assign #1 grey_wr_ptr_dly =  grey_wr_ptr;
+209                     
+210                         // write pointer synchronizer
+211                         always @(posedge rd_clk or negedge rd_reset_n) begin
+212        1/1          	if (!rd_reset_n) begin
+213        1/1          	   sync_wr_ptr_0 &lt;= 0;
+214        1/1          	   sync_wr_ptr_1 &lt;= 0;
+215                     	end
+216                     	else begin
+217        1/1          	   sync_wr_ptr_0 &lt;= grey_wr_ptr_dly;		
+218        1/1          	   sync_wr_ptr_1 &lt;= sync_wr_ptr_0;
+219                     	end
+220                         end
+221                         assign sync_wr_ptr = grey2bin(sync_wr_ptr_1);
+222                     
+223                     	
+224                     /************************ functions ******************************/
+225                     function [AW:0] bin2grey;
+226                     input [AW:0] bin;
+227                     reg [8:0] bin_8;
+228                     reg [8:0] grey_8;
+229                     begin
+230        1/1          	bin_8 = bin;
+231        1/1          	grey_8[1:0] = do_grey(bin_8[2:0]);
+232        1/1          	grey_8[3:2] = do_grey(bin_8[4:2]);
+233        1/1          	grey_8[5:4] = do_grey(bin_8[6:4]);
+234        1/1          	grey_8[7:6] = do_grey(bin_8[8:6]);
+235        1/1          	grey_8[8] = bin_8[8];
+236        1/1          	bin2grey = grey_8;
+237                     end
+238                     endfunction
+239                     
+240                     function [AW:0] grey2bin;
+241                     input [AW:0] grey;
+242                     reg [8:0] grey_8;
+243                     reg [8:0] bin_8;
+244                     begin
+245        1/1          	grey_8 = grey;
+246        1/1          	bin_8[8] = grey_8[8];
+247        1/1          	bin_8[7:6] = do_bin({bin_8[8], grey_8[7:6]});
+248        1/1          	bin_8[5:4] = do_bin({bin_8[6], grey_8[5:4]});
+249        1/1          	bin_8[3:2] = do_bin({bin_8[4], grey_8[3:2]});
+250        1/1          	bin_8[1:0] = do_bin({bin_8[2], grey_8[1:0]});
+251        1/1          	grey2bin = bin_8;
+252                     end
+253                     endfunction
+254                     
+255                     
+256                     function [1:0] do_grey;
+257                     input [2:0] bin;
+258                     begin
+259        1/1          	if (bin[2]) begin  // do reverse grey
+260        1/1          		case (bin[1:0]) 
+261        1/1          			2'b00: do_grey = 2'b10;
+262        1/1          			2'b01: do_grey = 2'b11;
+263        1/1          			2'b10: do_grey = 2'b01;
+264        1/1          			2'b11: do_grey = 2'b00;
+                   <font color = "red">==>  MISSING_DEFAULT</font>
+265                     		endcase
+266                     	end
+267                     	else begin
+268        1/1          		case (bin[1:0]) 
+269        1/1          			2'b00: do_grey = 2'b00;
+270        1/1          			2'b01: do_grey = 2'b01;
+271        1/1          			2'b10: do_grey = 2'b11;
+272        1/1          			2'b11: do_grey = 2'b10;
+                   <font color = "red">==>  MISSING_DEFAULT</font>
+273                     		endcase
+274                     	end
+275                     end
+276                     endfunction
+277                     
+278                     function [1:0] do_bin;
+279                     input [2:0] grey;
+280                     begin
+281        1/1          	if (grey[2]) begin	// actually bin[2]
+282        1/1          		case (grey[1:0])
+283        1/1          			2'b10: do_bin = 2'b00;
+284        1/1          			2'b11: do_bin = 2'b01;
+285        1/1          			2'b01: do_bin = 2'b10;
+286        1/1          			2'b00: do_bin = 2'b11;
+                   <font color = "red">==>  MISSING_DEFAULT</font>
+287                     		endcase
+288                     	end
+289                     	else begin
+290        1/1          		case (grey[1:0])
+291        1/1          			2'b00: do_bin = 2'b00;
+292        1/1          			2'b01: do_bin = 2'b01;
+293        1/1          			2'b11: do_bin = 2'b10;
+294        1/1          			2'b10: do_bin = 2'b11;
+                   <font color = "red">==>  MISSING_DEFAULT</font>
+295                     		endcase
+296                     	end
+297                     end
+298                     endfunction
+299                     			
+300                     function [AW:0] get_cnt;
+301                     input [AW:0] wr_ptr, rd_ptr;
+302                     begin
+303        1/1          	if (wr_ptr &gt;= rd_ptr) begin
+304        1/1          		get_cnt = (wr_ptr - rd_ptr);	
+305                     	end
+306                     	else begin
+307        1/1          		get_cnt = DP*2 - (rd_ptr - wr_ptr);
+</pre>
+<hr>
+<a name="inst_tag_8_Cond"></a>
+<b>Cond Coverage for Instance : <a href="mod6.html#inst_tag_8" >tbench_top.u_dut.u_wb2sdrc.u_rddatafifo</a></b><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s5"><td class="lf">Conditions</td><td>14</td><td>8</td><td>57.14</td></tr>
+<tr class="s5"><td class="lf">Logical</td><td>14</td><td>8</td><td>57.14</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       110
+ EXPRESSION ((wr_cnt == FULL_DP) ? 1'b1 : 1'b0)
+             ---------1---------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uRed"><td>1</td><td class="lf">Not Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       111
+ EXPRESSION ((wr_cnt == (FULL_DP - 1)) ? 1'b1 : 1'b0)
+             ------------1------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uRed"><td>1</td><td class="lf">Not Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       128
+ EXPRESSION (full_q &amp;&amp; (wr_cnt &lt; FULL_DP))
+             ---1--    ---------2--------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uRed"><td>1</td><td>0</td><td class="lf">Not Covered</td></tr>
+<tr class="uRed"><td>1</td><td>1</td><td class="lf">Not Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       171
+ EXPRESSION ((rd_cnt == 3'b0) ? 1'b1 : 1'b0)
+             --------1-------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       172
+ EXPRESSION ((rd_cnt == 3'b1) ? 1'b1 : 1'b0)
+             --------1-------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       189
+ EXPRESSION (empty_q &amp;&amp; (rd_cnt != EMPTY_DP))
+             ---1---    ----------2---------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uRed"><td>0</td><td>1</td><td class="lf">Not Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uRed"><td>1</td><td>1</td><td class="lf">Not Covered</td></tr>
+</table>
+<hr>
+<a name="inst_tag_8_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod6.html#inst_tag_8" >tbench_top.u_dut.u_wb2sdrc.u_rddatafifo</a></b><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s6">
+<td>Totals</td>
+<td class="rt">37</td>
+<td class="rt">25</td>
+<td class="rt">67.57 </td>
+</tr><tr class="s9">
+<td>Total Bits</td>
+<td class="rt">398</td>
+<td class="rt">370</td>
+<td class="rt">92.96 </td>
+</tr><tr class="s9">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">199</td>
+<td class="rt">185</td>
+<td class="rt">92.96 </td>
+</tr><tr class="s9">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">199</td>
+<td class="rt">185</td>
+<td class="rt">92.96 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s6">
+<td>Ports</td>
+<td class="rt">12</td>
+<td class="rt">8</td>
+<td class="rt">66.67 </td>
+</tr><tr class="s9">
+<td>Port Bits</td>
+<td class="rt">152</td>
+<td class="rt">144</td>
+<td class="rt">94.74 </td>
+</tr><tr class="s9">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">76</td>
+<td class="rt">72</td>
+<td class="rt">94.74 </td>
+</tr><tr class="s9">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">76</td>
+<td class="rt">72</td>
+<td class="rt">94.74 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s6">
+<td>Signals</td>
+<td class="rt">25</td>
+<td class="rt">17</td>
+<td class="rt">68.00 </td>
+</tr><tr class="s9">
+<td>Signal Bits</td>
+<td class="rt">246</td>
+<td class="rt">226</td>
+<td class="rt">91.87 </td>
+</tr><tr class="s9">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">123</td>
+<td class="rt">113</td>
+<td class="rt">91.87 </td>
+</tr><tr class="s9">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">123</td>
+<td class="rt">113</td>
+<td class="rt">91.87 </td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Port Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td><td class="alfsrt">Direction</td></tr><tr>
+<td>rd_data[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>rd_data[32]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>wr_data[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>wr_data[32]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>wr_clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>wr_reset_n</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>wr_en</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rd_clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rd_reset_n</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rd_en</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>full</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>empty</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>afull</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>aempty</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Signal Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td></tr><tr>
+<td>sync_rd_ptr_0[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>sync_rd_ptr_1[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>sync_rd_ptr[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>wr_ptr[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>grey_wr_ptr[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>grey_rd_ptr[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>full_q</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>full_c</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>afull_c</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>wr_ptr_inc[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>wr_cnt[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>wr_cnt[2:1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>grey_rd_ptr_dly[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>sync_wr_ptr_0[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>sync_wr_ptr_1[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>sync_wr_ptr[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_ptr[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>empty_q</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>empty_c</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>aempty_c</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_ptr_inc[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>sync_wr_ptr_dec[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_cnt[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_cnt[2:1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>rd_data_q[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_data_q[32]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>rd_data_c[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_data_c[32]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>grey_wr_ptr_dly[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+<hr>
+<a name="inst_tag_8_Assert"></a>
+<b>Assert Coverage for Instance : <a href="mod6.html#inst_tag_8" >tbench_top.u_dut.u_wb2sdrc.u_rddatafifo</a></b><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Attempted</th><th nowrap width=80>Percent</th><th nowrap width=80>Succeeded/Matched</th><th nowrap width=80>Percent</th></tr><tr>
+<td class="wht cl"><a href="#938742467" >Assertions</a></td>
+<td class="wht cl rt">2</td>
+<td class="s10 cl rt">2</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">2</td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl"><a href="#1210710130" >Cover properties</a></td>
+<td class="wht cl rt">0</td>
+<td class="wht cl rt">0</td>
+<td class="wht cl"></td>
+<td class="wht cl rt">0</td>
+<td class="wht cl"></td>
+</tr><tr>
+<td class="wht cl"><a href="#327997431" >Cover sequences</a></td>
+<td class="wht cl rt">0</td>
+<td class="wht cl rt">0</td>
+<td class="wht cl"></td>
+<td class="wht cl rt">0</td>
+<td class="wht cl"></td>
+</tr><tr>
+<td class="wht cl"><b>Total</b></td>
+<td class="wht cl rt">2</td>
+<td class="s10 cl rt">2</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">2</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<hr>
+<br clear=all>
+<a name="938742467"></a>
+<b>Assertion Details</b><br clear=all>
+<br clear=all>
+<table align=left class="sortable noborder">
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td>Attempts</td><td>Real Successes</td><td>Failures</td><td>Incomplete</td></tr><tr>
+<td class="wht cl"><a name="510709875"></a>
+assert_overflow_afifo</td>
+<td class="s9 cl rt">87966</td>
+<td class="s9 cl rt">67396</td>
+<td class="s9 cl rt">0</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="935203863"></a>
+assert_underflow_afifo</td>
+<td class="s9 cl rt">175932</td>
+<td class="s9 cl rt">134792</td>
+<td class="s9 cl rt">0</td>
+<td class="wht cl rt">0</td>
+</tr></table><br clear=all>
+</div>
+<div name='inst_tag_7'>
+<a name="inst_tag_7_Line"></a>
+<b>Line Coverage for Instance : <a href="mod6.html#inst_tag_7" >tbench_top.u_dut.u_wb2sdrc.u_wrdatafifo</a></b><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s9"><td class="lf">TOTAL</td><td></td><td>74</td><td>72</td><td>97.30</td></tr>
+<tr class="wht"><td class="lf">INITIAL</td><td>85</td><td>0</td><td>0</td><td></td></tr>
+<tr class="s8"><td class="lf">ALWAYS</td><td>115</td><td>11</td><td>9</td><td>81.82</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>138</td><td>2</td><td>2</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>148</td><td>5</td><td>5</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>175</td><td>11</td><td>11</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>203</td><td>1</td><td>1</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>212</td><td>5</td><td>5</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ROUTINE</td><td>230</td><td>7</td><td>7</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ROUTINE</td><td>245</td><td>7</td><td>7</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ROUTINE</td><td>259</td><td>11</td><td>11</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ROUTINE</td><td>281</td><td>11</td><td>11</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ROUTINE</td><td>303</td><td>3</td><td>3</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+84                        initial begin
+85         <font color = "grey">unreachable  </font>    if (AW == 0) begin
+86         <font color = "grey">unreachable  </font>      $display (&quot;%m : ERROR!!! Fifo depth %d not in range 2 to 256&quot;, DP);
+87                          end // if (AW == 0)
+                   <font color = "red">==>  MISSING_ELSE</font>
+88                        end // initial begin
+89                      
+90                         // synopsys translate_on
+91                      
+92                        //range_2: assert(AW==0) $display(&quot;%m : ERROR!!! Fifo depth %d not in range 2 to 256&quot;, DP);
+93                      
+94                      
+95                      
+96                      
+97                         reg [W-1 : 0]    mem[DP-1 : 0];
+98                      
+99                         /*********************** write side ************************/
+100                        reg [AW:0] sync_rd_ptr_0, sync_rd_ptr_1; 
+101                        wire [AW:0] sync_rd_ptr;
+102                        reg [AW:0] wr_ptr, grey_wr_ptr;
+103                        reg [AW:0] grey_rd_ptr;
+104                        reg full_q;
+105                        wire full_c;
+106                        wire afull_c;
+107                        wire [AW:0] wr_ptr_inc = wr_ptr + 1'b1;
+108                        wire [AW:0] wr_cnt = get_cnt(wr_ptr, sync_rd_ptr);
+109                     
+110                        assign full_c  = (wr_cnt == FULL_DP) ? 1'b1 : 1'b0;
+111                        assign afull_c = (wr_cnt == FULL_DP-1) ? 1'b1 : 1'b0;
+112                     
+113                     
+114                        always @(posedge wr_clk or negedge wr_reset_n) begin
+115        1/1          	if (!wr_reset_n) begin
+116        1/1          		wr_ptr &lt;= 0;
+117        1/1          		grey_wr_ptr &lt;= 0;
+118        1/1          		full_q &lt;= 0;	
+119                     	end
+120        1/1          	else if (wr_en) begin
+121        1/1          		wr_ptr &lt;= wr_ptr_inc;
+122        1/1          		grey_wr_ptr &lt;= bin2grey(wr_ptr_inc);
+123        1/1          		if (wr_cnt == (FULL_DP-1)) begin
+124        <font color = "red">0/1     ==>  			full_q &lt;= 1'b1;</font>
+125                     		end
+                        MISSING_ELSE
+126                     	end
+127                     	else begin
+128        1/1          	    	if (full_q &amp;&amp; (wr_cnt&lt;FULL_DP)) begin
+129        <font color = "red">0/1     ==>  			full_q &lt;= 1'b0;</font>
+130                     	     	end
+                        MISSING_ELSE
+131                     	end
+132                         end
+133                     
+134                         assign full  = (WR_FAST == 1) ? full_c : full_q;
+135                         assign afull = afull_c;
+136                     
+137                         always @(posedge wr_clk) begin
+138        1/1          	if (wr_en) begin
+139        1/1          		mem[wr_ptr[AW-1:0]] &lt;= wr_data;
+140                     	end
+                        MISSING_ELSE
+141                         end
+142                     
+143                         wire [AW:0] grey_rd_ptr_dly ;
+144                         assign #1 grey_rd_ptr_dly = grey_rd_ptr;
+145                     
+146                         // read pointer synchronizer
+147                         always @(posedge wr_clk or negedge wr_reset_n) begin
+148        1/1          	if (!wr_reset_n) begin
+149        1/1          		sync_rd_ptr_0 &lt;= 0;
+150        1/1          		sync_rd_ptr_1 &lt;= 0;
+151                     	end
+152                     	else begin
+153        1/1          		sync_rd_ptr_0 &lt;= grey_rd_ptr_dly;		
+154        1/1          		sync_rd_ptr_1 &lt;= sync_rd_ptr_0;
+155                     	end
+156                         end
+157                     
+158                         assign sync_rd_ptr = grey2bin(sync_rd_ptr_1);
+159                     
+160                        /************************ read side *****************************/
+161                        reg [AW:0] sync_wr_ptr_0, sync_wr_ptr_1; 
+162                        wire [AW:0] sync_wr_ptr;
+163                        reg [AW:0] rd_ptr;
+164                        reg empty_q;
+165                        wire empty_c;
+166                        wire aempty_c;
+167                        wire [AW:0] rd_ptr_inc = rd_ptr + 1'b1;
+168                        wire [AW:0] sync_wr_ptr_dec = sync_wr_ptr - 1'b1;
+169                        wire [AW:0] rd_cnt = get_cnt(sync_wr_ptr, rd_ptr);
+170                      
+171                        assign empty_c  = (rd_cnt == 0) ? 1'b1 : 1'b0;
+172                        assign aempty_c = (rd_cnt == 1) ? 1'b1 : 1'b0;
+173                     
+174                        always @(posedge rd_clk or negedge rd_reset_n) begin
+175        1/1                if (!rd_reset_n) begin
+176        1/1                   rd_ptr &lt;= 0;
+177        1/1          	 grey_rd_ptr &lt;= 0;
+178        1/1          	 empty_q &lt;= 1'b1;
+179                           end
+180                           else begin
+181        1/1                   if (rd_en) begin
+182        1/1                      rd_ptr &lt;= rd_ptr_inc;
+183        1/1                      grey_rd_ptr &lt;= bin2grey(rd_ptr_inc);
+184        1/1                      if (rd_cnt==(EMPTY_DP+1)) begin
+185        1/1                         empty_q &lt;= 1'b1;
+186                                 end
+                        MISSING_ELSE
+187                              end
+188                              else begin
+189        1/1                      if (empty_q &amp;&amp; (rd_cnt!=EMPTY_DP)) begin
+190        1/1          	      empty_q &lt;= 1'b0;
+191                     	    end
+                        MISSING_ELSE
+192                              end
+193                            end
+194                         end
+195                     
+196                         assign empty  = (RD_FAST == 1) ? empty_c : empty_q;
+197                         assign aempty = aempty_c;
+198                     
+199                         reg [W-1 : 0]  rd_data_q;
+200                     
+201                        wire [W-1 : 0] rd_data_c = mem[rd_ptr[AW-1:0]];
+202                        always @(posedge rd_clk) begin
+203        1/1          	rd_data_q &lt;= rd_data_c;
+204                        end
+205                        assign rd_data  = (RD_FAST == 1) ? rd_data_c : rd_data_q;
+206                     
+207                         wire [AW:0] grey_wr_ptr_dly ;
+208                         assign #1 grey_wr_ptr_dly =  grey_wr_ptr;
+209                     
+210                         // write pointer synchronizer
+211                         always @(posedge rd_clk or negedge rd_reset_n) begin
+212        1/1          	if (!rd_reset_n) begin
+213        1/1          	   sync_wr_ptr_0 &lt;= 0;
+214        1/1          	   sync_wr_ptr_1 &lt;= 0;
+215                     	end
+216                     	else begin
+217        1/1          	   sync_wr_ptr_0 &lt;= grey_wr_ptr_dly;		
+218        1/1          	   sync_wr_ptr_1 &lt;= sync_wr_ptr_0;
+219                     	end
+220                         end
+221                         assign sync_wr_ptr = grey2bin(sync_wr_ptr_1);
+222                     
+223                     	
+224                     /************************ functions ******************************/
+225                     function [AW:0] bin2grey;
+226                     input [AW:0] bin;
+227                     reg [8:0] bin_8;
+228                     reg [8:0] grey_8;
+229                     begin
+230        1/1          	bin_8 = bin;
+231        1/1          	grey_8[1:0] = do_grey(bin_8[2:0]);
+232        1/1          	grey_8[3:2] = do_grey(bin_8[4:2]);
+233        1/1          	grey_8[5:4] = do_grey(bin_8[6:4]);
+234        1/1          	grey_8[7:6] = do_grey(bin_8[8:6]);
+235        1/1          	grey_8[8] = bin_8[8];
+236        1/1          	bin2grey = grey_8;
+237                     end
+238                     endfunction
+239                     
+240                     function [AW:0] grey2bin;
+241                     input [AW:0] grey;
+242                     reg [8:0] grey_8;
+243                     reg [8:0] bin_8;
+244                     begin
+245        1/1          	grey_8 = grey;
+246        1/1          	bin_8[8] = grey_8[8];
+247        1/1          	bin_8[7:6] = do_bin({bin_8[8], grey_8[7:6]});
+248        1/1          	bin_8[5:4] = do_bin({bin_8[6], grey_8[5:4]});
+249        1/1          	bin_8[3:2] = do_bin({bin_8[4], grey_8[3:2]});
+250        1/1          	bin_8[1:0] = do_bin({bin_8[2], grey_8[1:0]});
+251        1/1          	grey2bin = bin_8;
+252                     end
+253                     endfunction
+254                     
+255                     
+256                     function [1:0] do_grey;
+257                     input [2:0] bin;
+258                     begin
+259        1/1          	if (bin[2]) begin  // do reverse grey
+260        1/1          		case (bin[1:0]) 
+261        1/1          			2'b00: do_grey = 2'b10;
+262        1/1          			2'b01: do_grey = 2'b11;
+263        1/1          			2'b10: do_grey = 2'b01;
+264        1/1          			2'b11: do_grey = 2'b00;
+                   <font color = "red">==>  MISSING_DEFAULT</font>
+265                     		endcase
+266                     	end
+267                     	else begin
+268        1/1          		case (bin[1:0]) 
+269        1/1          			2'b00: do_grey = 2'b00;
+270        1/1          			2'b01: do_grey = 2'b01;
+271        1/1          			2'b10: do_grey = 2'b11;
+272        1/1          			2'b11: do_grey = 2'b10;
+                   <font color = "red">==>  MISSING_DEFAULT</font>
+273                     		endcase
+274                     	end
+275                     end
+276                     endfunction
+277                     
+278                     function [1:0] do_bin;
+279                     input [2:0] grey;
+280                     begin
+281        1/1          	if (grey[2]) begin	// actually bin[2]
+282        1/1          		case (grey[1:0])
+283        1/1          			2'b10: do_bin = 2'b00;
+284        1/1          			2'b11: do_bin = 2'b01;
+285        1/1          			2'b01: do_bin = 2'b10;
+286        1/1          			2'b00: do_bin = 2'b11;
+                   <font color = "red">==>  MISSING_DEFAULT</font>
+287                     		endcase
+288                     	end
+289                     	else begin
+290        1/1          		case (grey[1:0])
+291        1/1          			2'b00: do_bin = 2'b00;
+292        1/1          			2'b01: do_bin = 2'b01;
+293        1/1          			2'b11: do_bin = 2'b10;
+294        1/1          			2'b10: do_bin = 2'b11;
+                   <font color = "red">==>  MISSING_DEFAULT</font>
+295                     		endcase
+296                     	end
+297                     end
+298                     endfunction
+299                     			
+300                     function [AW:0] get_cnt;
+301                     input [AW:0] wr_ptr, rd_ptr;
+302                     begin
+303        1/1          	if (wr_ptr &gt;= rd_ptr) begin
+304        1/1          		get_cnt = (wr_ptr - rd_ptr);	
+305                     	end
+306                     	else begin
+307        1/1          		get_cnt = DP*2 - (rd_ptr - wr_ptr);
+</pre>
+<hr>
+<a name="inst_tag_7_Cond"></a>
+<b>Cond Coverage for Instance : <a href="mod6.html#inst_tag_7" >tbench_top.u_dut.u_wb2sdrc.u_wrdatafifo</a></b><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s7"><td class="lf">Conditions</td><td>14</td><td>11</td><td>78.57</td></tr>
+<tr class="s7"><td class="lf">Logical</td><td>14</td><td>11</td><td>78.57</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       110
+ EXPRESSION ((wr_cnt == FULL_DP) ? 1'b1 : 1'b0)
+             ---------1---------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uRed"><td>1</td><td class="lf">Not Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       111
+ EXPRESSION ((wr_cnt == (FULL_DP - 1)) ? 1'b1 : 1'b0)
+             ------------1------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       128
+ EXPRESSION (full_q &amp;&amp; (wr_cnt &lt; FULL_DP))
+             ---1--    ---------2--------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uRed"><td>1</td><td>0</td><td class="lf">Not Covered</td></tr>
+<tr class="uRed"><td>1</td><td>1</td><td class="lf">Not Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       171
+ EXPRESSION ((rd_cnt == 4'b0) ? 1'b1 : 1'b0)
+             --------1-------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       172
+ EXPRESSION ((rd_cnt == 4'b1) ? 1'b1 : 1'b0)
+             --------1-------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       189
+ EXPRESSION (empty_q &amp;&amp; (rd_cnt != EMPTY_DP))
+             ---1---    ----------2---------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<hr>
+<a name="inst_tag_7_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod6.html#inst_tag_7" >tbench_top.u_dut.u_wb2sdrc.u_wrdatafifo</a></b><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s7">
+<td>Totals</td>
+<td class="rt">37</td>
+<td class="rt">29</td>
+<td class="rt">78.38 </td>
+</tr><tr class="s9">
+<td>Total Bits</td>
+<td class="rt">456</td>
+<td class="rt">422</td>
+<td class="rt">92.54 </td>
+</tr><tr class="s9">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">228</td>
+<td class="rt">211</td>
+<td class="rt">92.54 </td>
+</tr><tr class="s9">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">228</td>
+<td class="rt">211</td>
+<td class="rt">92.54 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s8">
+<td>Ports</td>
+<td class="rt">12</td>
+<td class="rt">10</td>
+<td class="rt">83.33 </td>
+</tr><tr class="s9">
+<td>Port Bits</td>
+<td class="rt">164</td>
+<td class="rt">154</td>
+<td class="rt">93.90 </td>
+</tr><tr class="s9">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">82</td>
+<td class="rt">77</td>
+<td class="rt">93.90 </td>
+</tr><tr class="s9">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">82</td>
+<td class="rt">77</td>
+<td class="rt">93.90 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s7">
+<td>Signals</td>
+<td class="rt">25</td>
+<td class="rt">19</td>
+<td class="rt">76.00 </td>
+</tr><tr class="s9">
+<td>Signal Bits</td>
+<td class="rt">292</td>
+<td class="rt">268</td>
+<td class="rt">91.78 </td>
+</tr><tr class="s9">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">146</td>
+<td class="rt">134</td>
+<td class="rt">91.78 </td>
+</tr><tr class="s9">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">146</td>
+<td class="rt">134</td>
+<td class="rt">91.78 </td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Port Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td><td class="alfsrt">Direction</td></tr><tr>
+<td>rd_data[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>rd_data[35:32]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>wr_data[35:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>wr_clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>wr_reset_n</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>wr_en</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rd_clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rd_reset_n</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rd_en</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>full</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>empty</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>afull</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>aempty</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Signal Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td></tr><tr>
+<td>sync_rd_ptr_0[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>sync_rd_ptr_1[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>sync_rd_ptr[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>wr_ptr[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>grey_wr_ptr[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>grey_rd_ptr[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>full_q</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>full_c</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>afull_c</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>wr_ptr_inc[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>wr_cnt[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>wr_cnt[3]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>grey_rd_ptr_dly[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>sync_wr_ptr_0[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>sync_wr_ptr_1[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>sync_wr_ptr[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_ptr[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>empty_q</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>empty_c</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>aempty_c</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_ptr_inc[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>sync_wr_ptr_dec[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_cnt[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_cnt[3]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>rd_data_q[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_data_q[35:32]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>rd_data_c[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_data_c[35:32]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>grey_wr_ptr_dly[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+<hr>
+<a name="inst_tag_7_Assert"></a>
+<b>Assert Coverage for Instance : <a href="mod6.html#inst_tag_7" >tbench_top.u_dut.u_wb2sdrc.u_wrdatafifo</a></b><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Attempted</th><th nowrap width=80>Percent</th><th nowrap width=80>Succeeded/Matched</th><th nowrap width=80>Percent</th></tr><tr>
+<td class="wht cl"><a href="#1611554924" >Assertions</a></td>
+<td class="wht cl rt">2</td>
+<td class="s10 cl rt">2</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">2</td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl"><a href="#537897673" >Cover properties</a></td>
+<td class="wht cl rt">0</td>
+<td class="wht cl rt">0</td>
+<td class="wht cl"></td>
+<td class="wht cl rt">0</td>
+<td class="wht cl"></td>
+</tr><tr>
+<td class="wht cl"><a href="#344815026" >Cover sequences</a></td>
+<td class="wht cl rt">0</td>
+<td class="wht cl rt">0</td>
+<td class="wht cl"></td>
+<td class="wht cl rt">0</td>
+<td class="wht cl"></td>
+</tr><tr>
+<td class="wht cl"><b>Total</b></td>
+<td class="wht cl rt">2</td>
+<td class="s10 cl rt">2</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">2</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<hr>
+<br clear=all>
+<a name="1611554924"></a>
+<b>Assertion Details</b><br clear=all>
+<br clear=all>
+<table align=left class="sortable noborder">
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td>Attempts</td><td>Real Successes</td><td>Failures</td><td>Incomplete</td></tr><tr>
+<td class="wht cl"><a name="162102582"></a>
+assert_overflow_afifo</td>
+<td class="s9 cl rt">175932</td>
+<td class="s9 cl rt">134792</td>
+<td class="s9 cl rt">0</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="262391406"></a>
+assert_underflow_afifo</td>
+<td class="s9 cl rt">87966</td>
+<td class="s9 cl rt">67396</td>
+<td class="s9 cl rt">0</td>
+<td class="wht cl rt">0</td>
+</tr></table><br clear=all>
+</div>
+<div name='inst_tag_6'>
+<a name="inst_tag_6_Line"></a>
+<b>Line Coverage for Instance : <a href="mod6.html#inst_tag_6" >tbench_top.u_dut.u_wb2sdrc.u_cmdfifo</a></b><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>74</td><td>74</td><td>100.00</td></tr>
+<tr class="wht"><td class="lf">INITIAL</td><td>85</td><td>0</td><td>0</td><td></td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>115</td><td>11</td><td>11</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>138</td><td>2</td><td>2</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>148</td><td>5</td><td>5</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>175</td><td>11</td><td>11</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>203</td><td>1</td><td>1</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>212</td><td>5</td><td>5</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ROUTINE</td><td>230</td><td>7</td><td>7</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ROUTINE</td><td>245</td><td>7</td><td>7</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ROUTINE</td><td>259</td><td>11</td><td>11</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ROUTINE</td><td>281</td><td>11</td><td>11</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ROUTINE</td><td>303</td><td>3</td><td>3</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+84                        initial begin
+85         <font color = "grey">unreachable  </font>    if (AW == 0) begin
+86         <font color = "grey">unreachable  </font>      $display (&quot;%m : ERROR!!! Fifo depth %d not in range 2 to 256&quot;, DP);
+87                          end // if (AW == 0)
+                   <font color = "red">==>  MISSING_ELSE</font>
+88                        end // initial begin
+89                      
+90                         // synopsys translate_on
+91                      
+92                        //range_2: assert(AW==0) $display(&quot;%m : ERROR!!! Fifo depth %d not in range 2 to 256&quot;, DP);
+93                      
+94                      
+95                      
+96                      
+97                         reg [W-1 : 0]    mem[DP-1 : 0];
+98                      
+99                         /*********************** write side ************************/
+100                        reg [AW:0] sync_rd_ptr_0, sync_rd_ptr_1; 
+101                        wire [AW:0] sync_rd_ptr;
+102                        reg [AW:0] wr_ptr, grey_wr_ptr;
+103                        reg [AW:0] grey_rd_ptr;
+104                        reg full_q;
+105                        wire full_c;
+106                        wire afull_c;
+107                        wire [AW:0] wr_ptr_inc = wr_ptr + 1'b1;
+108                        wire [AW:0] wr_cnt = get_cnt(wr_ptr, sync_rd_ptr);
+109                     
+110                        assign full_c  = (wr_cnt == FULL_DP) ? 1'b1 : 1'b0;
+111                        assign afull_c = (wr_cnt == FULL_DP-1) ? 1'b1 : 1'b0;
+112                     
+113                     
+114                        always @(posedge wr_clk or negedge wr_reset_n) begin
+115        1/1          	if (!wr_reset_n) begin
+116        1/1          		wr_ptr &lt;= 0;
+117        1/1          		grey_wr_ptr &lt;= 0;
+118        1/1          		full_q &lt;= 0;	
+119                     	end
+120        1/1          	else if (wr_en) begin
+121        1/1          		wr_ptr &lt;= wr_ptr_inc;
+122        1/1          		grey_wr_ptr &lt;= bin2grey(wr_ptr_inc);
+123        1/1          		if (wr_cnt == (FULL_DP-1)) begin
+124        1/1          			full_q &lt;= 1'b1;
+125                     		end
+                        MISSING_ELSE
+126                     	end
+127                     	else begin
+128        1/1          	    	if (full_q &amp;&amp; (wr_cnt&lt;FULL_DP)) begin
+129        1/1          			full_q &lt;= 1'b0;
+130                     	     	end
+                        MISSING_ELSE
+131                     	end
+132                         end
+133                     
+134                         assign full  = (WR_FAST == 1) ? full_c : full_q;
+135                         assign afull = afull_c;
+136                     
+137                         always @(posedge wr_clk) begin
+138        1/1          	if (wr_en) begin
+139        1/1          		mem[wr_ptr[AW-1:0]] &lt;= wr_data;
+140                     	end
+                        MISSING_ELSE
+141                         end
+142                     
+143                         wire [AW:0] grey_rd_ptr_dly ;
+144                         assign #1 grey_rd_ptr_dly = grey_rd_ptr;
+145                     
+146                         // read pointer synchronizer
+147                         always @(posedge wr_clk or negedge wr_reset_n) begin
+148        1/1          	if (!wr_reset_n) begin
+149        1/1          		sync_rd_ptr_0 &lt;= 0;
+150        1/1          		sync_rd_ptr_1 &lt;= 0;
+151                     	end
+152                     	else begin
+153        1/1          		sync_rd_ptr_0 &lt;= grey_rd_ptr_dly;		
+154        1/1          		sync_rd_ptr_1 &lt;= sync_rd_ptr_0;
+155                     	end
+156                         end
+157                     
+158                         assign sync_rd_ptr = grey2bin(sync_rd_ptr_1);
+159                     
+160                        /************************ read side *****************************/
+161                        reg [AW:0] sync_wr_ptr_0, sync_wr_ptr_1; 
+162                        wire [AW:0] sync_wr_ptr;
+163                        reg [AW:0] rd_ptr;
+164                        reg empty_q;
+165                        wire empty_c;
+166                        wire aempty_c;
+167                        wire [AW:0] rd_ptr_inc = rd_ptr + 1'b1;
+168                        wire [AW:0] sync_wr_ptr_dec = sync_wr_ptr - 1'b1;
+169                        wire [AW:0] rd_cnt = get_cnt(sync_wr_ptr, rd_ptr);
+170                      
+171                        assign empty_c  = (rd_cnt == 0) ? 1'b1 : 1'b0;
+172                        assign aempty_c = (rd_cnt == 1) ? 1'b1 : 1'b0;
+173                     
+174                        always @(posedge rd_clk or negedge rd_reset_n) begin
+175        1/1                if (!rd_reset_n) begin
+176        1/1                   rd_ptr &lt;= 0;
+177        1/1          	 grey_rd_ptr &lt;= 0;
+178        1/1          	 empty_q &lt;= 1'b1;
+179                           end
+180                           else begin
+181        1/1                   if (rd_en) begin
+182        1/1                      rd_ptr &lt;= rd_ptr_inc;
+183        1/1                      grey_rd_ptr &lt;= bin2grey(rd_ptr_inc);
+184        1/1                      if (rd_cnt==(EMPTY_DP+1)) begin
+185        1/1                         empty_q &lt;= 1'b1;
+186                                 end
+                        MISSING_ELSE
+187                              end
+188                              else begin
+189        1/1                      if (empty_q &amp;&amp; (rd_cnt!=EMPTY_DP)) begin
+190        1/1          	      empty_q &lt;= 1'b0;
+191                     	    end
+                        MISSING_ELSE
+192                              end
+193                            end
+194                         end
+195                     
+196                         assign empty  = (RD_FAST == 1) ? empty_c : empty_q;
+197                         assign aempty = aempty_c;
+198                     
+199                         reg [W-1 : 0]  rd_data_q;
+200                     
+201                        wire [W-1 : 0] rd_data_c = mem[rd_ptr[AW-1:0]];
+202                        always @(posedge rd_clk) begin
+203        1/1          	rd_data_q &lt;= rd_data_c;
+204                        end
+205                        assign rd_data  = (RD_FAST == 1) ? rd_data_c : rd_data_q;
+206                     
+207                         wire [AW:0] grey_wr_ptr_dly ;
+208                         assign #1 grey_wr_ptr_dly =  grey_wr_ptr;
+209                     
+210                         // write pointer synchronizer
+211                         always @(posedge rd_clk or negedge rd_reset_n) begin
+212        1/1          	if (!rd_reset_n) begin
+213        1/1          	   sync_wr_ptr_0 &lt;= 0;
+214        1/1          	   sync_wr_ptr_1 &lt;= 0;
+215                     	end
+216                     	else begin
+217        1/1          	   sync_wr_ptr_0 &lt;= grey_wr_ptr_dly;		
+218        1/1          	   sync_wr_ptr_1 &lt;= sync_wr_ptr_0;
+219                     	end
+220                         end
+221                         assign sync_wr_ptr = grey2bin(sync_wr_ptr_1);
+222                     
+223                     	
+224                     /************************ functions ******************************/
+225                     function [AW:0] bin2grey;
+226                     input [AW:0] bin;
+227                     reg [8:0] bin_8;
+228                     reg [8:0] grey_8;
+229                     begin
+230        1/1          	bin_8 = bin;
+231        1/1          	grey_8[1:0] = do_grey(bin_8[2:0]);
+232        1/1          	grey_8[3:2] = do_grey(bin_8[4:2]);
+233        1/1          	grey_8[5:4] = do_grey(bin_8[6:4]);
+234        1/1          	grey_8[7:6] = do_grey(bin_8[8:6]);
+235        1/1          	grey_8[8] = bin_8[8];
+236        1/1          	bin2grey = grey_8;
+237                     end
+238                     endfunction
+239                     
+240                     function [AW:0] grey2bin;
+241                     input [AW:0] grey;
+242                     reg [8:0] grey_8;
+243                     reg [8:0] bin_8;
+244                     begin
+245        1/1          	grey_8 = grey;
+246        1/1          	bin_8[8] = grey_8[8];
+247        1/1          	bin_8[7:6] = do_bin({bin_8[8], grey_8[7:6]});
+248        1/1          	bin_8[5:4] = do_bin({bin_8[6], grey_8[5:4]});
+249        1/1          	bin_8[3:2] = do_bin({bin_8[4], grey_8[3:2]});
+250        1/1          	bin_8[1:0] = do_bin({bin_8[2], grey_8[1:0]});
+251        1/1          	grey2bin = bin_8;
+252                     end
+253                     endfunction
+254                     
+255                     
+256                     function [1:0] do_grey;
+257                     input [2:0] bin;
+258                     begin
+259        1/1          	if (bin[2]) begin  // do reverse grey
+260        1/1          		case (bin[1:0]) 
+261        1/1          			2'b00: do_grey = 2'b10;
+262        1/1          			2'b01: do_grey = 2'b11;
+263        1/1          			2'b10: do_grey = 2'b01;
+264        1/1          			2'b11: do_grey = 2'b00;
+                   <font color = "red">==>  MISSING_DEFAULT</font>
+265                     		endcase
+266                     	end
+267                     	else begin
+268        1/1          		case (bin[1:0]) 
+269        1/1          			2'b00: do_grey = 2'b00;
+270        1/1          			2'b01: do_grey = 2'b01;
+271        1/1          			2'b10: do_grey = 2'b11;
+272        1/1          			2'b11: do_grey = 2'b10;
+                   <font color = "red">==>  MISSING_DEFAULT</font>
+273                     		endcase
+274                     	end
+275                     end
+276                     endfunction
+277                     
+278                     function [1:0] do_bin;
+279                     input [2:0] grey;
+280                     begin
+281        1/1          	if (grey[2]) begin	// actually bin[2]
+282        1/1          		case (grey[1:0])
+283        1/1          			2'b10: do_bin = 2'b00;
+284        1/1          			2'b11: do_bin = 2'b01;
+285        1/1          			2'b01: do_bin = 2'b10;
+286        1/1          			2'b00: do_bin = 2'b11;
+                   <font color = "red">==>  MISSING_DEFAULT</font>
+287                     		endcase
+288                     	end
+289                     	else begin
+290        1/1          		case (grey[1:0])
+291        1/1          			2'b00: do_bin = 2'b00;
+292        1/1          			2'b01: do_bin = 2'b01;
+293        1/1          			2'b11: do_bin = 2'b10;
+294        1/1          			2'b10: do_bin = 2'b11;
+                   <font color = "red">==>  MISSING_DEFAULT</font>
+295                     		endcase
+296                     	end
+297                     end
+298                     endfunction
+299                     			
+300                     function [AW:0] get_cnt;
+301                     input [AW:0] wr_ptr, rd_ptr;
+302                     begin
+303        1/1          	if (wr_ptr &gt;= rd_ptr) begin
+304        1/1          		get_cnt = (wr_ptr - rd_ptr);	
+305                     	end
+306                     	else begin
+307        1/1          		get_cnt = DP*2 - (rd_ptr - wr_ptr);
+</pre>
+<hr>
+<a name="inst_tag_6_Cond"></a>
+<b>Cond Coverage for Instance : <a href="mod6.html#inst_tag_6" >tbench_top.u_dut.u_wb2sdrc.u_cmdfifo</a></b><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">Conditions</td><td>14</td><td>14</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">Logical</td><td>14</td><td>14</td><td>100.00</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       110
+ EXPRESSION ((wr_cnt == FULL_DP) ? 1'b1 : 1'b0)
+             ---------1---------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       111
+ EXPRESSION ((wr_cnt == (FULL_DP - 1)) ? 1'b1 : 1'b0)
+             ------------1------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       128
+ EXPRESSION (full_q &amp;&amp; (wr_cnt &lt; FULL_DP))
+             ---1--    ---------2--------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       171
+ EXPRESSION ((rd_cnt == 3'b0) ? 1'b1 : 1'b0)
+             --------1-------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       172
+ EXPRESSION ((rd_cnt == 3'b1) ? 1'b1 : 1'b0)
+             --------1-------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       189
+ EXPRESSION (empty_q &amp;&amp; (rd_cnt != EMPTY_DP))
+             ---1---    ----------2---------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<hr>
+<a name="inst_tag_6_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod6.html#inst_tag_6" >tbench_top.u_dut.u_wb2sdrc.u_cmdfifo</a></b><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s8">
+<td>Totals</td>
+<td class="rt">37</td>
+<td class="rt">33</td>
+<td class="rt">89.19 </td>
+</tr><tr class="s7">
+<td>Total Bits</td>
+<td class="rt">422</td>
+<td class="rt">326</td>
+<td class="rt">77.25 </td>
+</tr><tr class="s7">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">211</td>
+<td class="rt">163</td>
+<td class="rt">77.25 </td>
+</tr><tr class="s7">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">211</td>
+<td class="rt">163</td>
+<td class="rt">77.25 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s8">
+<td>Ports</td>
+<td class="rt">12</td>
+<td class="rt">10</td>
+<td class="rt">83.33 </td>
+</tr><tr class="s7">
+<td>Port Bits</td>
+<td class="rt">164</td>
+<td class="rt">116</td>
+<td class="rt">70.73 </td>
+</tr><tr class="s7">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">82</td>
+<td class="rt">58</td>
+<td class="rt">70.73 </td>
+</tr><tr class="s7">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">82</td>
+<td class="rt">58</td>
+<td class="rt">70.73 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s9">
+<td>Signals</td>
+<td class="rt">25</td>
+<td class="rt">23</td>
+<td class="rt">92.00 </td>
+</tr><tr class="s8">
+<td>Signal Bits</td>
+<td class="rt">258</td>
+<td class="rt">210</td>
+<td class="rt">81.40 </td>
+</tr><tr class="s8">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">129</td>
+<td class="rt">105</td>
+<td class="rt">81.40 </td>
+</tr><tr class="s8">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">129</td>
+<td class="rt">105</td>
+<td class="rt">81.40 </td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Port Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td><td class="alfsrt">Direction</td></tr><tr>
+<td>rd_data[22:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>rd_data[25:23]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>rd_data[26]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>rd_data[35:27]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>wr_data[22:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>wr_data[25:23]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>wr_data[26]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>wr_data[35:27]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>wr_clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>wr_reset_n</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>wr_en</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rd_clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rd_reset_n</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>rd_en</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>full</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>empty</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>afull</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>aempty</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Signal Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td></tr><tr>
+<td>sync_rd_ptr_0[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>sync_rd_ptr_1[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>sync_rd_ptr[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>wr_ptr[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>grey_wr_ptr[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>grey_rd_ptr[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>full_q</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>full_c</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>afull_c</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>wr_ptr_inc[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>wr_cnt[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>grey_rd_ptr_dly[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>sync_wr_ptr_0[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>sync_wr_ptr_1[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>sync_wr_ptr[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_ptr[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>empty_q</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>empty_c</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>aempty_c</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_ptr_inc[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>sync_wr_ptr_dec[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_cnt[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_data_q[22:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_data_q[25:23]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>rd_data_q[26]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_data_q[35:27]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>rd_data_c[22:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_data_c[25:23]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>rd_data_c[26]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rd_data_c[35:27]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>grey_wr_ptr_dly[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+<hr>
+<a name="inst_tag_6_Assert"></a>
+<b>Assert Coverage for Instance : <a href="mod6.html#inst_tag_6" >tbench_top.u_dut.u_wb2sdrc.u_cmdfifo</a></b><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Attempted</th><th nowrap width=80>Percent</th><th nowrap width=80>Succeeded/Matched</th><th nowrap width=80>Percent</th></tr><tr>
+<td class="wht cl"><a href="#258352237" >Assertions</a></td>
+<td class="wht cl rt">2</td>
+<td class="s10 cl rt">2</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">2</td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl"><a href="#1195240792" >Cover properties</a></td>
+<td class="wht cl rt">0</td>
+<td class="wht cl rt">0</td>
+<td class="wht cl"></td>
+<td class="wht cl rt">0</td>
+<td class="wht cl"></td>
+</tr><tr>
+<td class="wht cl"><a href="#898221043" >Cover sequences</a></td>
+<td class="wht cl rt">0</td>
+<td class="wht cl rt">0</td>
+<td class="wht cl"></td>
+<td class="wht cl rt">0</td>
+<td class="wht cl"></td>
+</tr><tr>
+<td class="wht cl"><b>Total</b></td>
+<td class="wht cl rt">2</td>
+<td class="s10 cl rt">2</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">2</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<hr>
+<br clear=all>
+<a name="258352237"></a>
+<b>Assertion Details</b><br clear=all>
+<br clear=all>
+<table align=left class="sortable noborder">
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td>Attempts</td><td>Real Successes</td><td>Failures</td><td>Incomplete</td></tr><tr>
+<td class="wht cl"><a name="1892614921"></a>
+assert_overflow_afifo</td>
+<td class="s9 cl rt">175932</td>
+<td class="s9 cl rt">134792</td>
+<td class="s9 cl rt">0</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="379517907"></a>
+assert_underflow_afifo</td>
+<td class="s9 cl rt">87966</td>
+<td class="s9 cl rt">67396</td>
+<td class="s9 cl rt">0</td>
+<td class="wht cl rt">0</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="inst_tag_6">
+    <li>
+      <a href="#inst_tag_6_Line">Line</a>    </li>
+    <li>
+      <a href="#inst_tag_6_Cond">Cond</a>    </li>
+    <li>
+      <a href="#inst_tag_6_Toggle">Toggle</a>    </li>
+    <li>
+      <a href="#inst_tag_6_Assert">Assert</a>    </li>
+  </ul>
+  <ul name="inst_tag_7">
+    <li>
+      <a href="#inst_tag_7_Line">Line</a>    </li>
+    <li>
+      <a href="#inst_tag_7_Cond">Cond</a>    </li>
+    <li>
+      <a href="#inst_tag_7_Toggle">Toggle</a>    </li>
+    <li>
+      <a href="#inst_tag_7_Assert">Assert</a>    </li>
+  </ul>
+  <ul name="inst_tag_8">
+    <li>
+      <a href="#inst_tag_8_Line">Line</a>    </li>
+    <li>
+      <a href="#inst_tag_8_Cond">Cond</a>    </li>
+    <li>
+      <a href="#inst_tag_8_Toggle">Toggle</a>    </li>
+    <li>
+      <a href="#inst_tag_8_Assert">Assert</a>    </li>
+  </ul>
+  <ul name="tag_async_fifo">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+    <li>
+      <a href="#Toggle">Toggle</a>    </li>
+    <li>
+      <a href="#Assert">Assert</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

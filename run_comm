@@ -1,5 +1,4 @@
-vcs -f filelist +define+ASSERT +define+EST1 +define+EST2 +define+EST3 +define+EST4 +define+EST5 +define+S50 +define+VERBOSE +define+SDR_16BIT +incdir+./rtl +incdir+./rtl/model +incdir+./test_environment2 -sverilog -full64 -debug_access+all -timescale=1ns/10ps -PP -cm line+cond+fsm+tgl+assert
+vcs -f filelist +define+ASSERT +define+EST1 +define+EST2 +define+EST3 +define+EST4 +define+EST5 +define+S50 +define+VERBOSE +define+SDR_16BIT +incdir+./rtl +incdir+./rtl/model +incdir+./test_environment3 -sverilog -full64 -debug_access+all -timescale=1ns/10ps -PP -cm line+cond+tgl+assert
 ./simv -cm line+cond+fsm+tgl+assert > log.txt
 urg -full64 -dir simv.vdb
-firefox urgReport/dashboard.html
 rm -rf csrc/ DVEfiles/ inter.vpd swave_compile_done ucli.key 
